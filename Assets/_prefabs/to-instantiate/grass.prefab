@@ -96,9 +96,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sprites:
   - {fileID: 212602669951783270}
-  InGameDescription: grass
+  InGameDescription: Grass
   DefenceModifier: 0
-  AvoidanceModifier: 0
+  EvasionModifier: 0
   MovementDifficulty: 0
 --- !u!212 &212602669951783270
 SpriteRenderer:
@@ -134,7 +134,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300024, guid: d3fbe734cade8f64baccd3d4ac0694fe, type: 3}
+  m_Sprite: {fileID: 21300472, guid: 031915f78c5727540b2c118337a9a6f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

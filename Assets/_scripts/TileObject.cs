@@ -9,7 +9,7 @@ public class TileObject : MonoBehaviour
   public string InGameDescription;
 
   public int DefenceModifier = 0;
-  public int AvoidanceModifier = 0;
+  public int EvasionModifier = 0;
 
   [HideInInspector]
   public int MovementDifficulty = 0;
