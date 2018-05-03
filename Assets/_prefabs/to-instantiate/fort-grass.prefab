@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4483362893291300}
   - component: {fileID: 212158748437718404}
+  - component: {fileID: 65060844565770658}
   m_Layer: 0
   m_Name: sprite (1)
   m_TagString: Untagged
@@ -100,6 +101,18 @@ Transform:
   m_Father: {fileID: 4143364679129104}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65060844565770658
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1153788392832598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114440613834664286
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -14,6 +14,9 @@ public class TileObject : MonoBehaviour
   [HideInInspector]
   public int MovementDifficulty = 0;
 
+  [HideInInspector]
+  public int IndexInPrefabsManager = -1;
+
   public void FlipX()
   {
     foreach (var item in Sprites)
