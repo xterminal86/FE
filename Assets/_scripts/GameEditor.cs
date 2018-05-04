@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using TMPro;
+using SFB;
 
 public class GameEditor : MonoBehaviour 
 {
@@ -198,6 +200,8 @@ public class GameEditor : MonoBehaviour
       cursorPos.z = -2.0f;
       Cursor.transform.position = cursorPos;
 
+      bool isOverGui = EventSystem.current.IsPointerOverGameObject();
+
       if (_previewObject != null)
       {
         _previewObject.transform.position = Cursor.transform.position;
@@ -217,11 +221,11 @@ public class GameEditor : MonoBehaviour
           to.FlipY();
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !isOverGui)
         {
           PlaceSelectedTile(Cursor.transform.position);
         }
-        else if (Input.GetMouseButton(1))
+        else if (Input.GetMouseButton(1) && !isOverGui)
         {
           PlaceSelectedTile(Cursor.transform.position, true);
         }
@@ -234,7 +238,7 @@ public class GameEditor : MonoBehaviour
 
       // Tile picker
 
-      if (Input.GetMouseButtonDown(2))
+      if (Input.GetMouseButtonDown(2) && !isOverGui)
       {
         PickTileFromMap();
       }
@@ -257,7 +261,7 @@ public class GameEditor : MonoBehaviour
           Destroy(_previewObject.gameObject);
         }
 
-        _previewObject = Instantiate(PrefabsManager.Instance.Prefabs[tileIndex]);
+        _previewObject = Instantiate(PrefabsManager.Instance.Prefabs[tileIndex], Cursor.transform.position, Quaternion.identity);
         Util.SetGameObjectLayer(_previewObject, LayerMask.NameToLayer("Preview"), true);
 
         _selectedTileIndex = tileIndex;
@@ -288,5 +292,13 @@ public class GameEditor : MonoBehaviour
     Util.SetGameObjectLayer(go, LayerMask.NameToLayer("Default"), true);
     _map[posX, posY] = go.GetComponent<TileObject>();
     _map[posX, posY].IndexInPrefabsManager = _selectedTileIndex;
+  }
+
+  public void SaveMapHandler()
+  {
+    string path = StandaloneFileBrowser.SaveFilePanel("Save Map", "", "level", "bytes");
+    if (!string.IsNullOrEmpty(path))
+    {
+    }
   }
 }
