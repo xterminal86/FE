@@ -17,6 +17,15 @@ public class TileObject : MonoBehaviour
   [HideInInspector]
   public int IndexInPrefabsManager = -1;
 
+  [HideInInspector]
+  public string PrefabName = string.Empty;
+
+  [HideInInspector]
+  public bool FlipFlagX = false;
+
+  [HideInInspector]
+  public bool FlipFlagY = false;
+
   public void FlipX()
   {
     foreach (var item in Sprites)

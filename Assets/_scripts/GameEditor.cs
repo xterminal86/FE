@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,28 +19,32 @@ public class GameEditor : MonoBehaviour
   public Transform MapHolder;
   public GameObject Cursor;
 
-  int _mapSize = 16;
+  int _mapSizeX = 16;
+  int _mapSizeY = 16;
 
   TileObject[,] _map;
+
+  SerializedMap _levelToSave;
 
   void Start()
   {
     PrefabsManager.Instance.Initialize();
 
-    _map = new TileObject[_mapSize, _mapSize];
+    _map = new TileObject[_mapSizeX, _mapSizeY];
 
-    for (int x = 0; x < _mapSize; x++)
+    for (int x = 0; x < _mapSizeX; x++)
     {
-      for (int y = 0; y < _mapSize; y++)
+      for (int y = 0; y < _mapSizeY; y++)
       {
         var go = Instantiate(PrefabsManager.Instance.Prefabs[0], new Vector3(x, y, 0.0f), Quaternion.identity, MapHolder);
         TileObject to = go.GetComponent<TileObject>();
         _map[x, y] = to;
+        _map[x, y].PrefabName = PrefabsManager.Instance.Prefabs[0].name;
         _map[x, y].IndexInPrefabsManager = 0;
       }
     }
 
-    _cameraMovement = new Vector3(_mapSize / 2, _mapSize / 2, MainCamera.transform.position.z);
+    _cameraMovement = new Vector3(_mapSizeX / 2, _mapSizeY / 2, MainCamera.transform.position.z);
 
     _previewObject = Instantiate(PrefabsManager.Instance.Prefabs[0]);
 
@@ -67,8 +73,8 @@ public class GameEditor : MonoBehaviour
     _cameraMovement.x += (Time.smoothDeltaTime * _cameraMoveSpeed) * h;
     _cameraMovement.y += (Time.smoothDeltaTime * _cameraMoveSpeed) * v;
 
-    _cameraMovement.x = Mathf.Clamp(_cameraMovement.x, 0.0f, _mapSize);
-    _cameraMovement.y = Mathf.Clamp(_cameraMovement.y, 0.0f, _mapSize);
+    _cameraMovement.x = Mathf.Clamp(_cameraMovement.x, 0.0f, _mapSizeX);
+    _cameraMovement.y = Mathf.Clamp(_cameraMovement.y, 0.0f, _mapSizeY);
 
     MainCamera.orthographicSize = _cameraZoom;
 
@@ -149,13 +155,13 @@ public class GameEditor : MonoBehaviour
         _fillQueue.Enqueue(new Vector2Int(node.x, ly));
       }
 
-      if (hx < _mapSize && _map[hx, node.y].IndexInPrefabsManager == target)
+      if (hx < _mapSizeX && _map[hx, node.y].IndexInPrefabsManager == target)
       {
         PlaceSelectedTile(new Vector3(hx, node.y, node.y));
         _fillQueue.Enqueue(new Vector2Int(hx, node.y));
       }
 
-      if (hy < _mapSize && _map[node.x, hy].IndexInPrefabsManager == target)
+      if (hy < _mapSizeX && _map[node.x, hy].IndexInPrefabsManager == target)
       {
         PlaceSelectedTile(new Vector3(node.x, hy, hy));
         _fillQueue.Enqueue(new Vector2Int(node.x, hy));
@@ -214,11 +220,13 @@ public class GameEditor : MonoBehaviour
         {          
           var to = _previewObject.GetComponent<TileObject>();
           to.FlipX();
+          to.FlipFlagX = !to.FlipFlagX;
         }
         else if (Input.GetKeyDown(KeyCode.V))
         {
           var to = _previewObject.GetComponent<TileObject>();
           to.FlipY();
+          to.FlipFlagY = !to.FlipFlagY;
         }
 
         if (Input.GetMouseButton(0) && !isOverGui)
@@ -252,19 +260,20 @@ public class GameEditor : MonoBehaviour
 
     if (_map[mx, my] != null)
     {
-      int tileIndex = _map[mx, my].IndexInPrefabsManager;
+      //int tileIndex = _map[mx, my].IndexInPrefabsManager;
+      var res = PrefabsManager.Instance.FindPrefabByName(_map[mx, my].PrefabName);
 
-      if (_selectedTileIndex != tileIndex)
+      if (_selectedTileIndex != res.Key)
       {
         if (_previewObject != null)
         {
           Destroy(_previewObject.gameObject);
         }
 
-        _previewObject = Instantiate(PrefabsManager.Instance.Prefabs[tileIndex], Cursor.transform.position, Quaternion.identity);
+        _previewObject = Instantiate(PrefabsManager.Instance.Prefabs[res.Key], Cursor.transform.position, Quaternion.identity);
         Util.SetGameObjectLayer(_previewObject, LayerMask.NameToLayer("Preview"), true);
 
-        _selectedTileIndex = tileIndex;
+        _selectedTileIndex = res.Key;
       }
     }
   }
@@ -291,7 +300,38 @@ public class GameEditor : MonoBehaviour
     var go = Instantiate(objectToPlace, pos, Quaternion.identity, MapHolder);         
     Util.SetGameObjectLayer(go, LayerMask.NameToLayer("Default"), true);
     _map[posX, posY] = go.GetComponent<TileObject>();
+    _map[posX, posY].PrefabName = PrefabsManager.Instance.Prefabs[_selectedTileIndex].name;
     _map[posX, posY].IndexInPrefabsManager = _selectedTileIndex;
+  }
+
+  void PrepareDataToSave(string path)
+  {
+    _levelToSave = new SerializedMap();
+
+    _levelToSave.Path = path;
+    _levelToSave.MapSizeX = _mapSizeX;
+    _levelToSave.MapSizeY = _mapSizeY;
+
+    _levelToSave.MapTiles.Clear();
+
+    foreach (Transform t in MapHolder)
+    {
+      TileObject to = t.GetComponent<TileObject>();
+
+      SerializedTile st = new SerializedTile();
+      st.CoordX = (int)to.transform.position.x;
+      st.CoordY = (int)to.transform.position.y;
+      st.DefenceModifier = to.DefenceModifier;
+      st.EvasionModifier = to.EvasionModifier;
+      st.FlipFlagX = to.FlipFlagX;
+      st.FlipFlagY = to.FlipFlagY;
+      st.IndexInPrefabsManager = to.IndexInPrefabsManager;
+      st.InGameDescription = to.InGameDescription;
+      st.MovementDifficulty = to.MovementDifficulty;
+      st.PrefabName = to.PrefabName;
+
+      _levelToSave.MapTiles.Add(st);
+    }
   }
 
   public void SaveMapHandler()
@@ -299,6 +339,79 @@ public class GameEditor : MonoBehaviour
     string path = StandaloneFileBrowser.SaveFilePanel("Save Map", "", "level", "bytes");
     if (!string.IsNullOrEmpty(path))
     {
+      PrepareDataToSave(path);
+
+      var formatter = new BinaryFormatter();
+      Stream s = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None);
+      formatter.Serialize(s, _levelToSave);
+      s.Close();
+    }
+  }
+
+  void LoadLevel(string path)
+  {
+    var formatter = new BinaryFormatter();  
+    Stream stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);  
+    _levelToSave = (SerializedMap)formatter.Deserialize(stream);  
+    stream.Close();
+
+    DestroyChildren(MapHolder);
+
+    _mapSizeX = _levelToSave.MapSizeX;
+    _mapSizeY = _levelToSave.MapSizeY;
+
+    _map = new TileObject[_mapSizeX, _mapSizeY];
+
+    foreach (var tile in _levelToSave.MapTiles)
+    {
+      var res = PrefabsManager.Instance.FindPrefabByName(tile.PrefabName);
+      if (res.Value != null)
+      {
+        var go = Instantiate(res.Value, new Vector3(tile.CoordX, tile.CoordY, tile.CoordY), Quaternion.identity, MapHolder);
+
+        TileObject to = go.GetComponent<TileObject>();
+        to.PrefabName = tile.PrefabName;
+        to.IndexInPrefabsManager = res.Key;
+        to.InGameDescription = tile.InGameDescription;
+        to.DefenceModifier = tile.DefenceModifier;
+        to.EvasionModifier = tile.EvasionModifier;
+        to.MovementDifficulty = tile.MovementDifficulty;
+        to.FlipFlagX = tile.FlipFlagX;
+        to.FlipFlagY = tile.FlipFlagY;
+
+        if (tile.FlipFlagX)
+        {          
+          to.FlipX();
+        }
+
+        if (tile.FlipFlagY)
+        {
+          to.FlipY();
+        }
+
+        int x = tile.CoordX;
+        int y = tile.CoordY;
+
+        _map[x, y] = to;
+      }
+    }
+  }
+
+  public void LoadMapHandler()
+  {
+    string[] paths = StandaloneFileBrowser.OpenFilePanel("Save Map", "", "bytes", false);
+    if (paths.Length != 0 && !string.IsNullOrEmpty(paths[0]))
+    {
+      LoadLevel(paths[0]);
+    }
+  }
+
+  void DestroyChildren(Transform t)
+  {
+    int childCount = t.childCount;
+    for (int i = 0; i < childCount; i++)
+    {
+      Destroy(t.GetChild(i).gameObject);
     }
   }
 }

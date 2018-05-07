@@ -9,6 +9,8 @@ public delegate void CallbackC(Collider arg);
 
 public static class GlobalConstants 
 {  
+  public const float CursorRepeatDelay = 0.05f;
+  public const float CursorDelayBeforeRepeat = 0.15f;
 }
 
 
