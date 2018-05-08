@@ -19,8 +19,8 @@ public class GameEditor : MonoBehaviour
   public Transform MapHolder;
   public GameObject Cursor;
 
-  int _mapSizeX = 16;
-  int _mapSizeY = 16;
+  public int MapSizeX = 16;
+  public int MapSizeY = 16;
 
   TileObject[,] _map;
 
@@ -30,11 +30,11 @@ public class GameEditor : MonoBehaviour
   {
     PrefabsManager.Instance.Initialize();
 
-    _map = new TileObject[_mapSizeX, _mapSizeY];
+    _map = new TileObject[MapSizeX, MapSizeY];
 
-    for (int x = 0; x < _mapSizeX; x++)
+    for (int x = 0; x < MapSizeX; x++)
     {
-      for (int y = 0; y < _mapSizeY; y++)
+      for (int y = 0; y < MapSizeY; y++)
       {
         var go = Instantiate(PrefabsManager.Instance.Prefabs[0], new Vector3(x, y, 0.0f), Quaternion.identity, MapHolder);
         TileObject to = go.GetComponent<TileObject>();
@@ -44,7 +44,7 @@ public class GameEditor : MonoBehaviour
       }
     }
 
-    _cameraMovement = new Vector3(_mapSizeX / 2, _mapSizeY / 2, MainCamera.transform.position.z);
+    _cameraMovement = new Vector3(MapSizeX / 2, MapSizeY / 2, MainCamera.transform.position.z);
 
     _previewObject = Instantiate(PrefabsManager.Instance.Prefabs[0]);
 
@@ -73,8 +73,8 @@ public class GameEditor : MonoBehaviour
     _cameraMovement.x += (Time.smoothDeltaTime * _cameraMoveSpeed) * h;
     _cameraMovement.y += (Time.smoothDeltaTime * _cameraMoveSpeed) * v;
 
-    _cameraMovement.x = Mathf.Clamp(_cameraMovement.x, 0.0f, _mapSizeX);
-    _cameraMovement.y = Mathf.Clamp(_cameraMovement.y, 0.0f, _mapSizeY);
+    _cameraMovement.x = Mathf.Clamp(_cameraMovement.x, 0.0f, MapSizeX);
+    _cameraMovement.y = Mathf.Clamp(_cameraMovement.y, 0.0f, MapSizeY);
 
     MainCamera.orthographicSize = _cameraZoom;
 
@@ -130,7 +130,7 @@ public class GameEditor : MonoBehaviour
 
     while (_fillQueue.Count != 0)
     {
-      if (safeguard > 1000)
+      if (safeguard > 1000000)
       {
         Debug.LogWarning("Terminated by safeguard!");
         break;
@@ -155,13 +155,13 @@ public class GameEditor : MonoBehaviour
         _fillQueue.Enqueue(new Vector2Int(node.x, ly));
       }
 
-      if (hx < _mapSizeX && _map[hx, node.y].IndexInPrefabsManager == target)
+      if (hx < MapSizeX && _map[hx, node.y].IndexInPrefabsManager == target)
       {
         PlaceSelectedTile(new Vector3(hx, node.y, node.y));
         _fillQueue.Enqueue(new Vector2Int(hx, node.y));
       }
 
-      if (hy < _mapSizeX && _map[node.x, hy].IndexInPrefabsManager == target)
+      if (hy < MapSizeX && _map[node.x, hy].IndexInPrefabsManager == target)
       {
         PlaceSelectedTile(new Vector3(node.x, hy, hy));
         _fillQueue.Enqueue(new Vector2Int(node.x, hy));
@@ -309,8 +309,8 @@ public class GameEditor : MonoBehaviour
     _levelToSave = new SerializedMap();
 
     _levelToSave.Path = path;
-    _levelToSave.MapSizeX = _mapSizeX;
-    _levelToSave.MapSizeY = _mapSizeY;
+    _levelToSave.MapSizeX = MapSizeX;
+    _levelToSave.MapSizeY = MapSizeY;
 
     _levelToSave.MapTiles.Clear();
 
@@ -357,10 +357,10 @@ public class GameEditor : MonoBehaviour
 
     DestroyChildren(MapHolder);
 
-    _mapSizeX = _levelToSave.MapSizeX;
-    _mapSizeY = _levelToSave.MapSizeY;
+    MapSizeX = _levelToSave.MapSizeX;
+    MapSizeY = _levelToSave.MapSizeY;
 
-    _map = new TileObject[_mapSizeX, _mapSizeY];
+    _map = new TileObject[MapSizeX, MapSizeY];
 
     foreach (var tile in _levelToSave.MapTiles)
     {

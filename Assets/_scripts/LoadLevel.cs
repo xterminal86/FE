@@ -3,6 +3,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LoadLevel : MonoBehaviour 
 {
@@ -21,9 +22,11 @@ public class LoadLevel : MonoBehaviour
   Vector3 _cameraMovement = Vector3.zero;
   Vector3 _cursorPosition = Vector3.zero;
 
+  Dictionary<KeyCode, bool> _keyHoldStatuses = new Dictionary<KeyCode, bool>();
   void Awake()
-  {
-    string path = "D:\\Nick\\Sources\\Unity\\FE.git\\level.bytes";
+  {    
+    //string path = "D:\\Nick\\Sources\\Unity\\FE.git\\level.bytes";
+    string path = "level.bytes";
 
     LoadMap(path);
 
@@ -33,20 +36,10 @@ public class LoadLevel : MonoBehaviour
     MainCamera.transform.position = _cameraMovement;
     Cursor.position = _cursorPosition;
 
-    _arrowKeysStatus[KeyCode.LeftArrow] = false;
-    _arrowKeysStatus[KeyCode.RightArrow] = false;
-    _arrowKeysStatus[KeyCode.UpArrow] = false;
-    _arrowKeysStatus[KeyCode.DownArrow] = false;
-
-    _delayBeforeRepeat[KeyCode.LeftArrow] = 0.0f;
-    _delayBeforeRepeat[KeyCode.RightArrow] = 0.0f;
-    _delayBeforeRepeat[KeyCode.UpArrow] = 0.0f;
-    _delayBeforeRepeat[KeyCode.DownArrow] = 0.0f;
-
-    _repeatTimers[KeyCode.LeftArrow] = 0.0f;
-    _repeatTimers[KeyCode.RightArrow] = 0.0f;
-    _repeatTimers[KeyCode.UpArrow] = 0.0f;
-    _repeatTimers[KeyCode.DownArrow] = 0.0f;
+    _keyHoldStatuses[KeyCode.LeftArrow] = false;
+    _keyHoldStatuses[KeyCode.RightArrow] = false;
+    _keyHoldStatuses[KeyCode.UpArrow] = false;
+    _keyHoldStatuses[KeyCode.DownArrow] = false;
   }
 
   void LoadMap(string path)
@@ -96,94 +89,235 @@ public class LoadLevel : MonoBehaviour
     }
   }
 
-  Dictionary<KeyCode, float> _delayBeforeRepeat = new Dictionary<KeyCode, float>();
-  void CheckKeyDown(KeyCode keyCode, Callback cb = null)
+  void MoveCursor(int incX, int incY)
   {
-    if (Input.GetKeyDown(keyCode))
-    {      
-      _arrowKeysStatus[keyCode] = true;
+    _cursorPosition.x += incX;
+    _cursorPosition.y += incY;
 
-      if (cb != null)
-      {
-        cb();
-      }
-    }
-    else if (Input.GetKeyUp(keyCode))
+    CheckCursorBounds();
+  }
+
+  void HandleKeyDown()
+  {
+    if (Input.GetKeyDown(KeyCode.LeftArrow))
     {
-      _delayBeforeRepeat[keyCode] = 0.0f;
-      _repeatTimers[keyCode] = 0.0f;
-      _arrowKeysStatus[keyCode] = false;
+      _repeatTimer = 0.0f;
+      MoveCursor(-1, 0);
+      _delayValue = GlobalConstants.CursorDelayBeforeRepeat;
+    }
+    else if (Input.GetKeyDown(KeyCode.RightArrow))
+    {
+      _repeatTimer = 0.0f;
+      MoveCursor(1, 0);
+      _delayValue = GlobalConstants.CursorDelayBeforeRepeat;
+    }
+    else if (Input.GetKeyDown(KeyCode.UpArrow))
+    {
+      _repeatTimer = 0.0f;
+      MoveCursor(0, 1);
+      _delayValue = GlobalConstants.CursorDelayBeforeRepeat;
+    }
+    else if (Input.GetKeyDown(KeyCode.DownArrow))
+    {
+      _repeatTimer = 0.0f;
+      MoveCursor(0, -1);
+      _delayValue = GlobalConstants.CursorDelayBeforeRepeat;
     }
   }
 
-  Dictionary<KeyCode, float> _repeatTimers = new Dictionary<KeyCode, float>();
-  void ProcessRepeat(KeyCode keyCode, Callback cb = null)
+  float _repeatTimer = 0.0f;
+  float _delayValue = 0.0f;
+  void HandleKeyRepeat()
   {
-    if (_arrowKeysStatus[keyCode])
+    if (_keyHoldStatuses[KeyCode.LeftArrow] && _keyHoldStatuses[KeyCode.UpArrow])
     {
-      _delayBeforeRepeat[keyCode] += Time.smoothDeltaTime;
-    }
+      _repeatTimer += Time.smoothDeltaTime;
 
-    if (_delayBeforeRepeat[keyCode] > GlobalConstants.CursorDelayBeforeRepeat)
-    {
-      _repeatTimers[keyCode] += Time.smoothDeltaTime;
-
-      if (_repeatTimers[keyCode] > GlobalConstants.CursorRepeatDelay)
+      if (_repeatTimer > _delayValue)
       {
-        _repeatTimers[keyCode] = 0.0f;
+        _delayValue = GlobalConstants.CursorRepeatDelay;
+        MoveCursor(-1, 1);
+        _repeatTimer = 0.0f;
+      }
+    }
+    else if (_keyHoldStatuses[KeyCode.RightArrow] && _keyHoldStatuses[KeyCode.UpArrow])
+    {
+      _repeatTimer += Time.smoothDeltaTime;
 
-        if (cb != null)
-        {
-          cb();
-        }
+      if (_repeatTimer > _delayValue)
+      {
+        _delayValue = GlobalConstants.CursorRepeatDelay;
+        MoveCursor(1, 1);
+        _repeatTimer = 0.0f;
+      }
+    }
+    else if (_keyHoldStatuses[KeyCode.LeftArrow] && _keyHoldStatuses[KeyCode.DownArrow])
+    {
+      _repeatTimer += Time.smoothDeltaTime;
+
+      if (_repeatTimer > _delayValue)
+      {
+        _delayValue = GlobalConstants.CursorRepeatDelay;
+        MoveCursor(-1, -1);
+        _repeatTimer = 0.0f;
+      }
+    }
+    else if (_keyHoldStatuses[KeyCode.RightArrow] && _keyHoldStatuses[KeyCode.DownArrow])
+    {
+      _repeatTimer += Time.smoothDeltaTime;
+
+      if (_repeatTimer > _delayValue)
+      {
+        _delayValue = GlobalConstants.CursorRepeatDelay;
+        MoveCursor(1, -1);
+        _repeatTimer = 0.0f;
+      }
+    }
+    else if (_keyHoldStatuses[KeyCode.LeftArrow])
+    {
+      _repeatTimer += Time.smoothDeltaTime;
+
+      if (_repeatTimer > _delayValue)
+      {
+        _delayValue = GlobalConstants.CursorRepeatDelay;
+        MoveCursor(-1, 0);
+        _repeatTimer = 0.0f;
+      }
+    }
+    else if (_keyHoldStatuses[KeyCode.RightArrow])
+    {
+      _repeatTimer += Time.smoothDeltaTime;
+
+      if (_repeatTimer > _delayValue)
+      {
+        _delayValue = GlobalConstants.CursorRepeatDelay;
+        MoveCursor(1, 0);
+        _repeatTimer = 0.0f;
+      }
+    }
+    else if (_keyHoldStatuses[KeyCode.UpArrow])
+    {
+      _repeatTimer += Time.smoothDeltaTime;
+
+      if (_repeatTimer > _delayValue)
+      {
+        _delayValue = GlobalConstants.CursorRepeatDelay;
+        MoveCursor(0, 1);
+        _repeatTimer = 0.0f;
+      }
+    }
+    else if (_keyHoldStatuses[KeyCode.DownArrow])
+    {
+      _repeatTimer += Time.smoothDeltaTime;
+
+      if (_repeatTimer > _delayValue)
+      {
+        _delayValue = GlobalConstants.CursorRepeatDelay;
+        MoveCursor(0, -1);
+        _repeatTimer = 0.0f;
       }
     }
   }
 
-  Dictionary<KeyCode, bool> _arrowKeysStatus = new Dictionary<KeyCode, bool>();
-  void ControlCursor()
+  Vector3 _cameraScrollPos = Vector3.zero;
+  void ControlCamera()
+  {    
+    int cursorX = (int)_cursorPosition.x;
+    int cursorY = (int)_cursorPosition.y;
+    int camX = (int)MainCamera.transform.position.x;
+    int camY = (int)MainCamera.transform.position.y;
+
+    float scrollSpeed = _cursorTurboMode ? GlobalConstants.CameraEdgeScrollSpeed * 2.0f : GlobalConstants.CameraEdgeScrollSpeed;
+
+    if (camX - cursorX > GlobalConstants.EdgeScrollX && camY - cursorY < -GlobalConstants.EdgeScrollY)
+    {
+      _cameraScrollPos.Set(camX - 1, camY + 1, MainCamera.transform.position.z);
+      Vector3 res = Vector3.MoveTowards(_cameraMovement, _cameraScrollPos, Time.smoothDeltaTime * scrollSpeed);
+      _cameraMovement = res;
+      MainCamera.transform.position = _cameraMovement;
+    }
+    else if (camX - cursorX < -GlobalConstants.EdgeScrollX && camY - cursorY < -GlobalConstants.EdgeScrollY)
+    {
+      _cameraScrollPos.Set(camX + 1, camY + 1, MainCamera.transform.position.z);
+      Vector3 res = Vector3.MoveTowards(_cameraMovement, _cameraScrollPos, Time.smoothDeltaTime * scrollSpeed);
+      _cameraMovement = res;
+      MainCamera.transform.position = _cameraMovement;
+    }
+    else if (camX - cursorX > GlobalConstants.EdgeScrollX && camY - cursorY > GlobalConstants.EdgeScrollY)
+    {
+      _cameraScrollPos.Set(camX - 1, camY - 1, MainCamera.transform.position.z);
+      Vector3 res = Vector3.MoveTowards(_cameraMovement, _cameraScrollPos, Time.smoothDeltaTime * scrollSpeed);
+      _cameraMovement = res;
+      MainCamera.transform.position = _cameraMovement;
+    }
+    else if (camX - cursorX < -GlobalConstants.EdgeScrollX && camY - cursorY > GlobalConstants.EdgeScrollY)
+    {
+      _cameraScrollPos.Set(camX + 1, camY - 1, MainCamera.transform.position.z);
+      Vector3 res = Vector3.MoveTowards(_cameraMovement, _cameraScrollPos, Time.smoothDeltaTime * scrollSpeed);
+      _cameraMovement = res;
+      MainCamera.transform.position = _cameraMovement;
+    }
+    else if (camX - cursorX > GlobalConstants.EdgeScrollX)
+    {
+      _cameraScrollPos.Set(camX - 1, camY, MainCamera.transform.position.z);
+      Vector3 res = Vector3.MoveTowards(_cameraMovement, _cameraScrollPos, Time.smoothDeltaTime * scrollSpeed);
+      _cameraMovement = res;
+      MainCamera.transform.position = _cameraMovement;
+    }
+    else if (camX - cursorX < -GlobalConstants.EdgeScrollX)
+    {
+      _cameraScrollPos.Set(camX + 1, camY, MainCamera.transform.position.z);
+      Vector3 res = Vector3.MoveTowards(_cameraMovement, _cameraScrollPos, Time.smoothDeltaTime * scrollSpeed);
+      _cameraMovement = res;
+      MainCamera.transform.position = _cameraMovement;
+    }
+    else if (camY - cursorY < -GlobalConstants.EdgeScrollY)
+    {
+      _cameraScrollPos.Set(camX, camY + 1, MainCamera.transform.position.z);
+      Vector3 res = Vector3.MoveTowards(_cameraMovement, _cameraScrollPos, Time.smoothDeltaTime * scrollSpeed);
+      _cameraMovement = res;
+      MainCamera.transform.position = _cameraMovement;
+    }
+    else if (camY - cursorY > GlobalConstants.EdgeScrollY)
+    {
+      _cameraScrollPos.Set(camX, camY - 1, MainCamera.transform.position.z);
+      Vector3 res = Vector3.MoveTowards(_cameraMovement, _cameraScrollPos, Time.smoothDeltaTime * scrollSpeed);
+      _cameraMovement = res;
+      MainCamera.transform.position = _cameraMovement;
+    }
+  }
+
+  bool _cursorTurboMode = false;
+  void QueryInput()
   {
-    CheckKeyDown(KeyCode.LeftArrow, () => 
+    _keyHoldStatuses[KeyCode.LeftArrow] = Input.GetKey(KeyCode.LeftArrow);
+    _keyHoldStatuses[KeyCode.RightArrow] = Input.GetKey(KeyCode.RightArrow);
+    _keyHoldStatuses[KeyCode.UpArrow] = Input.GetKey(KeyCode.UpArrow);
+    _keyHoldStatuses[KeyCode.DownArrow] = Input.GetKey(KeyCode.DownArrow);
+
+    _cursorTurboMode = Input.GetKey(KeyCode.Z);
+
+    if (_cursorTurboMode)
     {
-      _cursorPosition.x--;
-    });
+      _delayValue = GlobalConstants.CursorRepeatDelay / 2.0f;
+    }
+  }
 
-    CheckKeyDown(KeyCode.RightArrow, () =>
+  void Update()
+  {   
+    QueryInput();
+
+    if (!_cursorTurboMode)
     {
-      _cursorPosition.x++;
-    });
-    CheckKeyDown(KeyCode.UpArrow, () =>
-    {
-      _cursorPosition.y++;
-    });
+      HandleKeyDown();
+    }
 
-    CheckKeyDown(KeyCode.DownArrow, () =>
-    {
-      _cursorPosition.y--;
-    });
+    HandleKeyRepeat();
+    ControlCamera();
+  }
 
-
-
-    ProcessRepeat(KeyCode.LeftArrow, () =>
-    {
-      _cursorPosition.x--;
-    });
-
-    ProcessRepeat(KeyCode.RightArrow, () =>
-    {
-      _cursorPosition.x++;
-    });
-
-    ProcessRepeat(KeyCode.UpArrow, () =>
-    {
-      _cursorPosition.y++;
-    });
-
-    ProcessRepeat(KeyCode.DownArrow, () =>
-    {
-      _cursorPosition.y--;
-    });
-
+  void CheckCursorBounds()
+  {
     _cursorPosition.x = Mathf.Clamp(_cursorPosition.x, 0, _mapSizeX - 1);
     _cursorPosition.y = Mathf.Clamp(_cursorPosition.y, 0, _mapSizeY - 1);
 
@@ -194,11 +328,6 @@ public class LoadLevel : MonoBehaviour
     }
 
     Cursor.position = _cursorPosition;
-  }
-
-  void Update()
-  {    
-    ControlCursor();
   }
 
   void DestroyChildren(Transform t)
