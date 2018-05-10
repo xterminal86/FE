@@ -89,12 +89,138 @@ public class LoadLevel : MonoBehaviour
     }
   }
 
+  bool _working = false;
   void MoveCursor(int incX, int incY)
   {
+    if (!_working)
+    {
+      _working = true;
+      StartCoroutine(MoveCursorRoutine(incX, incY));
+    }
+
+    /*
     _cursorPosition.x += incX;
     _cursorPosition.y += incY;
 
     CheckCursorBounds();
+    */
+  }
+
+  float _cursorSlideSpeed = 0.0f;
+
+  IEnumerator MoveCursorRoutine(int incX, int incY)
+  {
+    _cursorSlideSpeed = _cursorTurboMode ? GlobalConstants.CursorSlideSpeed * 2.0f : GlobalConstants.CursorSlideSpeed;
+
+    float camX = MainCamera.transform.position.x;
+    float camY = MainCamera.transform.position.y;
+
+    float newCamX = MainCamera.transform.position.x + incX;
+    float newCamY = MainCamera.transform.position.y + incY;
+
+    float x = _cursorPosition.x;
+    float y = _cursorPosition.y;
+
+    float oldX = x;
+    float oldY = y;
+
+    float newX = _cursorPosition.x + incX;
+    float newY = _cursorPosition.y + incY;
+
+    int dx = (int)camX - (int)newX;
+    int dy = (int)camY - (int)newY;
+
+    if (incX != 0 && incY != 0)
+    {
+      
+    }
+    else
+    {
+      if (incX != 0)
+      {      
+        bool condX = (incX > 0) ? (x < newX) : (x > newX);
+
+        int signX = (incX < 0) ? -1 : 1;
+
+        while (condX)
+        {
+          condX = (incX > 0) ? (x < newX) : (x > newX);
+
+          x += signX * Time.smoothDeltaTime * _cursorSlideSpeed;
+
+          if (dx > GlobalConstants.EdgeScrollX)
+          {
+            //_cameraMovement.x -= Time.smoothDeltaTime * _cursorSlideSpeed;
+          }
+          else
+          {
+            //_cameraMovement.x += Time.smoothDeltaTime * _cursorSlideSpeed;
+          }
+
+          if (incX > 0)
+          {
+            x = Mathf.Clamp(x, oldX, newX);
+            _cameraMovement.x = Mathf.Clamp(_cameraMovement.x, camX, newCamX);
+          }
+          else
+          {
+            x = Mathf.Clamp(x, newX, oldX);
+            _cameraMovement.x = Mathf.Clamp(_cameraMovement.x, newCamX, camX);
+          }
+
+          _cursorPosition.x = x;
+          Cursor.transform.position = _cursorPosition;
+          MainCamera.transform.position = _cameraMovement;
+
+          yield return null;
+        }
+
+        x = newX;
+        _cursorPosition.x = x;
+        Cursor.transform.position = _cursorPosition;
+
+        CursorSound.Play();
+      }
+  
+
+      if (incY != 0)
+      {
+        bool condY = (incY > 0) ? (y < newY) : (y > newY);
+
+        int signY = (incY < 0) ? -1 : 1;
+
+        while (condY)
+        {
+          condY = (incY > 0) ? (y < newY) : (y > newY);
+
+          y += signY * Time.smoothDeltaTime * _cursorSlideSpeed;
+
+          if (incY > 0)
+          {
+            y = Mathf.Clamp(y, oldY, newY);
+          }
+          else
+          {
+            y = Mathf.Clamp(y, newY, oldY);
+          }
+
+          _cursorPosition.y = y;
+          Cursor.transform.position = _cursorPosition;
+
+          yield return null;
+        }
+
+        y = newY;
+        _cursorPosition.y = y;
+        Cursor.transform.position = _cursorPosition;
+
+        CursorSound.Play();
+      }
+    }
+
+    _working = false;
+
+    yield return null;
   }
 
   void HandleKeyDown()
@@ -135,9 +261,9 @@ public class LoadLevel : MonoBehaviour
 
       if (_repeatTimer > _delayValue)
       {
-        _delayValue = GlobalConstants.CursorRepeatDelay;
+        //_delayValue = GlobalConstants.CursorRepeatDelay;
         MoveCursor(-1, 1);
-        _repeatTimer = 0.0f;
+        //_repeatTimer = 0.0f;
       }
     }
     else if (_keyHoldStatuses[KeyCode.RightArrow] && _keyHoldStatuses[KeyCode.UpArrow])
@@ -146,9 +272,9 @@ public class LoadLevel : MonoBehaviour
 
       if (_repeatTimer > _delayValue)
       {
-        _delayValue = GlobalConstants.CursorRepeatDelay;
+        //_delayValue = GlobalConstants.CursorRepeatDelay;
         MoveCursor(1, 1);
-        _repeatTimer = 0.0f;
+        //_repeatTimer = 0.0f;
       }
     }
     else if (_keyHoldStatuses[KeyCode.LeftArrow] && _keyHoldStatuses[KeyCode.DownArrow])
@@ -157,9 +283,9 @@ public class LoadLevel : MonoBehaviour
 
       if (_repeatTimer > _delayValue)
       {
-        _delayValue = GlobalConstants.CursorRepeatDelay;
+        //_delayValue = GlobalConstants.CursorRepeatDelay;
         MoveCursor(-1, -1);
-        _repeatTimer = 0.0f;
+        //_repeatTimer = 0.0f;
       }
     }
     else if (_keyHoldStatuses[KeyCode.RightArrow] && _keyHoldStatuses[KeyCode.DownArrow])
@@ -168,9 +294,9 @@ public class LoadLevel : MonoBehaviour
 
       if (_repeatTimer > _delayValue)
       {
-        _delayValue = GlobalConstants.CursorRepeatDelay;
+        //_delayValue = GlobalConstants.CursorRepeatDelay;
         MoveCursor(1, -1);
-        _repeatTimer = 0.0f;
+        //_repeatTimer = 0.0f;
       }
     }
     else if (_keyHoldStatuses[KeyCode.LeftArrow])
@@ -179,9 +305,9 @@ public class LoadLevel : MonoBehaviour
 
       if (_repeatTimer > _delayValue)
       {
-        _delayValue = GlobalConstants.CursorRepeatDelay;
+        //_delayValue = GlobalConstants.CursorRepeatDelay;
         MoveCursor(-1, 0);
-        _repeatTimer = 0.0f;
+        //_repeatTimer = 0.0f;
       }
     }
     else if (_keyHoldStatuses[KeyCode.RightArrow])
@@ -190,9 +316,9 @@ public class LoadLevel : MonoBehaviour
 
       if (_repeatTimer > _delayValue)
       {
-        _delayValue = GlobalConstants.CursorRepeatDelay;
+        //_delayValue = GlobalConstants.CursorRepeatDelay;
         MoveCursor(1, 0);
-        _repeatTimer = 0.0f;
+        //_repeatTimer = 0.0f;
       }
     }
     else if (_keyHoldStatuses[KeyCode.UpArrow])
@@ -201,9 +327,9 @@ public class LoadLevel : MonoBehaviour
 
       if (_repeatTimer > _delayValue)
       {
-        _delayValue = GlobalConstants.CursorRepeatDelay;
+        //_delayValue = GlobalConstants.CursorRepeatDelay;
         MoveCursor(0, 1);
-        _repeatTimer = 0.0f;
+        //_repeatTimer = 0.0f;
       }
     }
     else if (_keyHoldStatuses[KeyCode.DownArrow])
@@ -212,9 +338,9 @@ public class LoadLevel : MonoBehaviour
 
       if (_repeatTimer > _delayValue)
       {
-        _delayValue = GlobalConstants.CursorRepeatDelay;
+        //_delayValue = GlobalConstants.CursorRepeatDelay;
         MoveCursor(0, -1);
-        _repeatTimer = 0.0f;
+        //_repeatTimer = 0.0f;
       }
     }
   }
@@ -313,7 +439,7 @@ public class LoadLevel : MonoBehaviour
     }
 
     HandleKeyRepeat();
-    ControlCamera();
+    //ControlCamera();
   }
 
   void CheckCursorBounds()
