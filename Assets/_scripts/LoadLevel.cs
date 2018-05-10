@@ -97,17 +97,9 @@ public class LoadLevel : MonoBehaviour
       _working = true;
       StartCoroutine(MoveCursorRoutine(incX, incY));
     }
-
-    /*
-    _cursorPosition.x += incX;
-    _cursorPosition.y += incY;
-
-    CheckCursorBounds();
-    */
   }
 
   float _cursorSlideSpeed = 0.0f;
-
   IEnumerator MoveCursorRoutine(int incX, int incY)
   {
     _cursorSlideSpeed = _cursorTurboMode ? GlobalConstants.CursorSlideSpeed * 2.0f : GlobalConstants.CursorSlideSpeed;
@@ -132,7 +124,78 @@ public class LoadLevel : MonoBehaviour
 
     if (incX != 0 && incY != 0)
     {
-      
+      bool condX = (incX > 0) ? (x < newX) : (x > newX);
+      bool condY = (incY > 0) ? (y < newY) : (y > newY);
+
+      int signX = (incX < 0) ? -1 : 1;
+      int signY = (incY < 0) ? -1 : 1;
+
+      while (condX && condY)
+      {
+        condX = (incX > 0) ? (x < newX) : (x > newX);
+        condY = (incY > 0) ? (y < newY) : (y > newY);
+
+        x += signX * Time.deltaTime * _cursorSlideSpeed;
+        y += signY * Time.deltaTime * _cursorSlideSpeed;
+
+        if (dx > GlobalConstants.EdgeScrollX)
+        {
+          _cameraMovement.x -= Time.deltaTime * _cursorSlideSpeed;
+        }
+        else if (dx < -GlobalConstants.EdgeScrollX)
+        {
+          _cameraMovement.x += Time.deltaTime * _cursorSlideSpeed;
+        }
+
+        if (dy > GlobalConstants.EdgeScrollY)
+        {
+          _cameraMovement.y -= Time.deltaTime * _cursorSlideSpeed;
+        }
+        else if (dy < -GlobalConstants.EdgeScrollY)
+        {
+          _cameraMovement.y += Time.deltaTime * _cursorSlideSpeed;
+        }
+
+        if (incY > 0)
+        {
+          y = Mathf.Clamp(y, oldY, newY);
+          _cameraMovement.y = Mathf.Clamp(_cameraMovement.y, camY, newCamY);
+        }
+        else
+        {
+          y = Mathf.Clamp(y, newY, oldY);
+          _cameraMovement.y = Mathf.Clamp(_cameraMovement.y, newCamY, camY);
+        }
+
+        if (incX > 0)
+        {
+          x = Mathf.Clamp(x, oldX, newX);
+          _cameraMovement.x = Mathf.Clamp(_cameraMovement.x, camX, newCamX);
+        }
+        else
+        {
+          x = Mathf.Clamp(x, newX, oldX);
+          _cameraMovement.x = Mathf.Clamp(_cameraMovement.x, newCamX, camX);
+        }
+
+        _cursorPosition.x = x;
+        _cursorPosition.y = y;
+
+        Cursor.transform.position = _cursorPosition;
+        MainCamera.transform.position = _cameraMovement;
+
+        yield return null;
+      }
+
+      x = newX;
+      y = newY;
+
+      _cursorPosition.x = x;
+      _cursorPosition.y = y;
+
+      Cursor.transform.position = _cursorPosition;
+
+      CursorSound.Play();
     }
     else
     {
@@ -180,8 +243,7 @@ public class LoadLevel : MonoBehaviour
         Cursor.transform.position = _cursorPosition;
 
         CursorSound.Play();
-      }
-  
+      }  
 
       if (incY != 0)
       {
@@ -273,9 +335,7 @@ public class LoadLevel : MonoBehaviour
 
       if (_repeatTimer > _delayValue)
       {
-        //_delayValue = GlobalConstants.CursorRepeatDelay;
         MoveCursor(-1, 1);
-        //_repeatTimer = 0.0f;
       }
     }
     else if (_keyHoldStatuses[KeyCode.RightArrow] && _keyHoldStatuses[KeyCode.UpArrow])
@@ -284,9 +344,7 @@ public class LoadLevel : MonoBehaviour
 
       if (_repeatTimer > _delayValue)
       {
-        //_delayValue = GlobalConstants.CursorRepeatDelay;
         MoveCursor(1, 1);
-        //_repeatTimer = 0.0f;
       }
     }
     else if (_keyHoldStatuses[KeyCode.LeftArrow] && _keyHoldStatuses[KeyCode.DownArrow])
@@ -295,9 +353,7 @@ public class LoadLevel : MonoBehaviour
 
       if (_repeatTimer > _delayValue)
       {
-        //_delayValue = GlobalConstants.CursorRepeatDelay;
         MoveCursor(-1, -1);
-        //_repeatTimer = 0.0f;
       }
     }
     else if (_keyHoldStatuses[KeyCode.RightArrow] && _keyHoldStatuses[KeyCode.DownArrow])
@@ -306,9 +362,7 @@ public class LoadLevel : MonoBehaviour
 
       if (_repeatTimer > _delayValue)
       {
-        //_delayValue = GlobalConstants.CursorRepeatDelay;
         MoveCursor(1, -1);
-        //_repeatTimer = 0.0f;
       }
     }
     else if (_keyHoldStatuses[KeyCode.LeftArrow])
@@ -317,9 +371,7 @@ public class LoadLevel : MonoBehaviour
 
       if (_repeatTimer > _delayValue)
       {
-        //_delayValue = GlobalConstants.CursorRepeatDelay;
         MoveCursor(-1, 0);
-        //_repeatTimer = 0.0f;
       }
     }
     else if (_keyHoldStatuses[KeyCode.RightArrow])
@@ -328,9 +380,7 @@ public class LoadLevel : MonoBehaviour
 
       if (_repeatTimer > _delayValue)
       {
-        //_delayValue = GlobalConstants.CursorRepeatDelay;
         MoveCursor(1, 0);
-        //_repeatTimer = 0.0f;
       }
     }
     else if (_keyHoldStatuses[KeyCode.UpArrow])
@@ -339,9 +389,7 @@ public class LoadLevel : MonoBehaviour
 
       if (_repeatTimer > _delayValue)
       {
-        //_delayValue = GlobalConstants.CursorRepeatDelay;
         MoveCursor(0, 1);
-        //_repeatTimer = 0.0f;
       }
     }
     else if (_keyHoldStatuses[KeyCode.DownArrow])
@@ -350,78 +398,8 @@ public class LoadLevel : MonoBehaviour
 
       if (_repeatTimer > _delayValue)
       {
-        //_delayValue = GlobalConstants.CursorRepeatDelay;
         MoveCursor(0, -1);
-        //_repeatTimer = 0.0f;
       }
-    }
-  }
-
-  Vector3 _cameraScrollPos = Vector3.zero;
-  void ControlCamera()
-  {    
-    int cursorX = (int)_cursorPosition.x;
-    int cursorY = (int)_cursorPosition.y;
-    int camX = (int)MainCamera.transform.position.x;
-    int camY = (int)MainCamera.transform.position.y;
-
-    float scrollSpeed = _cursorTurboMode ? GlobalConstants.CameraEdgeScrollSpeed * 2.0f : GlobalConstants.CameraEdgeScrollSpeed;
-
-    if (camX - cursorX > GlobalConstants.EdgeScrollX && camY - cursorY < -GlobalConstants.EdgeScrollY)
-    {
-      _cameraScrollPos.Set(camX - 1, camY + 1, MainCamera.transform.position.z);
-      Vector3 res = Vector3.MoveTowards(_cameraMovement, _cameraScrollPos, Time.smoothDeltaTime * scrollSpeed);
-      _cameraMovement = res;
-      MainCamera.transform.position = _cameraMovement;
-    }
-    else if (camX - cursorX < -GlobalConstants.EdgeScrollX && camY - cursorY < -GlobalConstants.EdgeScrollY)
-    {
-      _cameraScrollPos.Set(camX + 1, camY + 1, MainCamera.transform.position.z);
-      Vector3 res = Vector3.MoveTowards(_cameraMovement, _cameraScrollPos, Time.smoothDeltaTime * scrollSpeed);
-      _cameraMovement = res;
-      MainCamera.transform.position = _cameraMovement;
-    }
-    else if (camX - cursorX > GlobalConstants.EdgeScrollX && camY - cursorY > GlobalConstants.EdgeScrollY)
-    {
-      _cameraScrollPos.Set(camX - 1, camY - 1, MainCamera.transform.position.z);
-      Vector3 res = Vector3.MoveTowards(_cameraMovement, _cameraScrollPos, Time.smoothDeltaTime * scrollSpeed);
-      _cameraMovement = res;
-      MainCamera.transform.position = _cameraMovement;
-    }
-    else if (camX - cursorX < -GlobalConstants.EdgeScrollX && camY - cursorY > GlobalConstants.EdgeScrollY)
-    {
-      _cameraScrollPos.Set(camX + 1, camY - 1, MainCamera.transform.position.z);
-      Vector3 res = Vector3.MoveTowards(_cameraMovement, _cameraScrollPos, Time.smoothDeltaTime * scrollSpeed);
-      _cameraMovement = res;
-      MainCamera.transform.position = _cameraMovement;
-    }
-    else if (camX - cursorX > GlobalConstants.EdgeScrollX)
-    {
-      _cameraScrollPos.Set(camX - 1, camY, MainCamera.transform.position.z);
-      Vector3 res = Vector3.MoveTowards(_cameraMovement, _cameraScrollPos, Time.smoothDeltaTime * scrollSpeed);
-      _cameraMovement = res;
-      MainCamera.transform.position = _cameraMovement;
-    }
-    else if (camX - cursorX < -GlobalConstants.EdgeScrollX)
-    {
-      _cameraScrollPos.Set(camX + 1, camY, MainCamera.transform.position.z);
-      Vector3 res = Vector3.MoveTowards(_cameraMovement, _cameraScrollPos, Time.smoothDeltaTime * scrollSpeed);
-      _cameraMovement = res;
-      MainCamera.transform.position = _cameraMovement;
-    }
-    else if (camY - cursorY < -GlobalConstants.EdgeScrollY)
-    {
-      _cameraScrollPos.Set(camX, camY + 1, MainCamera.transform.position.z);
-      Vector3 res = Vector3.MoveTowards(_cameraMovement, _cameraScrollPos, Time.smoothDeltaTime * scrollSpeed);
-      _cameraMovement = res;
-      MainCamera.transform.position = _cameraMovement;
-    }
-    else if (camY - cursorY > GlobalConstants.EdgeScrollY)
-    {
-      _cameraScrollPos.Set(camX, camY - 1, MainCamera.transform.position.z);
-      Vector3 res = Vector3.MoveTowards(_cameraMovement, _cameraScrollPos, Time.smoothDeltaTime * scrollSpeed);
-      _cameraMovement = res;
-      MainCamera.transform.position = _cameraMovement;
     }
   }
 
@@ -451,21 +429,6 @@ public class LoadLevel : MonoBehaviour
     }
 
     HandleKeyRepeat();
-    //ControlCamera();
-  }
-
-  void CheckCursorBounds()
-  {
-    _cursorPosition.x = Mathf.Clamp(_cursorPosition.x, 0, _mapSizeX - 1);
-    _cursorPosition.y = Mathf.Clamp(_cursorPosition.y, 0, _mapSizeY - 1);
-
-    if ((int)_cursorPosition.x != (int)Cursor.position.x 
-     || (int)_cursorPosition.y != (int)Cursor.position.y)
-    {
-      CursorSound.Play();
-    }
-
-    Cursor.position = _cursorPosition;
   }
 
   void DestroyChildren(Transform t)
