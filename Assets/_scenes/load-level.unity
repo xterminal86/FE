@@ -232,6 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 517961189}
   - component: {fileID: 517961188}
+  - component: {fileID: 517961190}
   m_Layer: 0
   m_Name: cursor
   m_TagString: Untagged
@@ -298,6 +299,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &517961190
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 517961187}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 895ec6b292bcb874caee1cb3ff5dd16d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &792718485
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +410,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CursorSound: {fileID: 493476062}
-  CursorSoundRepeating: {fileID: 0}
   MainCamera: {fileID: 792718488}
   MapHolder: {fileID: 1319699350}
   Cursor: {fileID: 517961189}
