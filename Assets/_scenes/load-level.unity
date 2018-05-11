@@ -754,6 +754,9 @@ MonoBehaviour:
   MainCamera: {fileID: 792718488}
   MapHolder: {fileID: 1319699350}
   Cursor: {fileID: 517961189}
+  TileInfoSprite: {fileID: 267243652}
+  TileName: {fileID: 1190192493}
+  TileDetails: {fileID: 408299807}
 --- !u!1 &922931595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,7 +1187,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 1
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0

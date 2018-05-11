@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class LoadLevel : MonoBehaviour 
 {
@@ -11,6 +12,9 @@ public class LoadLevel : MonoBehaviour
   public Camera MainCamera;
   public Transform MapHolder;
   public Transform Cursor;
+  public Image TileInfoSprite;
+  public TMP_Text TileName;
+  public TMP_Text TileDetails;
 
   TileObject[,] _map;
 
@@ -40,6 +44,8 @@ public class LoadLevel : MonoBehaviour
     _keyHoldStatuses[KeyCode.RightArrow] = false;
     _keyHoldStatuses[KeyCode.UpArrow] = false;
     _keyHoldStatuses[KeyCode.DownArrow] = false;
+
+    UpdateTileInfo();
   }
 
   void LoadMap(string path)
@@ -119,11 +125,25 @@ public class LoadLevel : MonoBehaviour
     float newX = _cursorPosition.x + incX;
     float newY = _cursorPosition.y + incY;
 
+    var boundsCheckRes = CheckBounds((int)newX, (int)newY);
+
+    if (boundsCheckRes.x != 0)
+    {
+      incX = 0;
+    }
+
+    if (boundsCheckRes.y != 0)
+    {
+      incY = 0;
+    }
+
     int dx = (int)camX - (int)newX;
     int dy = (int)camY - (int)newY;
 
     if (incX != 0 && incY != 0)
     {
+      // Diagonal cursor movement
+
       bool condX = (incX > 0) ? (x < newX) : (x > newX);
       bool condY = (incY > 0) ? (y < newY) : (y > newY);
 
@@ -199,6 +219,8 @@ public class LoadLevel : MonoBehaviour
     }
     else
     {
+      // Horizontal and vertical cursor movement
+
       if (incX != 0)
       {      
         bool condX = (incX > 0) ? (x < newX) : (x > newX);
@@ -292,36 +314,54 @@ public class LoadLevel : MonoBehaviour
       }
     }
 
+    UpdateTileInfo();
+
     _working = false;
 
     yield return null;
   }
 
   void HandleKeyDown()
-  {
+  {    
     if (Input.GetKeyDown(KeyCode.LeftArrow))
     {
-      _repeatTimer = 0.0f;
       MoveCursor(-1, 0);
       _delayValue = GlobalConstants.CursorDelayBeforeRepeat;
     }
     else if (Input.GetKeyDown(KeyCode.RightArrow))
     {
-      _repeatTimer = 0.0f;
       MoveCursor(1, 0);
       _delayValue = GlobalConstants.CursorDelayBeforeRepeat;
     }
     else if (Input.GetKeyDown(KeyCode.UpArrow))
     {
-      _repeatTimer = 0.0f;
       MoveCursor(0, 1);
       _delayValue = GlobalConstants.CursorDelayBeforeRepeat;
     }
     else if (Input.GetKeyDown(KeyCode.DownArrow))
     {
-      _repeatTimer = 0.0f;
       MoveCursor(0, -1);
       _delayValue = GlobalConstants.CursorDelayBeforeRepeat;
+    }
+  }
+
+  void HandleKeyUp()
+  {
+    if (Input.GetKeyUp(KeyCode.LeftArrow))
+    {
+      _repeatTimer = 0.0f;
+    }
+    else if (Input.GetKeyUp(KeyCode.RightArrow))
+    {
+      _repeatTimer = 0.0f;
+    }
+    else if (Input.GetKeyUp(KeyCode.UpArrow))
+    {
+      _repeatTimer = 0.0f;
+    }
+    else if (Input.GetKeyUp(KeyCode.DownArrow))
+    {
+      _repeatTimer = 0.0f;
     }
   }
 
@@ -415,7 +455,7 @@ public class LoadLevel : MonoBehaviour
 
     if (_cursorTurboMode)
     {
-      _delayValue = GlobalConstants.CursorRepeatDelay * 0.1f;
+      _delayValue = 0.0f;
     }
   }
 
@@ -426,9 +466,38 @@ public class LoadLevel : MonoBehaviour
     if (!_cursorTurboMode)
     {
       HandleKeyDown();
+      HandleKeyUp();
     }
 
     HandleKeyRepeat();
+  }
+
+  Vector2Int _checkBoundsResult = Vector2Int.zero;
+  Vector2Int CheckBounds(int x, int y)
+  {
+    int resX = (x < 0 || x > _mapSizeX - 1) ? 1 : 0;
+    int resY = (y < 0 || y > _mapSizeY - 1) ? 1 : 0;
+
+    _checkBoundsResult.Set(resX, resY);
+
+    return _checkBoundsResult;
+  }
+
+  Vector3 _tileInfoScale = Vector3.zero;
+  void UpdateTileInfo()
+  {
+    int mx = (int)Cursor.transform.position.x;
+    int my = (int)Cursor.transform.position.y;
+
+    bool flipX = _map[mx, my].Sprites[_map[mx, my].Sprites.Count - 1].flipX;
+    bool flipY = _map[mx, my].Sprites[_map[mx, my].Sprites.Count - 1].flipY;
+
+    _tileInfoScale.Set(flipX ? -1.0f : 1.0f, flipY ? -1.0f : 1.0f, 1.0f);
+
+    TileInfoSprite.sprite = _map[mx, my].Sprites[_map[mx, my].Sprites.Count - 1].sprite;
+    TileInfoSprite.rectTransform.localScale = _tileInfoScale;
+    TileDetails.text = string.Format("D:{0} E:{1}", _map[mx, my].DefenceModifier, _map[mx, my].EvasionModifier);
+    TileName.text = _map[mx, my].InGameDescription;
   }
 
   void DestroyChildren(Transform t)
