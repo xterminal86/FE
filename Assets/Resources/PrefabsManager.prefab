@@ -51,17 +51,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f937c2e642450f4b9170e701693c78f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefabs:
+  TileBasePrefab: {fileID: 1291152045419358, guid: 648e16b85374c204aaaf175e21614019,
+    type: 2}
+  PrefabsLayer1:
   - {fileID: 1309173339869430, guid: 96454dd4c914bb04a9255c1b06f9b859, type: 2}
   - {fileID: 1442443320155528, guid: 9eae449b1e2d7324e9372727eaa99541, type: 2}
   - {fileID: 1492531636897390, guid: ca3674998cd850c459bcd7b97b290ed1, type: 2}
-  - {fileID: 1098874164938946, guid: d0b2965a707fe3c409dceecf9f6eec16, type: 2}
-  - {fileID: 1069234165185114, guid: 092ea627ec201a84aaea82d045946839, type: 2}
-  - {fileID: 1985502560717610, guid: 99b01a31bd246e84094d25a691fef920, type: 2}
-  - {fileID: 1966333526543928, guid: 69693844b9f67d74e93e77a83effb9d3, type: 2}
   - {fileID: 1001214775547648, guid: e8d34bf42c3b6ba42aa12f1c0c82f111, type: 2}
   - {fileID: 1491733500395252, guid: ce5ac899fdd631740a6d5706ab744c52, type: 2}
   - {fileID: 1090528003453366, guid: 47b9e7d655668e545a5293519d916b23, type: 2}
+  - {fileID: 1226011094147378, guid: 21ffb0deb94e0ad4b8400ed5bd3221af, type: 2}
+  - {fileID: 1923193806325390, guid: 18730467bb1c9b440bd5b6c1969f4d1e, type: 2}
+  PrefabsLayer2:
+  - {fileID: 1016377834677672, guid: 6f6a938f489ec2f4fbf2c85651105b76, type: 2}
+  - {fileID: 1722711083591158, guid: db3ca2536cef48740b3e0905bef8d314, type: 2}
   - {fileID: 1399502230438884, guid: 4ea035952e1ff70468ea7ede05f6f4c9, type: 2}
   - {fileID: 1400883811263554, guid: 3c3d7874ad74e534a94554eb65c09d39, type: 2}
   - {fileID: 1180589408585676, guid: b69eebaae2a78264aac9eb131724b304, type: 2}
@@ -70,5 +73,3 @@ MonoBehaviour:
   - {fileID: 1217088491726136, guid: db6e244fae405ef419729128c0fc87fd, type: 2}
   - {fileID: 1227971208951562, guid: b7c11edecfff53549ae8fc903447ea5e, type: 2}
   - {fileID: 1252883709180854, guid: 044ea21d74461ff4a8315ef482d7a36a, type: 2}
-  - {fileID: 1226011094147378, guid: 21ffb0deb94e0ad4b8400ed5bd3221af, type: 2}
-  - {fileID: 1923193806325390, guid: 18730467bb1c9b440bd5b6c1969f4d1e, type: 2}

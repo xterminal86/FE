@@ -15,32 +15,38 @@ public class PrefabsManagerInspector : Editor
 
     if (pm == null) return;
         
-    string searchPath = "Assets/_prefabs/to-instantiate";
+    string searchPathLayer1 = "Assets/_prefabs/ground-tiles";
+    string searchPathLayer2 = "Assets/_prefabs/objects";
+
+    pm.TileBasePrefab = (GameObject)EditorGUILayout.ObjectField("Tile Base Prefab", pm.TileBasePrefab, typeof(GameObject), false);
 
     if (GUILayout.Button("Generate Prefabs List"))
     {
-      pm.Prefabs.Clear();
-      
-      string[] dirs = Directory.GetDirectories(searchPath, "*", SearchOption.AllDirectories);
-      if (dirs.Length == 0)
-      {
-        LoadPrefabs(pm.Prefabs, searchPath);
-      }
-      else
-      {
-        for (int i = 0; i < dirs.Length; i++)
-        {
-          LoadPrefabs(pm.Prefabs, dirs[i]);
-        }
-      }
+      LoadPrefabs(pm.PrefabsLayer1, searchPathLayer1);
+      LoadPrefabs(pm.PrefabsLayer2, searchPathLayer2);
     }
 
-    if (pm.Prefabs.Count != 0)
+    EditorGUILayout.HelpBox(searchPathLayer1, MessageType.Info);
+    PrintPrefabsList(pm.PrefabsLayer1);
+    EditorGUILayout.TextArea("", GUI.skin.horizontalSlider);
+    EditorGUILayout.HelpBox(searchPathLayer2, MessageType.Info);
+    PrintPrefabsList(pm.PrefabsLayer2);
+
+    if (GUI.changed)
+    {
+      EditorUtility.SetDirty(pm);
+      AssetDatabase.SaveAssets();
+    }
+  }
+
+  void PrintPrefabsList(List<GameObject> listToPrint)
+  {
+    if (listToPrint.Count != 0)
     {
       _prefabsList = string.Empty;
 
       int counter = 0;
-      foreach (var item in pm.Prefabs)
+      foreach (var item in listToPrint)
       {
         if (item != null)
         {
@@ -51,16 +57,12 @@ public class PrefabsManagerInspector : Editor
 
       EditorGUILayout.HelpBox(_prefabsList, MessageType.None);
     }
-
-    if (GUI.changed)
-    {
-      EditorUtility.SetDirty(pm);
-      AssetDatabase.SaveAssets();
-    }
   }
 
   void LoadPrefabs(List<GameObject> listToAdd, string path)
   {
+    listToAdd.Clear();
+
     string[] array = Directory.GetFiles(path, "*.prefab");
     
     for (int j = 0; j < array.Length; j++)

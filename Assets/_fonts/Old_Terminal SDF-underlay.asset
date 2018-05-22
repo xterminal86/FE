@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -667331979, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
-  m_Name: Old_Terminal SDF
+  m_Name: Old_Terminal SDF-underlay
   m_EditorClassIdentifier: 
-  hashCode: -1593893587
+  hashCode: 1229897468
   material: {fileID: 21379533378278750}
   materialHashCode: 1207538694
   fontAssetType: 1
@@ -977,7 +977,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Old_Terminal SDF Material
   m_Shader: {fileID: 4800000, guid: dca26082f9cb439469295791d9f76fe5, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: UNDERLAY_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0

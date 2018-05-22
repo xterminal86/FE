@@ -13,6 +13,7 @@ public class GameEditor : MonoBehaviour
   public Image TileInfoSprite;
   public TMP_Text TileDetails;
   public TMP_Text TileName;
+  public TMP_Text CurrentLayer;
 
   public Camera MainCamera;
 
@@ -22,7 +23,7 @@ public class GameEditor : MonoBehaviour
   public int MapSizeX = 16;
   public int MapSizeY = 16;
 
-  TileObject[,] _map;
+  TileBase[,] _map;
 
   SerializedMap _levelToSave;
 
@@ -30,24 +31,25 @@ public class GameEditor : MonoBehaviour
   {
     PrefabsManager.Instance.Initialize();
 
-    _map = new TileObject[MapSizeX, MapSizeY];
+    _map = new TileBase[MapSizeX, MapSizeY];
 
     for (int x = 0; x < MapSizeX; x++)
     {
       for (int y = 0; y < MapSizeY; y++)
       {
-        var go = Instantiate(PrefabsManager.Instance.Prefabs[0], new Vector3(x, y, 0.0f), Quaternion.identity, MapHolder);
-        TileObject to = go.GetComponent<TileObject>();
+        var go = Instantiate(PrefabsManager.Instance.TileBasePrefab, new Vector3(x, y, 0.0f), Quaternion.identity, MapHolder);
+        TileBase to = go.GetComponent<TileBase>();
         _map[x, y] = to;
-        _map[x, y].PrefabName = PrefabsManager.Instance.Prefabs[0].name;
-        _map[x, y].IndexInPrefabsManager = 0;
+        var l1 = Instantiate(PrefabsManager.Instance.PrefabsLayer1[0], new Vector3(x, y, 0.0f), Quaternion.identity, go.transform);
+        to.TileObjectLayer1 = l1.GetComponent<TileObject>();
+        to.TileObjectLayer1.PrefabName = PrefabsManager.Instance.PrefabsLayer1[0].name;
       }
     }
 
     _cameraMovement = new Vector3(MapSizeX / 2, MapSizeY / 2, MainCamera.transform.position.z);
 
-    _previewObject = Instantiate(PrefabsManager.Instance.Prefabs[0]);
-
+    _previewObject = Instantiate(PrefabsManager.Instance.PrefabsLayer1[0]);
+    _previewObject.name = _previewObject.name.Replace("(Clone)", "") + "-preview";
     Util.SetGameObjectLayer(_previewObject, LayerMask.NameToLayer("Preview"), true);
   }
 
@@ -81,10 +83,23 @@ public class GameEditor : MonoBehaviour
     MainCamera.transform.position = _cameraMovement;
   }
 
+  int _objectsLayer = 0;
   int _selectedTileIndex = 0;
   void SelectTile()
   {
     int oldIndex = _selectedTileIndex;
+    int oldLayer = _objectsLayer;
+
+    if (Input.GetKeyDown(KeyCode.Alpha1))
+    {
+      _objectsLayer = 0;
+    }
+    else if (Input.GetKeyDown(KeyCode.Alpha2))
+    {
+      _objectsLayer = 1;
+    }
+
+    var prefabsList = (_objectsLayer == 0) ? PrefabsManager.Instance.PrefabsLayer1 : PrefabsManager.Instance.PrefabsLayer2;
 
     float mouseWheel = Input.GetAxis("Mouse ScrollWheel");
 
@@ -97,32 +112,34 @@ public class GameEditor : MonoBehaviour
       _selectedTileIndex++;
     }
 
-    _selectedTileIndex = Mathf.Clamp(_selectedTileIndex, 0, PrefabsManager.Instance.Prefabs.Count - 1);
+    _selectedTileIndex = Mathf.Clamp(_selectedTileIndex, 0, prefabsList.Count - 1);
 
-    if (oldIndex != _selectedTileIndex)
+    if (oldIndex != _selectedTileIndex || oldLayer != _objectsLayer)
     {
       Destroy(_previewObject.gameObject);
-      _previewObject = Instantiate(PrefabsManager.Instance.Prefabs[_selectedTileIndex]);
+      _previewObject = Instantiate(prefabsList[_selectedTileIndex]);
+      _previewObject.name = _previewObject.name.Replace("(Clone)", "") + "-preview";
+      _previewObject.GetComponent<TileObject>().PrefabName = prefabsList[_selectedTileIndex].name;
       Util.SetGameObjectLayer(_previewObject, LayerMask.NameToLayer("Preview"), true);
     }
   }
 
   Queue<Vector2Int> _fillQueue = new Queue<Vector2Int>();
-  void FillMap(int replacement)
+  void FillMap()
   {
     int cx = (int)Cursor.transform.position.x;
     int cy = (int)Cursor.transform.position.y;
 
-    int target = _map[cx, cy].IndexInPrefabsManager;
+    string target = _map[cx, cy].TileObjectLayer1.PrefabName;
 
-    if (target == replacement)
+    if (target == _previewObject.GetComponent<TileObject>().PrefabName)
     {
       return;
     }
 
     _fillQueue.Clear();
 
-    PlaceSelectedTile(new Vector3(cx, cy, cy));
+    PlaceSelectedObject(new Vector3(cx, cy, cy));
 
     _fillQueue.Enqueue(new Vector2Int(cx, cy));
 
@@ -143,27 +160,27 @@ public class GameEditor : MonoBehaviour
       int ly = node.y - 1;
       int hy = node.y + 1;
 
-      if (lx >= 0 && _map[lx, node.y].IndexInPrefabsManager == target)
+      if (lx >= 0 && _map[lx, node.y].TileObjectLayer1.PrefabName == target)
       {
-        PlaceSelectedTile(new Vector3(lx, node.y, node.y));
+        PlaceSelectedObject(new Vector3(lx, node.y, node.y));
         _fillQueue.Enqueue(new Vector2Int(lx, node.y));
       }
 
-      if (ly >= 0 && _map[node.x, ly].IndexInPrefabsManager == target)
+      if (ly >= 0 && _map[node.x, ly].TileObjectLayer1.PrefabName == target)
       {
-        PlaceSelectedTile(new Vector3(node.x, ly, ly));
+        PlaceSelectedObject(new Vector3(node.x, ly, ly));
         _fillQueue.Enqueue(new Vector2Int(node.x, ly));
       }
 
-      if (hx < MapSizeX && _map[hx, node.y].IndexInPrefabsManager == target)
+      if (hx < MapSizeX && _map[hx, node.y].TileObjectLayer1.PrefabName == target)
       {
-        PlaceSelectedTile(new Vector3(hx, node.y, node.y));
+        PlaceSelectedObject(new Vector3(hx, node.y, node.y));
         _fillQueue.Enqueue(new Vector2Int(hx, node.y));
       }
 
-      if (hy < MapSizeX && _map[node.x, hy].IndexInPrefabsManager == target)
+      if (hy < MapSizeX && _map[node.x, hy].TileObjectLayer1.PrefabName == target)
       {
-        PlaceSelectedTile(new Vector3(node.x, hy, hy));
+        PlaceSelectedObject(new Vector3(node.x, hy, hy));
         _fillQueue.Enqueue(new Vector2Int(node.x, hy));
       }
 
@@ -176,12 +193,11 @@ public class GameEditor : MonoBehaviour
     int mx = (int)Cursor.transform.position.x;
     int my = (int)Cursor.transform.position.y;
 
-    if (_map[mx, my] != null)
-    {
-      TileInfoSprite.sprite = _map[mx, my].Sprites[_map[mx, my].Sprites.Count - 1].sprite;
-      TileDetails.text = string.Format("D:{0} E:{1}", _map[mx, my].DefenceModifier, _map[mx, my].EvasionModifier);
-      TileName.text = _map[mx, my].InGameDescription;
-    }
+    var tileObject = (_map[mx, my].TileObjectLayer2 != null) ? _map[mx, my].TileObjectLayer2 : _map[mx, my].TileObjectLayer1;
+
+    TileInfoSprite.sprite = tileObject.TileSprite.sprite;
+    TileDetails.text = string.Format("D:{0} E:{1}", tileObject.DefenceModifier, tileObject.EvasionModifier);
+    TileName.text = tileObject.InGameDescription;
   }
 
   GameObject _previewObject;
@@ -192,6 +208,8 @@ public class GameEditor : MonoBehaviour
   {
     ControlCamera();
     SelectTile();
+
+    CurrentLayer.text = (_objectsLayer == 0) ? "Ground" : "Objects";
 
     Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
     int mask = LayerMask.GetMask("Default");
@@ -231,16 +249,16 @@ public class GameEditor : MonoBehaviour
 
         if (Input.GetMouseButton(0) && !isOverGui)
         {
-          PlaceSelectedTile(Cursor.transform.position);
+          PlaceSelectedObject(Cursor.transform.position);
         }
         else if (Input.GetMouseButton(1) && !isOverGui)
         {
-          PlaceSelectedTile(Cursor.transform.position, true);
+          RemoveSelectedObject(Cursor.transform.position);
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-          FillMap(_selectedTileIndex);
+          FillMap();
         }
       }
 
@@ -258,54 +276,75 @@ public class GameEditor : MonoBehaviour
     int mx = (int)Cursor.transform.position.x;
     int my = (int)Cursor.transform.position.y;
 
-    if (_map[mx, my] != null)
+    var objectToPick = (_objectsLayer == 0) ? _map[mx, my].TileObjectLayer1 : _map[mx, my].TileObjectLayer2;
+
+    if (objectToPick != null)
     {
-      //int tileIndex = _map[mx, my].IndexInPrefabsManager;
-      var res = PrefabsManager.Instance.FindPrefabByName(_map[mx, my].PrefabName);
-
-      if (_selectedTileIndex != res.Key)
-      {
-        if (_previewObject != null)
-        {
-          Destroy(_previewObject.gameObject);
-        }
-
-        _previewObject = Instantiate(PrefabsManager.Instance.Prefabs[res.Key], Cursor.transform.position, Quaternion.identity);
-        Util.SetGameObjectLayer(_previewObject, LayerMask.NameToLayer("Preview"), true);
-
-        _selectedTileIndex = res.Key;
-      }
+      Destroy(_previewObject.gameObject);
+      _previewObject = Instantiate(objectToPick.gameObject, Cursor.transform.position, Quaternion.identity);
+      _previewObject.name = objectToPick.name.Replace("(Clone)", "");
+      Util.SetGameObjectLayer(_previewObject, LayerMask.NameToLayer("Preview"), true);
     }
   }
 
-  void PlaceSelectedTile(Vector3 placementPos, bool erase = false)
-  {    
+  void PlaceSelectedObject(Vector3 placementPos)
+  { 
     // Objects are Z sorted using Y coordinate
 
     Vector3 pos = new Vector3(placementPos.x, 
                               placementPos.y, 
                               placementPos.y);
-    
+
     int posX = (int)placementPos.x;
     int posY = (int)placementPos.y;
 
-    if (_map[posX, posY] != null)
-    {
-      Destroy(_map[posX, posY].gameObject);
-      _map[posX, posY] = null;
-    }
-
-    var objectToPlace = erase ? PrefabsManager.Instance.Prefabs[0] : _previewObject;
-
-    var go = Instantiate(objectToPlace, pos, Quaternion.identity, MapHolder);         
+    var go = Instantiate(_previewObject, pos, Quaternion.identity, _map[posX, posY].transform);         
     Util.SetGameObjectLayer(go, LayerMask.NameToLayer("Default"), true);
-    _map[posX, posY] = go.GetComponent<TileObject>();
-    _map[posX, posY].PrefabName = PrefabsManager.Instance.Prefabs[_selectedTileIndex].name;
-    _map[posX, posY].IndexInPrefabsManager = _selectedTileIndex;
+
+    if (_objectsLayer == 0)
+    {
+      Destroy(_map[posX, posY].TileObjectLayer1.gameObject);
+      _map[posX, posY].TileObjectLayer1 = go.GetComponent<TileObject>();
+      _map[posX, posY].TileObjectLayer1.PrefabName = go.GetComponent<TileObject>().PrefabName;
+    }
+    else if (_objectsLayer == 1)
+    {
+      if (_map[posX, posY].TileObjectLayer2 != null)
+      {
+        Destroy(_map[posX, posY].TileObjectLayer2.gameObject);
+      }
+
+      _map[posX, posY].TileObjectLayer2 = go.GetComponent<TileObject>();
+    }
+  }
+
+  void RemoveSelectedObject(Vector3 placementPos)
+  {
+    // Objects are Z sorted using Y coordinate
+
+    Vector3 pos = new Vector3(placementPos.x, 
+                              placementPos.y, 
+                              placementPos.y);
+
+    int posX = (int)placementPos.x;
+    int posY = (int)placementPos.y;
+
+    if (_objectsLayer == 0)
+    {
+      Destroy(_map[posX, posY].TileObjectLayer1.gameObject);
+      var go = Instantiate(PrefabsManager.Instance.PrefabsLayer1[0], pos, Quaternion.identity, _map[posX, posY].transform);         
+      Util.SetGameObjectLayer(go, LayerMask.NameToLayer("Default"), true);
+      _map[posX, posY].TileObjectLayer1 = go.GetComponent<TileObject>();
+    }
+    else if (_objectsLayer == 1 && _map[posX, posY].TileObjectLayer2 != null)
+    {
+      Destroy(_map[posX, posY].TileObjectLayer2.gameObject);
+    }
   }
 
   void PrepareDataToSave(string path)
   {
+    /*
     _levelToSave = new SerializedMap();
 
     _levelToSave.Path = path;
@@ -316,7 +355,7 @@ public class GameEditor : MonoBehaviour
 
     foreach (Transform t in MapHolder)
     {
-      TileObject to = t.GetComponent<TileObject>();
+      TileBase to = t.GetComponent<TileBase>();
 
       SerializedTile st = new SerializedTile();
       st.CoordX = (int)to.transform.position.x;
@@ -332,6 +371,7 @@ public class GameEditor : MonoBehaviour
 
       _levelToSave.MapTiles.Add(st);
     }
+    */
   }
 
   public void SaveMapHandler()
@@ -350,6 +390,7 @@ public class GameEditor : MonoBehaviour
 
   void LoadLevel(string path)
   {
+    /*
     var formatter = new BinaryFormatter();  
     Stream stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);  
     _levelToSave = (SerializedMap)formatter.Deserialize(stream);  
@@ -360,7 +401,7 @@ public class GameEditor : MonoBehaviour
     MapSizeX = _levelToSave.MapSizeX;
     MapSizeY = _levelToSave.MapSizeY;
 
-    _map = new TileObject[MapSizeX, MapSizeY];
+    _map = new TileBase[MapSizeX, MapSizeY];
 
     foreach (var tile in _levelToSave.MapTiles)
     {
@@ -369,7 +410,7 @@ public class GameEditor : MonoBehaviour
       {
         var go = Instantiate(res.Value, new Vector3(tile.CoordX, tile.CoordY, tile.CoordY), Quaternion.identity, MapHolder);
 
-        TileObject to = go.GetComponent<TileObject>();
+        TileBase to = go.GetComponent<TileBase>();
         to.PrefabName = tile.PrefabName;
         to.IndexInPrefabsManager = res.Key;
         to.InGameDescription = tile.InGameDescription;
@@ -395,6 +436,7 @@ public class GameEditor : MonoBehaviour
         _map[x, y] = to;
       }
     }
+    */
   }
 
   public void LoadMapHandler()

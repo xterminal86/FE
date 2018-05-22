@@ -91,15 +91,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1399502230438884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd13d83c9e970bf4fac0d2d5670f7e93, type: 3}
+  m_Script: {fileID: 11500000, guid: eeb99b3d049c65f4db8ac1a1a172b5e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sprites:
-  - {fileID: 212791389662818574}
+  TileSprite: {fileID: 212791389662818574}
   InGameDescription: Wall
-  DefenceModifier: 1
-  EvasionModifier: 20
+  DefenceModifier: 0
+  EvasionModifier: 0
   MovementDifficulty: 0
+  IndexInPrefabsManager: -1
+  PrefabName: 
+  FlipFlagX: 0
+  FlipFlagY: 0
 --- !u!212 &212791389662818574
 SpriteRenderer:
   m_ObjectHideFlags: 1

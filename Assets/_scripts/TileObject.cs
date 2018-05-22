@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TileObject : MonoBehaviour 
 {
-  public List<SpriteRenderer> Sprites;
+  public SpriteRenderer TileSprite;
 
   public string InGameDescription;
 
@@ -28,17 +28,14 @@ public class TileObject : MonoBehaviour
 
   public void FlipX()
   {
-    foreach (var item in Sprites)
-    {
-      item.flipX = !item.flipX;
-    }
+    // We cannot put flag inversion in this method because it will also be called
+    // during loading, so to prevent flip flags corruption we handle them separately
+
+    TileSprite.flipX = !TileSprite.flipX;
   }
 
   public void FlipY()
   {
-    foreach (var item in Sprites)
-    {
-      item.flipY = !item.flipY;
-    }
+    TileSprite.flipY = !TileSprite.flipY;
   }
 }

@@ -16,7 +16,7 @@ public class LoadLevel : MonoBehaviour
   public TMP_Text TileName;
   public TMP_Text TileDetails;
 
-  TileObject[,] _map;
+  TileBase[,] _map;
 
   SerializedMap _level;
 
@@ -50,6 +50,7 @@ public class LoadLevel : MonoBehaviour
 
   void LoadMap(string path)
   {
+    /*
     var formatter = new BinaryFormatter();  
     Stream stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);  
     _level = (SerializedMap)formatter.Deserialize(stream);  
@@ -58,7 +59,7 @@ public class LoadLevel : MonoBehaviour
     _mapSizeX = _level.MapSizeX;
     _mapSizeY = _level.MapSizeY;
 
-    _map = new TileObject[_mapSizeX, _mapSizeY];
+    _map = new TileBase[_mapSizeX, _mapSizeY];
 
     foreach (var tile in _level.MapTiles)
     {
@@ -67,7 +68,7 @@ public class LoadLevel : MonoBehaviour
       {
         var go = Instantiate(res.Value, new Vector3(tile.CoordX, tile.CoordY, tile.CoordY), Quaternion.identity, MapHolder);
 
-        TileObject to = go.GetComponent<TileObject>();
+        TileBase to = go.GetComponent<TileBase>();
         to.PrefabName = tile.PrefabName;
         to.IndexInPrefabsManager = res.Key;
         to.InGameDescription = tile.InGameDescription;
@@ -93,6 +94,7 @@ public class LoadLevel : MonoBehaviour
         _map[x, y] = to;
       }
     }
+    */
   }
 
   bool _working = false;
@@ -486,6 +488,7 @@ public class LoadLevel : MonoBehaviour
   Vector3 _tileInfoScale = Vector3.zero;
   void UpdateTileInfo()
   {
+    /*
     int mx = (int)Cursor.transform.position.x;
     int my = (int)Cursor.transform.position.y;
 
@@ -498,6 +501,7 @@ public class LoadLevel : MonoBehaviour
     TileInfoSprite.rectTransform.localScale = _tileInfoScale;
     TileDetails.text = string.Format("D:{0} E:{1}", _map[mx, my].DefenceModifier, _map[mx, my].EvasionModifier);
     TileName.text = _map[mx, my].InGameDescription;
+    */
   }
 
   void DestroyChildren(Transform t)
