@@ -316,6 +316,8 @@ public class GameEditor : MonoBehaviour
         Destroy(_map[posX, posY].TileObjectLayer2.gameObject);
       }
 
+      // PrefabName is assigned during SelectTile() method in _previewObject
+
       _map[posX, posY].TileObjectLayer2 = go.GetComponent<TileObject>();
     }
   }
@@ -333,16 +335,20 @@ public class GameEditor : MonoBehaviour
     int posX = (int)placementPos.x;
     int posY = (int)placementPos.y;
 
+    // Replace ground tile with emptiness for layer1 and just destroy for layer2
+
     if (_objectsLayer == 0)
     {
       Destroy(_map[posX, posY].TileObjectLayer1.gameObject);
       var go = Instantiate(PrefabsManager.Instance.PrefabsLayer1[0], pos, Quaternion.identity, _map[posX, posY].transform);         
       Util.SetGameObjectLayer(go, LayerMask.NameToLayer("Default"), true);
       _map[posX, posY].TileObjectLayer1 = go.GetComponent<TileObject>();
+      _map[posX, posY].TileObjectLayer1.PrefabName = PrefabsManager.Instance.PrefabsLayer1[0].name;
     }
     else if (_objectsLayer == 1 && _map[posX, posY].TileObjectLayer2 != null)
     {
       Destroy(_map[posX, posY].TileObjectLayer2.gameObject);
+      _map[posX, posY].TileObjectLayer2 = null;
     }
   }
 

@@ -516,6 +516,8 @@ public class LoadLevel : MonoBehaviour
     int mx = (int)Cursor.transform.position.x;
     int my = (int)Cursor.transform.position.y;
 
+    DisplayTileInfo(_map[mx, my].TileObjectLayer1, 0);
+
     if (_map[mx, my].TileObjectLayer2 != null)
     {
       TileInfoImageLayer2.gameObject.SetActive(true);
@@ -524,7 +526,6 @@ public class LoadLevel : MonoBehaviour
     else
     {
       TileInfoImageLayer2.gameObject.SetActive(false);
-      DisplayTileInfo(_map[mx, my].TileObjectLayer1, 0);
     }
   }
 
