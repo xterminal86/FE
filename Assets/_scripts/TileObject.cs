@@ -15,9 +15,6 @@ public class TileObject : MonoBehaviour
   public int MovementDifficulty = 0;
 
   [HideInInspector]
-  public int IndexInPrefabsManager = -1;
-
-  [HideInInspector]
   public string PrefabName = string.Empty;
 
   [HideInInspector]

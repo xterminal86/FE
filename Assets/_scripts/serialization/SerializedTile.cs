@@ -6,6 +6,13 @@ using UnityEngine;
 [Serializable]
 public class SerializedTile
 {
+  public SerializedTileObject TileLayer1;
+  public SerializedTileObject TileLayer2;
+}
+
+[Serializable]
+public class SerializedTileObject
+{
   public int CoordX = 0;
   public int CoordY = 0;
 
@@ -19,5 +26,4 @@ public class SerializedTile
   public bool FlipFlagY = false;
 
   public int MovementDifficulty = -1;
-  public int IndexInPrefabsManager = -1;
 }

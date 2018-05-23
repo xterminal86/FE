@@ -40,7 +40,7 @@ public class GameEditor : MonoBehaviour
         var go = Instantiate(PrefabsManager.Instance.TileBasePrefab, new Vector3(x, y, 0.0f), Quaternion.identity, MapHolder);
         TileBase to = go.GetComponent<TileBase>();
         _map[x, y] = to;
-        var l1 = Instantiate(PrefabsManager.Instance.PrefabsLayer1[0], new Vector3(x, y, 0.0f), Quaternion.identity, go.transform);
+        var l1 = Instantiate(PrefabsManager.Instance.PrefabsLayer1[0], new Vector3(x, y, y), Quaternion.identity, go.transform);
         to.TileObjectLayer1 = l1.GetComponent<TileObject>();
         to.TileObjectLayer1.PrefabName = PrefabsManager.Instance.PrefabsLayer1[0].name;
       }
@@ -289,11 +289,13 @@ public class GameEditor : MonoBehaviour
 
   void PlaceSelectedObject(Vector3 placementPos)
   { 
+    float zDepth = (_objectsLayer == 0) ? placementPos.y : placementPos.y - 1;
+
     // Objects are Z sorted using Y coordinate
 
     Vector3 pos = new Vector3(placementPos.x, 
                               placementPos.y, 
-                              placementPos.y);
+                              zDepth);
 
     int posX = (int)placementPos.x;
     int posY = (int)placementPos.y;
@@ -320,11 +322,13 @@ public class GameEditor : MonoBehaviour
 
   void RemoveSelectedObject(Vector3 placementPos)
   {
+    float zDepth = (_objectsLayer == 0) ? placementPos.y : placementPos.y - 1;
+
     // Objects are Z sorted using Y coordinate
 
     Vector3 pos = new Vector3(placementPos.x, 
                               placementPos.y, 
-                              placementPos.y);
+                              zDepth);
 
     int posX = (int)placementPos.x;
     int posY = (int)placementPos.y;
@@ -344,7 +348,6 @@ public class GameEditor : MonoBehaviour
 
   void PrepareDataToSave(string path)
   {
-    /*
     _levelToSave = new SerializedMap();
 
     _levelToSave.Path = path;
@@ -358,20 +361,35 @@ public class GameEditor : MonoBehaviour
       TileBase to = t.GetComponent<TileBase>();
 
       SerializedTile st = new SerializedTile();
-      st.CoordX = (int)to.transform.position.x;
-      st.CoordY = (int)to.transform.position.y;
-      st.DefenceModifier = to.DefenceModifier;
-      st.EvasionModifier = to.EvasionModifier;
-      st.FlipFlagX = to.FlipFlagX;
-      st.FlipFlagY = to.FlipFlagY;
-      st.IndexInPrefabsManager = to.IndexInPrefabsManager;
-      st.InGameDescription = to.InGameDescription;
-      st.MovementDifficulty = to.MovementDifficulty;
-      st.PrefabName = to.PrefabName;
+
+      var layer1 = FillSerializedTileData(to.TileObjectLayer1);
+      st.TileLayer1 = layer1;
+
+      if (to.TileObjectLayer2 != null)
+      {
+        var layer2 = FillSerializedTileData(to.TileObjectLayer2);
+        st.TileLayer2 = layer2;
+      }
 
       _levelToSave.MapTiles.Add(st);
     }
-    */
+  }
+
+  SerializedTileObject FillSerializedTileData(TileObject tileObject)
+  {
+    SerializedTileObject serialiedTileObject = new SerializedTileObject();
+
+    serialiedTileObject.CoordX = (int)tileObject.transform.position.x;
+    serialiedTileObject.CoordY = (int)tileObject.transform.position.y;
+    serialiedTileObject.DefenceModifier = tileObject.DefenceModifier;
+    serialiedTileObject.EvasionModifier = tileObject.EvasionModifier;
+    serialiedTileObject.FlipFlagX = tileObject.FlipFlagX;
+    serialiedTileObject.FlipFlagY = tileObject.FlipFlagY;
+    serialiedTileObject.InGameDescription = tileObject.InGameDescription;
+    serialiedTileObject.MovementDifficulty = tileObject.MovementDifficulty;
+    serialiedTileObject.PrefabName = tileObject.PrefabName;
+
+    return serialiedTileObject;
   }
 
   public void SaveMapHandler()
@@ -390,7 +408,6 @@ public class GameEditor : MonoBehaviour
 
   void LoadLevel(string path)
   {
-    /*
     var formatter = new BinaryFormatter();  
     Stream stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);  
     _levelToSave = (SerializedMap)formatter.Deserialize(stream);  
@@ -405,38 +422,64 @@ public class GameEditor : MonoBehaviour
 
     foreach (var tile in _levelToSave.MapTiles)
     {
-      var res = PrefabsManager.Instance.FindPrefabByName(tile.PrefabName);
-      if (res.Value != null)
+      var layer1 = tile.TileLayer1;
+
+      int x = layer1.CoordX;
+      int y = layer1.CoordY;
+
+      var go = Instantiate(PrefabsManager.Instance.TileBasePrefab, new Vector3(x, y, 0.0f), Quaternion.identity, MapHolder);
+
+      TileBase tb = go.GetComponent<TileBase>();
+
+      _map[x, y] = tb;
+
+      InstantiateTileObject(tb, tile.TileLayer1, 0);
+
+      if (tile.TileLayer2 != null)
       {
-        var go = Instantiate(res.Value, new Vector3(tile.CoordX, tile.CoordY, tile.CoordY), Quaternion.identity, MapHolder);
-
-        TileBase to = go.GetComponent<TileBase>();
-        to.PrefabName = tile.PrefabName;
-        to.IndexInPrefabsManager = res.Key;
-        to.InGameDescription = tile.InGameDescription;
-        to.DefenceModifier = tile.DefenceModifier;
-        to.EvasionModifier = tile.EvasionModifier;
-        to.MovementDifficulty = tile.MovementDifficulty;
-        to.FlipFlagX = tile.FlipFlagX;
-        to.FlipFlagY = tile.FlipFlagY;
-
-        if (tile.FlipFlagX)
-        {          
-          to.FlipX();
-        }
-
-        if (tile.FlipFlagY)
-        {
-          to.FlipY();
-        }
-
-        int x = tile.CoordX;
-        int y = tile.CoordY;
-
-        _map[x, y] = to;
+        InstantiateTileObject(tb, tile.TileLayer2, 1);
       }
     }
-    */
+  }
+
+  void InstantiateTileObject(TileBase tb, SerializedTileObject sto, int layer)
+  {
+    string prefabName = sto.PrefabName;
+
+    var res = PrefabsManager.Instance.FindPrefabByName(prefabName, layer);
+    if (res.Value != null)
+    {
+      float zDepth = (layer == 0) ? sto.CoordY : sto.CoordY - 1;
+      Vector3 pos = new Vector3(sto.CoordX, sto.CoordY, zDepth);
+      var go = Instantiate(res.Value, pos, Quaternion.identity, tb.transform);
+      TileObject to = go.GetComponent<TileObject>();
+      to.PrefabName = prefabName;
+      to.DefenceModifier = sto.DefenceModifier;
+      to.EvasionModifier = sto.EvasionModifier;
+      to.FlipFlagX = sto.FlipFlagX;
+      to.FlipFlagY = sto.FlipFlagY;
+      to.InGameDescription = sto.InGameDescription;
+      to.MovementDifficulty = sto.MovementDifficulty;
+
+      if (sto.FlipFlagX)
+      {
+        to.FlipX();
+      }
+
+      if (sto.FlipFlagY)
+      {
+        to.FlipY();
+      }
+
+      if (layer == 0)
+      {
+        tb.TileObjectLayer1 = to;
+      }
+      else if (layer == 1)
+      {
+        tb.TileObjectLayer2 = to;
+      }
+    }
   }
 
   public void LoadMapHandler()

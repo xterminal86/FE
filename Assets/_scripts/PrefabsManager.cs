@@ -36,7 +36,7 @@ public class PrefabsManager : MonoSingleton<PrefabsManager>
       index++;
     }
 
-    Debug.LogWarning("Could not find prefab " + name);
+    Debug.LogWarning("Could not find prefab [" + name + "]");
 
     return new KeyValuePair<KeyValuePair<int, int>, GameObject>(new KeyValuePair<int, int>(layer, -1), null);
   }

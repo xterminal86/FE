@@ -12,7 +12,8 @@ public class LoadLevel : MonoBehaviour
   public Camera MainCamera;
   public Transform MapHolder;
   public Transform Cursor;
-  public Image TileInfoSprite;
+  public Image TileInfoImageLayer1;
+  public Image TileInfoImageLayer2;
   public TMP_Text TileName;
   public TMP_Text TileDetails;
 
@@ -29,13 +30,12 @@ public class LoadLevel : MonoBehaviour
   Dictionary<KeyCode, bool> _keyHoldStatuses = new Dictionary<KeyCode, bool>();
   void Awake()
   {    
-    //string path = "D:\\Nick\\Sources\\Unity\\FE.git\\level.bytes";
     string path = "level.bytes";
 
     LoadMap(path);
 
     _cameraMovement.Set(_mapSizeX / 2, _mapSizeY / 2, MainCamera.transform.position.z);
-    _cursorPosition.Set((int)_mapSizeX / 2, (int)_mapSizeY / 2, -2.0f);
+    _cursorPosition.Set((int)_mapSizeX / 2, (int)_mapSizeY / 2, Camera.main.transform.position.z + 1);
 
     MainCamera.transform.position = _cameraMovement;
     Cursor.position = _cursorPosition;
@@ -50,7 +50,6 @@ public class LoadLevel : MonoBehaviour
 
   void LoadMap(string path)
   {
-    /*
     var formatter = new BinaryFormatter();  
     Stream stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);  
     _level = (SerializedMap)formatter.Deserialize(stream);  
@@ -63,38 +62,64 @@ public class LoadLevel : MonoBehaviour
 
     foreach (var tile in _level.MapTiles)
     {
-      var res = PrefabsManager.Instance.FindPrefabByName(tile.PrefabName);
-      if (res.Value != null)
+      var layer1 = tile.TileLayer1;
+
+      int x = layer1.CoordX;
+      int y = layer1.CoordY;
+
+      var go = Instantiate(PrefabsManager.Instance.TileBasePrefab, new Vector3(x, y, 0.0f), Quaternion.identity, MapHolder);
+
+      TileBase tb = go.GetComponent<TileBase>();
+
+      _map[x, y] = tb;
+
+      InstantiateTileObject(tb, tile.TileLayer1, 0);
+
+      if (tile.TileLayer2 != null)
       {
-        var go = Instantiate(res.Value, new Vector3(tile.CoordX, tile.CoordY, tile.CoordY), Quaternion.identity, MapHolder);
-
-        TileBase to = go.GetComponent<TileBase>();
-        to.PrefabName = tile.PrefabName;
-        to.IndexInPrefabsManager = res.Key;
-        to.InGameDescription = tile.InGameDescription;
-        to.DefenceModifier = tile.DefenceModifier;
-        to.EvasionModifier = tile.EvasionModifier;
-        to.MovementDifficulty = tile.MovementDifficulty;
-        to.FlipFlagX = tile.FlipFlagX;
-        to.FlipFlagY = tile.FlipFlagY;
-
-        if (tile.FlipFlagX)
-        {          
-          to.FlipX();
-        }
-
-        if (tile.FlipFlagY)
-        {
-          to.FlipY();
-        }
-
-        int x = tile.CoordX;
-        int y = tile.CoordY;
-
-        _map[x, y] = to;
+        InstantiateTileObject(tb, tile.TileLayer2, 1);
       }
     }
-    */
+  }
+
+  void InstantiateTileObject(TileBase tb, SerializedTileObject sto, int layer)
+  {
+    string prefabName = sto.PrefabName;
+
+    var res = PrefabsManager.Instance.FindPrefabByName(prefabName, layer);
+    if (res.Value != null)
+    {
+      float zDepth = (layer == 0) ? sto.CoordY : sto.CoordY - 1;
+      Vector3 pos = new Vector3(sto.CoordX, sto.CoordY, zDepth);
+      var go = Instantiate(res.Value, pos, Quaternion.identity, tb.transform);
+      TileObject to = go.GetComponent<TileObject>();
+      to.PrefabName = prefabName;
+      to.DefenceModifier = sto.DefenceModifier;
+      to.EvasionModifier = sto.EvasionModifier;
+      to.FlipFlagX = sto.FlipFlagX;
+      to.FlipFlagY = sto.FlipFlagY;
+      to.InGameDescription = sto.InGameDescription;
+      to.MovementDifficulty = sto.MovementDifficulty;
+
+      if (sto.FlipFlagX)
+      {
+        to.FlipX();
+      }
+
+      if (sto.FlipFlagY)
+      {
+        to.FlipY();
+      }
+
+      if (layer == 0)
+      {
+        tb.TileObjectLayer1 = to;
+      }
+      else if (layer == 1)
+      {
+        tb.TileObjectLayer2 = to;
+      }
+    }
   }
 
   bool _working = false;
@@ -488,20 +513,35 @@ public class LoadLevel : MonoBehaviour
   Vector3 _tileInfoScale = Vector3.zero;
   void UpdateTileInfo()
   {
-    /*
     int mx = (int)Cursor.transform.position.x;
     int my = (int)Cursor.transform.position.y;
 
-    bool flipX = _map[mx, my].Sprites[_map[mx, my].Sprites.Count - 1].flipX;
-    bool flipY = _map[mx, my].Sprites[_map[mx, my].Sprites.Count - 1].flipY;
+    if (_map[mx, my].TileObjectLayer2 != null)
+    {
+      TileInfoImageLayer2.gameObject.SetActive(true);
+      DisplayTileInfo(_map[mx, my].TileObjectLayer2, 1);
+    }
+    else
+    {
+      TileInfoImageLayer2.gameObject.SetActive(false);
+      DisplayTileInfo(_map[mx, my].TileObjectLayer1, 0);
+    }
+  }
+
+  void DisplayTileInfo(TileObject tileObject, int layer)
+  {
+    bool flipX = tileObject.FlipFlagX;
+    bool flipY = tileObject.FlipFlagY;
 
     _tileInfoScale.Set(flipX ? -1.0f : 1.0f, flipY ? -1.0f : 1.0f, 1.0f);
 
-    TileInfoSprite.sprite = _map[mx, my].Sprites[_map[mx, my].Sprites.Count - 1].sprite;
-    TileInfoSprite.rectTransform.localScale = _tileInfoScale;
-    TileDetails.text = string.Format("D:{0} E:{1}", _map[mx, my].DefenceModifier, _map[mx, my].EvasionModifier);
-    TileName.text = _map[mx, my].InGameDescription;
-    */
+    Image tileInfoImage = (layer == 0) ? TileInfoImageLayer1 : TileInfoImageLayer2;
+
+    tileInfoImage.sprite = tileObject.TileSprite.sprite;
+    tileInfoImage.rectTransform.localScale = _tileInfoScale;
+
+    TileDetails.text = string.Format("D:{0} E:{1}", tileObject.DefenceModifier, tileObject.EvasionModifier);
+    TileName.text = tileObject.InGameDescription;
   }
 
   void DestroyChildren(Transform t)

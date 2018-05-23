@@ -1009,8 +1009,8 @@ MonoBehaviour:
   MainCamera: {fileID: 1244628279}
   MapHolder: {fileID: 1365440348}
   Cursor: {fileID: 1875431096}
-  MapSizeX: 32
-  MapSizeY: 32
+  MapSizeX: 16
+  MapSizeY: 16
 --- !u!1 &1365440347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,7 +1508,8 @@ Transform:
 --- !u!1 &1967210498
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 1796949779188578, guid: 33b2de72e69dbcd4b81c908a8be126f3,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
@@ -1525,7 +1526,8 @@ GameObject:
 --- !u!224 &1967210499
 RectTransform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 224459296193093116, guid: 33b2de72e69dbcd4b81c908a8be126f3,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1967210498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1543,7 +1545,8 @@ RectTransform:
 --- !u!114 &1967210500
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 114610069511851748, guid: 33b2de72e69dbcd4b81c908a8be126f3,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1967210498}
   m_Enabled: 1
@@ -1570,7 +1573,8 @@ MonoBehaviour:
 --- !u!222 &1967210501
 CanvasRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 222259614230758174, guid: 33b2de72e69dbcd4b81c908a8be126f3,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1967210498}
 --- !u!1 &2011375143
