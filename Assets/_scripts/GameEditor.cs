@@ -284,6 +284,8 @@ public class GameEditor : MonoBehaviour
       _previewObject = Instantiate(objectToPick.gameObject, Cursor.transform.position, Quaternion.identity);
       _previewObject.name = objectToPick.name.Replace("(Clone)", "");
       Util.SetGameObjectLayer(_previewObject, LayerMask.NameToLayer("Preview"), true);
+      //var res = PrefabsManager.Instance.FindPrefabByName(_previewObject.GetComponent<TileObject>().PrefabName);
+      Debug.Log(objectToPick.PrefabName);
     }
   }
 
