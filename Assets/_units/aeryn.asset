@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab1703fc12f0204c9e18f7c9eec5d57, type: 3}
+  m_Name: aeryn
+  m_EditorClassIdentifier: 
+  UnitName: (not set)
+  UnitClass: (not set)
+  Experience: 0
+  StartingLevel: 1
+  Hitpoints: 0
+  HpGrowth: 0
+  Strength: 0
+  StrGrowth: 0
+  Skill: 0
+  SklGrowth: 0
+  Magic: 0
+  MagGrowth: 0
+  Speed: 0
+  SpdGrowth: 0
+  Defence: 0
+  DefGrowth: 0
+  Resistance: 0
+  ResGrowth: 0
+  Luck: 0
+  LckGrowth: 0
+  AutoLevelThisUnit: 0
+  AutolevelStop: 1
+  RuntimeLevel: 1
+  RuntimeHitpoints:
+    CurrentValue: 0
+    MaxValue: 0
+    GrowthRate: 0
+  RuntimeStrength:
+    CurrentValue: 0
+    MaxValue: 0
+    GrowthRate: 0
+  RuntimeSkill:
+    CurrentValue: 0
+    MaxValue: 0
+    GrowthRate: 0
+  RuntimeMagic:
+    CurrentValue: 0
+    MaxValue: 0
+    GrowthRate: 0
+  RuntimeSpeed:
+    CurrentValue: 0
+    MaxValue: 0
+    GrowthRate: 0
+  RuntimeDefence:
+    CurrentValue: 0
+    MaxValue: 0
+    GrowthRate: 0
+  RuntimeResistance:
+    CurrentValue: 0
+    MaxValue: 0
+    GrowthRate: 0
+  RuntimeLuck:
+    CurrentValue: 0
+    MaxValue: 0
+    GrowthRate: 0
