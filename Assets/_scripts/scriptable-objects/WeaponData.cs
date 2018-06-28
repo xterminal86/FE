@@ -23,6 +23,7 @@ public class WeaponData : ScriptableObject
   [Range(-1, 100)]
   public int Durability = 0;
 
+  [HideInInspector]
   public SerializableWeaponData RuntimeWeaponData = new SerializableWeaponData();
 
   public void Initialize()

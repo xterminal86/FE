@@ -67,7 +67,7 @@ public class UnitData : ScriptableObject
   public bool AutoLevelThisUnit = false;
 
   [Range(1, 100)]
-  public int AutolevelStop = 2;
+  public int AutolevelStop = 1;
 
   // Runtime
 
@@ -114,13 +114,15 @@ public class UnitData : ScriptableObject
 
   public void Initialize()
   {    
+    // TODO: impement proper save / load in the future
+
     ClearRuntimeData();
 
     if (AutoLevelThisUnit)
     {
       while (RuntimeLevel < AutolevelStop)
       {
-        AutoLevel();
+        LevelUp();
       }
 
       _details = string.Empty;
@@ -138,8 +140,9 @@ public class UnitData : ScriptableObject
       _details += string.Format("RES: {0} ({1}%)\n", RuntimeResistance.CurrentValue, ResGrowth);
       _details += string.Format("LCK: {0} ({1}%)\n", RuntimeLuck.CurrentValue, LckGrowth);
 
-      Debug.Log(_details);
+      //Debug.Log(_details);
     }
+
     _isInitialized = true;
   }
 
@@ -164,7 +167,7 @@ public class UnitData : ScriptableObject
     stat.GrowthRate = growthRate;
   }
 
-  void AutoLevel()
+  void LevelUp()
   {
     RollStat(RuntimeHitpoints);
     RollStat(RuntimeStrength);

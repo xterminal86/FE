@@ -17,6 +17,7 @@ public class PrefabsManagerInspector : Editor
         
     string searchPathLayer1 = "Assets/_prefabs/ground-tiles";
     string searchPathLayer2 = "Assets/_prefabs/objects";
+    string searchPathUnits = "Assets/_prefabs/units";
 
     pm.TileBasePrefab = (GameObject)EditorGUILayout.ObjectField("Tile Base Prefab", pm.TileBasePrefab, typeof(GameObject), false);
 
@@ -24,6 +25,7 @@ public class PrefabsManagerInspector : Editor
     {
       LoadPrefabs(pm.PrefabsLayer1, searchPathLayer1);
       LoadPrefabs(pm.PrefabsLayer2, searchPathLayer2);
+      LoadPrefabs(pm.Units, searchPathUnits);
     }
 
     EditorGUILayout.HelpBox(searchPathLayer1, MessageType.Info);
@@ -31,6 +33,9 @@ public class PrefabsManagerInspector : Editor
     EditorGUILayout.TextArea("", GUI.skin.horizontalSlider);
     EditorGUILayout.HelpBox(searchPathLayer2, MessageType.Info);
     PrintPrefabsList(pm.PrefabsLayer2);
+    EditorGUILayout.TextArea("", GUI.skin.horizontalSlider);
+    EditorGUILayout.HelpBox(searchPathUnits, MessageType.Info);
+    PrintPrefabsList(pm.Units);
 
     if (GUI.changed)
     {

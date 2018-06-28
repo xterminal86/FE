@@ -11,8 +11,9 @@ public class TileObject : MonoBehaviour
   public int DefenceModifier = 0;
   public int EvasionModifier = 0;
 
-  [HideInInspector]
-  public int MovementDifficulty = 0;
+  // 0 means not traversable
+  [Range(0, 3)]
+  public int MovementDifficulty = 1;
 
   [HideInInspector]
   public string PrefabName = string.Empty;

@@ -85,8 +85,7 @@ MonoBehaviour:
   InGameDescription: Fort
   DefenceModifier: 2
   EvasionModifier: 40
-  MovementDifficulty: 0
-  IndexInPrefabsManager: -1
+  MovementDifficulty: 2
   PrefabName: 
   FlipFlagX: 0
   FlipFlagY: 0

@@ -98,8 +98,7 @@ MonoBehaviour:
   InGameDescription: Grass
   DefenceModifier: 0
   EvasionModifier: 0
-  MovementDifficulty: 0
-  IndexInPrefabsManager: -1
+  MovementDifficulty: 1
   PrefabName: 
   FlipFlagX: 0
   FlipFlagY: 0

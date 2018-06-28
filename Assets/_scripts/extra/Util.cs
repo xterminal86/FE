@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 public static class Util
 {
@@ -25,6 +26,20 @@ public static class Util
         SetGameObjectLayer(t.gameObject, layer, recursive);
       }
     }
+  }
+
+  public static TimeSpan MeasureTime(Callback cb)
+  {
+    Stopwatch timer = Stopwatch.StartNew();
+
+    if (cb != null)
+      cb();
+
+    timer.Stop();
+
+    UnityEngine.Debug.Log("[" + cb.Method.Name + "] => " + timer.Elapsed);
+
+    return timer.Elapsed;
   }
 }
 

@@ -9,11 +9,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 454f8a89282e63e448217894fb728fe5, type: 3}
-  m_Name: w-test
+  m_Name: w-dummy
   m_EditorClassIdentifier: 
-  Name: (not set)
-  Might: 0
+  Name: Toothpick
+  Might: 1
   Hit: 0
   Crit: 0
-  Weight: 0
-  Durability: 0
+  Weight: 1
+  Durability: 15
+  RuntimeWeaponData:
+    Might: 0
+    Hit: 0
+    Crit: 0
+    Weight: 0
+    Durability: 0

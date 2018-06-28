@@ -14,7 +14,6 @@ public class AutolevelTest : MonoBehaviour
     var go = (GameObject)Instantiate(UnitPrefab);
 
     var ub = go.GetComponent<Unit>();
-    ub.UnitData_.Initialize();
 
     Text.text = ub.UnitData_.Details;
   }

@@ -17,6 +17,8 @@ public class LoadLevel : MonoBehaviour
   public TMP_Text TileName;
   public TMP_Text TileDetails;
 
+  public TMP_Text CursorPositionText;
+
   TileBase[,] _map;
 
   SerializedMap _level;
@@ -30,9 +32,21 @@ public class LoadLevel : MonoBehaviour
   Dictionary<KeyCode, bool> _keyHoldStatuses = new Dictionary<KeyCode, bool>();
   void Awake()
   {    
-    string path = "level.bytes";
+    string path = "level2.bytes";
 
     LoadMap(path);
+
+    Pathfinder pf = new Pathfinder(_map, _mapSizeX, _mapSizeY);
+    pf.BuildRoad(new Vector2Int(0, 0), new Vector2Int(_mapSizeX - 1, _mapSizeY - 1), true);
+
+    /*
+    Util.MeasureTime(() =>
+    {
+      Pathfinder pf = new Pathfinder(_map, _mapSizeX, _mapSizeY);
+      //pf.BuildRoad(new Vector2Int(0, 0), new Vector2Int(_mapSizeX - 1, _mapSizeY - 1), true);
+      pf.BuildRoad(new Vector2Int(0, 0), new Vector2Int(0, 9), true);
+    });
+    */
 
     _cameraMovement.Set(_mapSizeX / 2, _mapSizeY / 2, MainCamera.transform.position.z);
     _cursorPosition.Set((int)_mapSizeX / 2, (int)_mapSizeY / 2, Camera.main.transform.position.z + 1);
@@ -497,6 +511,8 @@ public class LoadLevel : MonoBehaviour
     }
 
     HandleKeyRepeat();
+
+    CursorPositionText.text = string.Format("[{0}:{1}]", (int)_cursorPosition.x, (int)_cursorPosition.y);
   }
 
   Vector2Int _checkBoundsResult = Vector2Int.zero;

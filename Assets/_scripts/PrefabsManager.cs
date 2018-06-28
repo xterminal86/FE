@@ -11,12 +11,27 @@ public class PrefabsManager : MonoSingleton<PrefabsManager>
 
   public List<GameObject> PrefabsLayer1 = new List<GameObject>();
   public List<GameObject> PrefabsLayer2 = new List<GameObject>();
+  public List<GameObject> Units = new List<GameObject>();
 
   protected override void Init()
   {
     base.Init();
   }
 
+  public GameObject FindUnitByName(string name)
+  {
+    foreach (var item in Units)
+    {
+      if (item.name == name)
+      {
+        return item;
+      }
+    }
+
+    Debug.LogWarning("Could not find unit [" + name + "]");
+
+    return null;
+  }
 
   /// <summary>
   /// Finds prefab by name and returns pair with index of this prefab and prefab itself.
