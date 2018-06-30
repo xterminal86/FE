@@ -32,6 +32,8 @@ public class LoadLevel : MonoBehaviour
   Dictionary<KeyCode, bool> _keyHoldStatuses = new Dictionary<KeyCode, bool>();
   void Awake()
   {    
+    PrefabsManager.Instance.Initialize();
+
     string path = "level2.bytes";
 
     LoadMap(path);
