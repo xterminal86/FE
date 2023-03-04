@@ -1,370 +1,1086 @@
 fileFormatVersion: 2
 guid: 031915f78c5727540b2c118337a9a6f1
-timeCreated: 1525359740
-licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: wc-summer_0
-    21300002: wc-summer_1
-    21300004: wc-summer_2
-    21300006: wc-summer_3
-    21300008: wc-summer_4
-    21300010: wc-summer_5
-    21300012: wc-summer_6
-    21300014: wc-summer_7
-    21300016: wc-summer_8
-    21300018: wc-summer_9
-    21300020: wc-summer_10
-    21300022: wc-summer_11
-    21300024: wc-summer_12
-    21300026: wc-summer_13
-    21300028: wc-summer_14
-    21300030: wc-summer_15
-    21300032: wc-summer_16
-    21300034: wc-summer_17
-    21300036: wc-summer_18
-    21300038: wc-summer_19
-    21300040: wc-summer_20
-    21300042: wc-summer_21
-    21300044: wc-summer_22
-    21300046: wc-summer_23
-    21300048: wc-summer_24
-    21300050: wc-summer_25
-    21300052: wc-summer_26
-    21300054: wc-summer_27
-    21300056: wc-summer_28
-    21300058: wc-summer_29
-    21300060: wc-summer_30
-    21300062: wc-summer_31
-    21300064: wc-summer_32
-    21300066: wc-summer_33
-    21300068: wc-summer_34
-    21300070: wc-summer_35
-    21300072: wc-summer_36
-    21300074: wc-summer_37
-    21300076: wc-summer_38
-    21300078: wc-summer_39
-    21300080: wc-summer_40
-    21300082: wc-summer_41
-    21300084: wc-summer_42
-    21300086: wc-summer_43
-    21300088: wc-summer_44
-    21300090: wc-summer_45
-    21300092: wc-summer_46
-    21300094: wc-summer_47
-    21300096: wc-summer_48
-    21300098: wc-summer_49
-    21300100: wc-summer_50
-    21300102: wc-summer_51
-    21300104: wc-summer_52
-    21300106: wc-summer_53
-    21300108: wc-summer_54
-    21300110: wc-summer_55
-    21300112: wc-summer_56
-    21300114: wc-summer_57
-    21300116: wc-summer_58
-    21300118: wc-summer_59
-    21300120: wc-summer_60
-    21300122: wc-summer_61
-    21300124: wc-summer_62
-    21300126: wc-summer_63
-    21300128: wc-summer_64
-    21300130: wc-summer_65
-    21300132: wc-summer_66
-    21300134: wc-summer_67
-    21300136: wc-summer_68
-    21300138: wc-summer_69
-    21300140: wc-summer_70
-    21300142: wc-summer_71
-    21300144: wc-summer_72
-    21300146: wc-summer_73
-    21300148: wc-summer_74
-    21300150: wc-summer_75
-    21300152: wc-summer_76
-    21300154: wc-summer_77
-    21300156: wc-summer_78
-    21300158: wc-summer_79
-    21300160: wc-summer_80
-    21300162: wc-summer_81
-    21300164: wc-summer_82
-    21300166: wc-summer_83
-    21300168: wc-summer_84
-    21300170: wc-summer_85
-    21300172: wc-summer_86
-    21300174: wc-summer_87
-    21300176: wc-summer_88
-    21300178: wc-summer_89
-    21300180: wc-summer_90
-    21300182: wc-summer_91
-    21300184: wc-summer_92
-    21300186: wc-summer_93
-    21300188: wc-summer_94
-    21300190: wc-summer_95
-    21300192: wc-summer_96
-    21300194: wc-summer_97
-    21300196: wc-summer_98
-    21300198: wc-summer_99
-    21300200: wc-summer_100
-    21300202: wc-summer_101
-    21300204: wc-summer_102
-    21300206: wc-summer_103
-    21300208: wc-summer_104
-    21300210: wc-summer_105
-    21300212: wc-summer_106
-    21300214: wc-summer_107
-    21300216: wc-summer_108
-    21300218: wc-summer_109
-    21300220: wc-summer_110
-    21300222: wc-summer_111
-    21300224: wc-summer_112
-    21300226: wc-summer_113
-    21300228: wc-summer_114
-    21300230: wc-summer_115
-    21300232: wc-summer_116
-    21300234: wc-summer_117
-    21300236: wc-summer_118
-    21300238: wc-summer_119
-    21300240: wc-summer_120
-    21300242: wc-summer_121
-    21300244: wc-summer_122
-    21300246: wc-summer_123
-    21300248: wc-summer_124
-    21300250: wc-summer_125
-    21300252: wc-summer_126
-    21300254: wc-summer_127
-    21300256: wc-summer_128
-    21300258: wc-summer_129
-    21300260: wc-summer_130
-    21300262: wc-summer_131
-    21300264: wc-summer_132
-    21300266: wc-summer_133
-    21300268: wc-summer_134
-    21300270: wc-summer_135
-    21300272: wc-summer_136
-    21300274: wc-summer_137
-    21300276: wc-summer_138
-    21300278: wc-summer_139
-    21300280: wc-summer_140
-    21300282: wc-summer_141
-    21300284: wc-summer_142
-    21300286: wc-summer_143
-    21300288: wc-summer_144
-    21300290: wc-summer_145
-    21300292: wc-summer_146
-    21300294: wc-summer_147
-    21300296: wc-summer_148
-    21300298: wc-summer_149
-    21300300: wc-summer_150
-    21300302: wc-summer_151
-    21300304: wc-summer_152
-    21300306: wc-summer_153
-    21300308: wc-summer_154
-    21300310: wc-summer_155
-    21300312: wc-summer_156
-    21300314: wc-summer_157
-    21300316: wc-summer_158
-    21300318: wc-summer_159
-    21300320: wc-summer_160
-    21300322: wc-summer_161
-    21300324: wc-summer_162
-    21300326: wc-summer_163
-    21300328: wc-summer_164
-    21300330: wc-summer_165
-    21300332: wc-summer_166
-    21300334: wc-summer_167
-    21300336: wc-summer_168
-    21300338: wc-summer_169
-    21300340: wc-summer_170
-    21300342: wc-summer_171
-    21300344: wc-summer_172
-    21300346: wc-summer_173
-    21300348: wc-summer_174
-    21300350: wc-summer_175
-    21300352: wc-summer_176
-    21300354: wc-summer_177
-    21300356: wc-summer_178
-    21300358: wc-summer_179
-    21300360: wc-summer_180
-    21300362: wc-summer_181
-    21300364: wc-summer_182
-    21300366: wc-summer_183
-    21300368: wc-summer_184
-    21300370: wc-summer_185
-    21300372: wc-summer_186
-    21300374: wc-summer_187
-    21300376: wc-summer_188
-    21300378: wc-summer_189
-    21300380: wc-summer_190
-    21300382: wc-summer_191
-    21300384: wc-summer_192
-    21300386: wc-summer_193
-    21300388: wc-summer_194
-    21300390: wc-summer_195
-    21300392: wc-summer_196
-    21300394: wc-summer_197
-    21300396: wc-summer_198
-    21300398: wc-summer_199
-    21300400: wc-summer_200
-    21300402: wc-summer_201
-    21300404: wc-summer_202
-    21300406: wc-summer_203
-    21300408: wc-summer_204
-    21300410: wc-summer_205
-    21300412: wc-summer_206
-    21300414: wc-summer_207
-    21300416: wc-summer_208
-    21300418: wc-summer_209
-    21300420: wc-summer_210
-    21300422: wc-summer_211
-    21300424: wc-summer_212
-    21300426: wc-summer_213
-    21300428: wc-summer_214
-    21300430: wc-summer_215
-    21300432: wc-summer_216
-    21300434: wc-summer_217
-    21300436: wc-summer_218
-    21300438: wc-summer_219
-    21300440: wc-summer_220
-    21300442: wc-summer_221
-    21300444: wc-summer_222
-    21300446: wc-summer_223
-    21300448: wc-summer_224
-    21300450: wc-summer_225
-    21300452: wc-summer_226
-    21300454: wc-summer_227
-    21300456: wc-summer_228
-    21300458: wc-summer_229
-    21300460: wc-summer_230
-    21300462: wc-summer_231
-    21300464: wc-summer_232
-    21300466: wc-summer_233
-    21300468: wc-summer_234
-    21300470: wc-summer_235
-    21300472: wc-summer_236
-    21300474: wc-summer_237
-    21300476: wc-summer_238
-    21300478: wc-summer_239
-    21300480: wc-summer_240
-    21300482: wc-summer_241
-    21300484: wc-summer_242
-    21300486: wc-summer_243
-    21300488: wc-summer_244
-    21300490: wc-summer_245
-    21300492: wc-summer_246
-    21300494: wc-summer_247
-    21300496: wc-summer_248
-    21300498: wc-summer_249
-    21300500: wc-summer_250
-    21300502: wc-summer_251
-    21300504: wc-summer_252
-    21300506: wc-summer_253
-    21300508: wc-summer_254
-    21300510: wc-summer_255
-    21300512: wc-summer_256
-    21300514: wc-summer_257
-    21300516: wc-summer_258
-    21300518: wc-summer_259
-    21300520: wc-summer_260
-    21300522: wc-summer_261
-    21300524: wc-summer_262
-    21300526: wc-summer_263
-    21300528: wc-summer_264
-    21300530: wc-summer_265
-    21300532: wc-summer_266
-    21300534: wc-summer_267
-    21300536: wc-summer_268
-    21300538: wc-summer_269
-    21300540: wc-summer_270
-    21300542: wc-summer_271
-    21300544: wc-summer_272
-    21300546: wc-summer_273
-    21300548: wc-summer_274
-    21300550: wc-summer_275
-    21300552: wc-summer_276
-    21300554: wc-summer_277
-    21300556: wc-summer_278
-    21300558: wc-summer_279
-    21300560: wc-summer_280
-    21300562: wc-summer_281
-    21300564: wc-summer_282
-    21300566: wc-summer_283
-    21300568: wc-summer_284
-    21300570: wc-summer_285
-    21300572: wc-summer_286
-    21300574: wc-summer_287
-    21300576: wc-summer_288
-    21300578: wc-summer_289
-    21300580: wc-summer_290
-    21300582: wc-summer_291
-    21300584: wc-summer_292
-    21300586: wc-summer_293
-    21300588: wc-summer_294
-    21300590: wc-summer_295
-    21300592: wc-summer_296
-    21300594: wc-summer_297
-    21300596: wc-summer_298
-    21300598: wc-summer_299
-    21300600: wc-summer_300
-    21300602: wc-summer_301
-    21300604: wc-summer_302
-    21300606: wc-summer_303
-    21300608: wc-summer_304
-    21300610: wc-summer_305
-    21300612: wc-summer_306
-    21300614: wc-summer_307
-    21300616: wc-summer_308
-    21300618: wc-summer_309
-    21300620: wc-summer_310
-    21300622: wc-summer_311
-    21300624: wc-summer_312
-    21300626: wc-summer_313
-    21300628: wc-summer_314
-    21300630: wc-summer_315
-    21300632: wc-summer_316
-    21300634: wc-summer_317
-    21300636: wc-summer_318
-    21300638: wc-summer_319
-    21300640: wc-summer_320
-    21300642: wc-summer_321
-    21300644: wc-summer_322
-    21300646: wc-summer_323
-    21300648: wc-summer_324
-    21300650: wc-summer_325
-    21300652: wc-summer_326
-    21300654: wc-summer_327
-    21300656: wc-summer_328
-    21300658: wc-summer_329
-    21300660: wc-summer_330
-    21300662: wc-summer_331
-    21300664: wc-summer_332
-    21300666: wc-summer_333
-    21300668: wc-summer_334
-    21300670: wc-summer_335
-    21300672: wc-summer_336
-    21300674: wc-summer_337
-    21300676: wc-summer_338
-    21300678: wc-summer_339
-    21300680: wc-summer_340
-    21300682: wc-summer_341
-    21300684: wc-summer_342
-    21300686: wc-summer_343
-    21300688: wc-summer_344
-    21300690: wc-summer_345
-    21300692: wc-summer_346
-    21300694: wc-summer_347
-    21300696: wc-summer_348
-    21300698: wc-summer_349
-    21300700: wc-summer_350
-    21300702: wc-summer_351
-    21300704: wc-summer_352
-    21300706: wc-summer_353
-    21300708: wc-summer_354
-    21300710: wc-summer_355
-    21300712: wc-summer_356
-    21300714: wc-summer_357
-    21300716: wc-summer_358
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: wc-summer_0
+  - first:
+      213: 21300002
+    second: wc-summer_1
+  - first:
+      213: 21300004
+    second: wc-summer_2
+  - first:
+      213: 21300006
+    second: wc-summer_3
+  - first:
+      213: 21300008
+    second: wc-summer_4
+  - first:
+      213: 21300010
+    second: wc-summer_5
+  - first:
+      213: 21300012
+    second: wc-summer_6
+  - first:
+      213: 21300014
+    second: wc-summer_7
+  - first:
+      213: 21300016
+    second: wc-summer_8
+  - first:
+      213: 21300018
+    second: wc-summer_9
+  - first:
+      213: 21300020
+    second: wc-summer_10
+  - first:
+      213: 21300022
+    second: wc-summer_11
+  - first:
+      213: 21300024
+    second: wc-summer_12
+  - first:
+      213: 21300026
+    second: wc-summer_13
+  - first:
+      213: 21300028
+    second: wc-summer_14
+  - first:
+      213: 21300030
+    second: wc-summer_15
+  - first:
+      213: 21300032
+    second: wc-summer_16
+  - first:
+      213: 21300034
+    second: wc-summer_17
+  - first:
+      213: 21300036
+    second: wc-summer_18
+  - first:
+      213: 21300038
+    second: wc-summer_19
+  - first:
+      213: 21300040
+    second: wc-summer_20
+  - first:
+      213: 21300042
+    second: wc-summer_21
+  - first:
+      213: 21300044
+    second: wc-summer_22
+  - first:
+      213: 21300046
+    second: wc-summer_23
+  - first:
+      213: 21300048
+    second: wc-summer_24
+  - first:
+      213: 21300050
+    second: wc-summer_25
+  - first:
+      213: 21300052
+    second: wc-summer_26
+  - first:
+      213: 21300054
+    second: wc-summer_27
+  - first:
+      213: 21300056
+    second: wc-summer_28
+  - first:
+      213: 21300058
+    second: wc-summer_29
+  - first:
+      213: 21300060
+    second: wc-summer_30
+  - first:
+      213: 21300062
+    second: wc-summer_31
+  - first:
+      213: 21300064
+    second: wc-summer_32
+  - first:
+      213: 21300066
+    second: wc-summer_33
+  - first:
+      213: 21300068
+    second: wc-summer_34
+  - first:
+      213: 21300070
+    second: wc-summer_35
+  - first:
+      213: 21300072
+    second: wc-summer_36
+  - first:
+      213: 21300074
+    second: wc-summer_37
+  - first:
+      213: 21300076
+    second: wc-summer_38
+  - first:
+      213: 21300078
+    second: wc-summer_39
+  - first:
+      213: 21300080
+    second: wc-summer_40
+  - first:
+      213: 21300082
+    second: wc-summer_41
+  - first:
+      213: 21300084
+    second: wc-summer_42
+  - first:
+      213: 21300086
+    second: wc-summer_43
+  - first:
+      213: 21300088
+    second: wc-summer_44
+  - first:
+      213: 21300090
+    second: wc-summer_45
+  - first:
+      213: 21300092
+    second: wc-summer_46
+  - first:
+      213: 21300094
+    second: wc-summer_47
+  - first:
+      213: 21300096
+    second: wc-summer_48
+  - first:
+      213: 21300098
+    second: wc-summer_49
+  - first:
+      213: 21300100
+    second: wc-summer_50
+  - first:
+      213: 21300102
+    second: wc-summer_51
+  - first:
+      213: 21300104
+    second: wc-summer_52
+  - first:
+      213: 21300106
+    second: wc-summer_53
+  - first:
+      213: 21300108
+    second: wc-summer_54
+  - first:
+      213: 21300110
+    second: wc-summer_55
+  - first:
+      213: 21300112
+    second: wc-summer_56
+  - first:
+      213: 21300114
+    second: wc-summer_57
+  - first:
+      213: 21300116
+    second: wc-summer_58
+  - first:
+      213: 21300118
+    second: wc-summer_59
+  - first:
+      213: 21300120
+    second: wc-summer_60
+  - first:
+      213: 21300122
+    second: wc-summer_61
+  - first:
+      213: 21300124
+    second: wc-summer_62
+  - first:
+      213: 21300126
+    second: wc-summer_63
+  - first:
+      213: 21300128
+    second: wc-summer_64
+  - first:
+      213: 21300130
+    second: wc-summer_65
+  - first:
+      213: 21300132
+    second: wc-summer_66
+  - first:
+      213: 21300134
+    second: wc-summer_67
+  - first:
+      213: 21300136
+    second: wc-summer_68
+  - first:
+      213: 21300138
+    second: wc-summer_69
+  - first:
+      213: 21300140
+    second: wc-summer_70
+  - first:
+      213: 21300142
+    second: wc-summer_71
+  - first:
+      213: 21300144
+    second: wc-summer_72
+  - first:
+      213: 21300146
+    second: wc-summer_73
+  - first:
+      213: 21300148
+    second: wc-summer_74
+  - first:
+      213: 21300150
+    second: wc-summer_75
+  - first:
+      213: 21300152
+    second: wc-summer_76
+  - first:
+      213: 21300154
+    second: wc-summer_77
+  - first:
+      213: 21300156
+    second: wc-summer_78
+  - first:
+      213: 21300158
+    second: wc-summer_79
+  - first:
+      213: 21300160
+    second: wc-summer_80
+  - first:
+      213: 21300162
+    second: wc-summer_81
+  - first:
+      213: 21300164
+    second: wc-summer_82
+  - first:
+      213: 21300166
+    second: wc-summer_83
+  - first:
+      213: 21300168
+    second: wc-summer_84
+  - first:
+      213: 21300170
+    second: wc-summer_85
+  - first:
+      213: 21300172
+    second: wc-summer_86
+  - first:
+      213: 21300174
+    second: wc-summer_87
+  - first:
+      213: 21300176
+    second: wc-summer_88
+  - first:
+      213: 21300178
+    second: wc-summer_89
+  - first:
+      213: 21300180
+    second: wc-summer_90
+  - first:
+      213: 21300182
+    second: wc-summer_91
+  - first:
+      213: 21300184
+    second: wc-summer_92
+  - first:
+      213: 21300186
+    second: wc-summer_93
+  - first:
+      213: 21300188
+    second: wc-summer_94
+  - first:
+      213: 21300190
+    second: wc-summer_95
+  - first:
+      213: 21300192
+    second: wc-summer_96
+  - first:
+      213: 21300194
+    second: wc-summer_97
+  - first:
+      213: 21300196
+    second: wc-summer_98
+  - first:
+      213: 21300198
+    second: wc-summer_99
+  - first:
+      213: 21300200
+    second: wc-summer_100
+  - first:
+      213: 21300202
+    second: wc-summer_101
+  - first:
+      213: 21300204
+    second: wc-summer_102
+  - first:
+      213: 21300206
+    second: wc-summer_103
+  - first:
+      213: 21300208
+    second: wc-summer_104
+  - first:
+      213: 21300210
+    second: wc-summer_105
+  - first:
+      213: 21300212
+    second: wc-summer_106
+  - first:
+      213: 21300214
+    second: wc-summer_107
+  - first:
+      213: 21300216
+    second: wc-summer_108
+  - first:
+      213: 21300218
+    second: wc-summer_109
+  - first:
+      213: 21300220
+    second: wc-summer_110
+  - first:
+      213: 21300222
+    second: wc-summer_111
+  - first:
+      213: 21300224
+    second: wc-summer_112
+  - first:
+      213: 21300226
+    second: wc-summer_113
+  - first:
+      213: 21300228
+    second: wc-summer_114
+  - first:
+      213: 21300230
+    second: wc-summer_115
+  - first:
+      213: 21300232
+    second: wc-summer_116
+  - first:
+      213: 21300234
+    second: wc-summer_117
+  - first:
+      213: 21300236
+    second: wc-summer_118
+  - first:
+      213: 21300238
+    second: wc-summer_119
+  - first:
+      213: 21300240
+    second: wc-summer_120
+  - first:
+      213: 21300242
+    second: wc-summer_121
+  - first:
+      213: 21300244
+    second: wc-summer_122
+  - first:
+      213: 21300246
+    second: wc-summer_123
+  - first:
+      213: 21300248
+    second: wc-summer_124
+  - first:
+      213: 21300250
+    second: wc-summer_125
+  - first:
+      213: 21300252
+    second: wc-summer_126
+  - first:
+      213: 21300254
+    second: wc-summer_127
+  - first:
+      213: 21300256
+    second: wc-summer_128
+  - first:
+      213: 21300258
+    second: wc-summer_129
+  - first:
+      213: 21300260
+    second: wc-summer_130
+  - first:
+      213: 21300262
+    second: wc-summer_131
+  - first:
+      213: 21300264
+    second: wc-summer_132
+  - first:
+      213: 21300266
+    second: wc-summer_133
+  - first:
+      213: 21300268
+    second: wc-summer_134
+  - first:
+      213: 21300270
+    second: wc-summer_135
+  - first:
+      213: 21300272
+    second: wc-summer_136
+  - first:
+      213: 21300274
+    second: wc-summer_137
+  - first:
+      213: 21300276
+    second: wc-summer_138
+  - first:
+      213: 21300278
+    second: wc-summer_139
+  - first:
+      213: 21300280
+    second: wc-summer_140
+  - first:
+      213: 21300282
+    second: wc-summer_141
+  - first:
+      213: 21300284
+    second: wc-summer_142
+  - first:
+      213: 21300286
+    second: wc-summer_143
+  - first:
+      213: 21300288
+    second: wc-summer_144
+  - first:
+      213: 21300290
+    second: wc-summer_145
+  - first:
+      213: 21300292
+    second: wc-summer_146
+  - first:
+      213: 21300294
+    second: wc-summer_147
+  - first:
+      213: 21300296
+    second: wc-summer_148
+  - first:
+      213: 21300298
+    second: wc-summer_149
+  - first:
+      213: 21300300
+    second: wc-summer_150
+  - first:
+      213: 21300302
+    second: wc-summer_151
+  - first:
+      213: 21300304
+    second: wc-summer_152
+  - first:
+      213: 21300306
+    second: wc-summer_153
+  - first:
+      213: 21300308
+    second: wc-summer_154
+  - first:
+      213: 21300310
+    second: wc-summer_155
+  - first:
+      213: 21300312
+    second: wc-summer_156
+  - first:
+      213: 21300314
+    second: wc-summer_157
+  - first:
+      213: 21300316
+    second: wc-summer_158
+  - first:
+      213: 21300318
+    second: wc-summer_159
+  - first:
+      213: 21300320
+    second: wc-summer_160
+  - first:
+      213: 21300322
+    second: wc-summer_161
+  - first:
+      213: 21300324
+    second: wc-summer_162
+  - first:
+      213: 21300326
+    second: wc-summer_163
+  - first:
+      213: 21300328
+    second: wc-summer_164
+  - first:
+      213: 21300330
+    second: wc-summer_165
+  - first:
+      213: 21300332
+    second: wc-summer_166
+  - first:
+      213: 21300334
+    second: wc-summer_167
+  - first:
+      213: 21300336
+    second: wc-summer_168
+  - first:
+      213: 21300338
+    second: wc-summer_169
+  - first:
+      213: 21300340
+    second: wc-summer_170
+  - first:
+      213: 21300342
+    second: wc-summer_171
+  - first:
+      213: 21300344
+    second: wc-summer_172
+  - first:
+      213: 21300346
+    second: wc-summer_173
+  - first:
+      213: 21300348
+    second: wc-summer_174
+  - first:
+      213: 21300350
+    second: wc-summer_175
+  - first:
+      213: 21300352
+    second: wc-summer_176
+  - first:
+      213: 21300354
+    second: wc-summer_177
+  - first:
+      213: 21300356
+    second: wc-summer_178
+  - first:
+      213: 21300358
+    second: wc-summer_179
+  - first:
+      213: 21300360
+    second: wc-summer_180
+  - first:
+      213: 21300362
+    second: wc-summer_181
+  - first:
+      213: 21300364
+    second: wc-summer_182
+  - first:
+      213: 21300366
+    second: wc-summer_183
+  - first:
+      213: 21300368
+    second: wc-summer_184
+  - first:
+      213: 21300370
+    second: wc-summer_185
+  - first:
+      213: 21300372
+    second: wc-summer_186
+  - first:
+      213: 21300374
+    second: wc-summer_187
+  - first:
+      213: 21300376
+    second: wc-summer_188
+  - first:
+      213: 21300378
+    second: wc-summer_189
+  - first:
+      213: 21300380
+    second: wc-summer_190
+  - first:
+      213: 21300382
+    second: wc-summer_191
+  - first:
+      213: 21300384
+    second: wc-summer_192
+  - first:
+      213: 21300386
+    second: wc-summer_193
+  - first:
+      213: 21300388
+    second: wc-summer_194
+  - first:
+      213: 21300390
+    second: wc-summer_195
+  - first:
+      213: 21300392
+    second: wc-summer_196
+  - first:
+      213: 21300394
+    second: wc-summer_197
+  - first:
+      213: 21300396
+    second: wc-summer_198
+  - first:
+      213: 21300398
+    second: wc-summer_199
+  - first:
+      213: 21300400
+    second: wc-summer_200
+  - first:
+      213: 21300402
+    second: wc-summer_201
+  - first:
+      213: 21300404
+    second: wc-summer_202
+  - first:
+      213: 21300406
+    second: wc-summer_203
+  - first:
+      213: 21300408
+    second: wc-summer_204
+  - first:
+      213: 21300410
+    second: wc-summer_205
+  - first:
+      213: 21300412
+    second: wc-summer_206
+  - first:
+      213: 21300414
+    second: wc-summer_207
+  - first:
+      213: 21300416
+    second: wc-summer_208
+  - first:
+      213: 21300418
+    second: wc-summer_209
+  - first:
+      213: 21300420
+    second: wc-summer_210
+  - first:
+      213: 21300422
+    second: wc-summer_211
+  - first:
+      213: 21300424
+    second: wc-summer_212
+  - first:
+      213: 21300426
+    second: wc-summer_213
+  - first:
+      213: 21300428
+    second: wc-summer_214
+  - first:
+      213: 21300430
+    second: wc-summer_215
+  - first:
+      213: 21300432
+    second: wc-summer_216
+  - first:
+      213: 21300434
+    second: wc-summer_217
+  - first:
+      213: 21300436
+    second: wc-summer_218
+  - first:
+      213: 21300438
+    second: wc-summer_219
+  - first:
+      213: 21300440
+    second: wc-summer_220
+  - first:
+      213: 21300442
+    second: wc-summer_221
+  - first:
+      213: 21300444
+    second: wc-summer_222
+  - first:
+      213: 21300446
+    second: wc-summer_223
+  - first:
+      213: 21300448
+    second: wc-summer_224
+  - first:
+      213: 21300450
+    second: wc-summer_225
+  - first:
+      213: 21300452
+    second: wc-summer_226
+  - first:
+      213: 21300454
+    second: wc-summer_227
+  - first:
+      213: 21300456
+    second: wc-summer_228
+  - first:
+      213: 21300458
+    second: wc-summer_229
+  - first:
+      213: 21300460
+    second: wc-summer_230
+  - first:
+      213: 21300462
+    second: wc-summer_231
+  - first:
+      213: 21300464
+    second: wc-summer_232
+  - first:
+      213: 21300466
+    second: wc-summer_233
+  - first:
+      213: 21300468
+    second: wc-summer_234
+  - first:
+      213: 21300470
+    second: wc-summer_235
+  - first:
+      213: 21300472
+    second: wc-summer_236
+  - first:
+      213: 21300474
+    second: wc-summer_237
+  - first:
+      213: 21300476
+    second: wc-summer_238
+  - first:
+      213: 21300478
+    second: wc-summer_239
+  - first:
+      213: 21300480
+    second: wc-summer_240
+  - first:
+      213: 21300482
+    second: wc-summer_241
+  - first:
+      213: 21300484
+    second: wc-summer_242
+  - first:
+      213: 21300486
+    second: wc-summer_243
+  - first:
+      213: 21300488
+    second: wc-summer_244
+  - first:
+      213: 21300490
+    second: wc-summer_245
+  - first:
+      213: 21300492
+    second: wc-summer_246
+  - first:
+      213: 21300494
+    second: wc-summer_247
+  - first:
+      213: 21300496
+    second: wc-summer_248
+  - first:
+      213: 21300498
+    second: wc-summer_249
+  - first:
+      213: 21300500
+    second: wc-summer_250
+  - first:
+      213: 21300502
+    second: wc-summer_251
+  - first:
+      213: 21300504
+    second: wc-summer_252
+  - first:
+      213: 21300506
+    second: wc-summer_253
+  - first:
+      213: 21300508
+    second: wc-summer_254
+  - first:
+      213: 21300510
+    second: wc-summer_255
+  - first:
+      213: 21300512
+    second: wc-summer_256
+  - first:
+      213: 21300514
+    second: wc-summer_257
+  - first:
+      213: 21300516
+    second: wc-summer_258
+  - first:
+      213: 21300518
+    second: wc-summer_259
+  - first:
+      213: 21300520
+    second: wc-summer_260
+  - first:
+      213: 21300522
+    second: wc-summer_261
+  - first:
+      213: 21300524
+    second: wc-summer_262
+  - first:
+      213: 21300526
+    second: wc-summer_263
+  - first:
+      213: 21300528
+    second: wc-summer_264
+  - first:
+      213: 21300530
+    second: wc-summer_265
+  - first:
+      213: 21300532
+    second: wc-summer_266
+  - first:
+      213: 21300534
+    second: wc-summer_267
+  - first:
+      213: 21300536
+    second: wc-summer_268
+  - first:
+      213: 21300538
+    second: wc-summer_269
+  - first:
+      213: 21300540
+    second: wc-summer_270
+  - first:
+      213: 21300542
+    second: wc-summer_271
+  - first:
+      213: 21300544
+    second: wc-summer_272
+  - first:
+      213: 21300546
+    second: wc-summer_273
+  - first:
+      213: 21300548
+    second: wc-summer_274
+  - first:
+      213: 21300550
+    second: wc-summer_275
+  - first:
+      213: 21300552
+    second: wc-summer_276
+  - first:
+      213: 21300554
+    second: wc-summer_277
+  - first:
+      213: 21300556
+    second: wc-summer_278
+  - first:
+      213: 21300558
+    second: wc-summer_279
+  - first:
+      213: 21300560
+    second: wc-summer_280
+  - first:
+      213: 21300562
+    second: wc-summer_281
+  - first:
+      213: 21300564
+    second: wc-summer_282
+  - first:
+      213: 21300566
+    second: wc-summer_283
+  - first:
+      213: 21300568
+    second: wc-summer_284
+  - first:
+      213: 21300570
+    second: wc-summer_285
+  - first:
+      213: 21300572
+    second: wc-summer_286
+  - first:
+      213: 21300574
+    second: wc-summer_287
+  - first:
+      213: 21300576
+    second: wc-summer_288
+  - first:
+      213: 21300578
+    second: wc-summer_289
+  - first:
+      213: 21300580
+    second: wc-summer_290
+  - first:
+      213: 21300582
+    second: wc-summer_291
+  - first:
+      213: 21300584
+    second: wc-summer_292
+  - first:
+      213: 21300586
+    second: wc-summer_293
+  - first:
+      213: 21300588
+    second: wc-summer_294
+  - first:
+      213: 21300590
+    second: wc-summer_295
+  - first:
+      213: 21300592
+    second: wc-summer_296
+  - first:
+      213: 21300594
+    second: wc-summer_297
+  - first:
+      213: 21300596
+    second: wc-summer_298
+  - first:
+      213: 21300598
+    second: wc-summer_299
+  - first:
+      213: 21300600
+    second: wc-summer_300
+  - first:
+      213: 21300602
+    second: wc-summer_301
+  - first:
+      213: 21300604
+    second: wc-summer_302
+  - first:
+      213: 21300606
+    second: wc-summer_303
+  - first:
+      213: 21300608
+    second: wc-summer_304
+  - first:
+      213: 21300610
+    second: wc-summer_305
+  - first:
+      213: 21300612
+    second: wc-summer_306
+  - first:
+      213: 21300614
+    second: wc-summer_307
+  - first:
+      213: 21300616
+    second: wc-summer_308
+  - first:
+      213: 21300618
+    second: wc-summer_309
+  - first:
+      213: 21300620
+    second: wc-summer_310
+  - first:
+      213: 21300622
+    second: wc-summer_311
+  - first:
+      213: 21300624
+    second: wc-summer_312
+  - first:
+      213: 21300626
+    second: wc-summer_313
+  - first:
+      213: 21300628
+    second: wc-summer_314
+  - first:
+      213: 21300630
+    second: wc-summer_315
+  - first:
+      213: 21300632
+    second: wc-summer_316
+  - first:
+      213: 21300634
+    second: wc-summer_317
+  - first:
+      213: 21300636
+    second: wc-summer_318
+  - first:
+      213: 21300638
+    second: wc-summer_319
+  - first:
+      213: 21300640
+    second: wc-summer_320
+  - first:
+      213: 21300642
+    second: wc-summer_321
+  - first:
+      213: 21300644
+    second: wc-summer_322
+  - first:
+      213: 21300646
+    second: wc-summer_323
+  - first:
+      213: 21300648
+    second: wc-summer_324
+  - first:
+      213: 21300650
+    second: wc-summer_325
+  - first:
+      213: 21300652
+    second: wc-summer_326
+  - first:
+      213: 21300654
+    second: wc-summer_327
+  - first:
+      213: 21300656
+    second: wc-summer_328
+  - first:
+      213: 21300658
+    second: wc-summer_329
+  - first:
+      213: 21300660
+    second: wc-summer_330
+  - first:
+      213: 21300662
+    second: wc-summer_331
+  - first:
+      213: 21300664
+    second: wc-summer_332
+  - first:
+      213: 21300666
+    second: wc-summer_333
+  - first:
+      213: 21300668
+    second: wc-summer_334
+  - first:
+      213: 21300670
+    second: wc-summer_335
+  - first:
+      213: 21300672
+    second: wc-summer_336
+  - first:
+      213: 21300674
+    second: wc-summer_337
+  - first:
+      213: 21300676
+    second: wc-summer_338
+  - first:
+      213: 21300678
+    second: wc-summer_339
+  - first:
+      213: 21300680
+    second: wc-summer_340
+  - first:
+      213: 21300682
+    second: wc-summer_341
+  - first:
+      213: 21300684
+    second: wc-summer_342
+  - first:
+      213: 21300686
+    second: wc-summer_343
+  - first:
+      213: 21300688
+    second: wc-summer_344
+  - first:
+      213: 21300690
+    second: wc-summer_345
+  - first:
+      213: 21300692
+    second: wc-summer_346
+  - first:
+      213: 21300694
+    second: wc-summer_347
+  - first:
+      213: 21300696
+    second: wc-summer_348
+  - first:
+      213: 21300698
+    second: wc-summer_349
+  - first:
+      213: 21300700
+    second: wc-summer_350
+  - first:
+      213: 21300702
+    second: wc-summer_351
+  - first:
+      213: 21300704
+    second: wc-summer_352
+  - first:
+      213: 21300706
+    second: wc-summer_353
+  - first:
+      213: 21300708
+    second: wc-summer_354
+  - first:
+      213: 21300710
+    second: wc-summer_355
+  - first:
+      213: 21300712
+    second: wc-summer_356
+  - first:
+      213: 21300714
+    second: wc-summer_357
+  - first:
+      213: 21300716
+    second: wc-summer_358
   externalObjects: {}
-  serializedVersion: 4
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
@@ -382,6 +1098,10 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -391,8 +1111,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -404,18 +1124,26 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -425,7 +1153,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Standalone
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -435,7 +1165,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Android
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -445,6 +1177,31 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -462,6 +1219,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_1
       rect:
@@ -476,6 +1240,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_2
       rect:
@@ -490,6 +1261,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_3
       rect:
@@ -504,6 +1282,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_4
       rect:
@@ -518,6 +1303,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_5
       rect:
@@ -532,6 +1324,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_6
       rect:
@@ -546,6 +1345,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_7
       rect:
@@ -560,6 +1366,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_8
       rect:
@@ -574,6 +1387,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_9
       rect:
@@ -588,6 +1408,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_10
       rect:
@@ -602,6 +1429,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_11
       rect:
@@ -616,6 +1450,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_12
       rect:
@@ -630,6 +1471,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_13
       rect:
@@ -644,6 +1492,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_14
       rect:
@@ -658,6 +1513,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_15
       rect:
@@ -672,6 +1534,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_16
       rect:
@@ -686,6 +1555,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_17
       rect:
@@ -700,6 +1576,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 24305410000000000800000000000000
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_18
       rect:
@@ -714,6 +1597,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 44305410000000000800000000000000
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_19
       rect:
@@ -728,6 +1618,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 64305410000000000800000000000000
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_20
       rect:
@@ -742,6 +1639,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 84305410000000000800000000000000
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_21
       rect:
@@ -756,6 +1660,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a4305410000000000800000000000000
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_22
       rect:
@@ -770,6 +1681,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c4305410000000000800000000000000
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_23
       rect:
@@ -784,6 +1702,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e4305410000000000800000000000000
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_24
       rect:
@@ -798,6 +1723,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 05305410000000000800000000000000
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_25
       rect:
@@ -812,6 +1744,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 25305410000000000800000000000000
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_26
       rect:
@@ -826,6 +1765,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 45305410000000000800000000000000
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_27
       rect:
@@ -840,6 +1786,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 65305410000000000800000000000000
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_28
       rect:
@@ -854,6 +1807,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 85305410000000000800000000000000
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_29
       rect:
@@ -868,6 +1828,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a5305410000000000800000000000000
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_30
       rect:
@@ -882,6 +1849,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c5305410000000000800000000000000
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_31
       rect:
@@ -896,6 +1870,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e5305410000000000800000000000000
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_32
       rect:
@@ -910,6 +1891,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 06305410000000000800000000000000
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_33
       rect:
@@ -924,6 +1912,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 26305410000000000800000000000000
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_34
       rect:
@@ -938,6 +1933,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 46305410000000000800000000000000
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_35
       rect:
@@ -952,6 +1954,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 66305410000000000800000000000000
+      internalID: 21300070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_36
       rect:
@@ -966,6 +1975,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 86305410000000000800000000000000
+      internalID: 21300072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_37
       rect:
@@ -980,6 +1996,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a6305410000000000800000000000000
+      internalID: 21300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_38
       rect:
@@ -994,6 +2017,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c6305410000000000800000000000000
+      internalID: 21300076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_39
       rect:
@@ -1008,6 +2038,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e6305410000000000800000000000000
+      internalID: 21300078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_40
       rect:
@@ -1022,6 +2059,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 07305410000000000800000000000000
+      internalID: 21300080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_41
       rect:
@@ -1036,6 +2080,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 27305410000000000800000000000000
+      internalID: 21300082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_42
       rect:
@@ -1050,6 +2101,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 47305410000000000800000000000000
+      internalID: 21300084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_43
       rect:
@@ -1064,6 +2122,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 67305410000000000800000000000000
+      internalID: 21300086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_44
       rect:
@@ -1078,6 +2143,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 87305410000000000800000000000000
+      internalID: 21300088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_45
       rect:
@@ -1092,6 +2164,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a7305410000000000800000000000000
+      internalID: 21300090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_46
       rect:
@@ -1106,6 +2185,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c7305410000000000800000000000000
+      internalID: 21300092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_47
       rect:
@@ -1120,6 +2206,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e7305410000000000800000000000000
+      internalID: 21300094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_48
       rect:
@@ -1134,6 +2227,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 08305410000000000800000000000000
+      internalID: 21300096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_49
       rect:
@@ -1148,6 +2248,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 28305410000000000800000000000000
+      internalID: 21300098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_50
       rect:
@@ -1162,6 +2269,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 48305410000000000800000000000000
+      internalID: 21300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_51
       rect:
@@ -1176,6 +2290,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 68305410000000000800000000000000
+      internalID: 21300102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_52
       rect:
@@ -1190,6 +2311,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 88305410000000000800000000000000
+      internalID: 21300104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_53
       rect:
@@ -1204,6 +2332,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a8305410000000000800000000000000
+      internalID: 21300106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_54
       rect:
@@ -1218,6 +2353,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c8305410000000000800000000000000
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_55
       rect:
@@ -1232,6 +2374,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e8305410000000000800000000000000
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_56
       rect:
@@ -1246,6 +2395,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 09305410000000000800000000000000
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_57
       rect:
@@ -1260,6 +2416,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 29305410000000000800000000000000
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_58
       rect:
@@ -1274,6 +2437,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 49305410000000000800000000000000
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_59
       rect:
@@ -1288,6 +2458,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 69305410000000000800000000000000
+      internalID: 21300118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_60
       rect:
@@ -1302,6 +2479,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 89305410000000000800000000000000
+      internalID: 21300120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_61
       rect:
@@ -1316,6 +2500,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a9305410000000000800000000000000
+      internalID: 21300122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_62
       rect:
@@ -1330,6 +2521,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c9305410000000000800000000000000
+      internalID: 21300124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_63
       rect:
@@ -1344,6 +2542,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e9305410000000000800000000000000
+      internalID: 21300126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_64
       rect:
@@ -1358,6 +2563,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0a305410000000000800000000000000
+      internalID: 21300128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_65
       rect:
@@ -1372,6 +2584,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2a305410000000000800000000000000
+      internalID: 21300130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_66
       rect:
@@ -1386,6 +2605,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4a305410000000000800000000000000
+      internalID: 21300132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_67
       rect:
@@ -1400,6 +2626,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6a305410000000000800000000000000
+      internalID: 21300134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_68
       rect:
@@ -1414,6 +2647,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8a305410000000000800000000000000
+      internalID: 21300136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_69
       rect:
@@ -1428,6 +2668,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: aa305410000000000800000000000000
+      internalID: 21300138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_70
       rect:
@@ -1442,6 +2689,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ca305410000000000800000000000000
+      internalID: 21300140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_71
       rect:
@@ -1456,6 +2710,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ea305410000000000800000000000000
+      internalID: 21300142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_72
       rect:
@@ -1470,6 +2731,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0b305410000000000800000000000000
+      internalID: 21300144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_73
       rect:
@@ -1484,6 +2752,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2b305410000000000800000000000000
+      internalID: 21300146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_74
       rect:
@@ -1498,6 +2773,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4b305410000000000800000000000000
+      internalID: 21300148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_75
       rect:
@@ -1512,6 +2794,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6b305410000000000800000000000000
+      internalID: 21300150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_76
       rect:
@@ -1526,6 +2815,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8b305410000000000800000000000000
+      internalID: 21300152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_77
       rect:
@@ -1540,6 +2836,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ab305410000000000800000000000000
+      internalID: 21300154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_78
       rect:
@@ -1554,6 +2857,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cb305410000000000800000000000000
+      internalID: 21300156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_79
       rect:
@@ -1568,6 +2878,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: eb305410000000000800000000000000
+      internalID: 21300158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_80
       rect:
@@ -1582,6 +2899,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0c305410000000000800000000000000
+      internalID: 21300160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_81
       rect:
@@ -1596,6 +2920,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2c305410000000000800000000000000
+      internalID: 21300162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_82
       rect:
@@ -1610,6 +2941,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4c305410000000000800000000000000
+      internalID: 21300164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_83
       rect:
@@ -1624,6 +2962,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6c305410000000000800000000000000
+      internalID: 21300166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_84
       rect:
@@ -1638,6 +2983,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8c305410000000000800000000000000
+      internalID: 21300168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_85
       rect:
@@ -1652,6 +3004,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ac305410000000000800000000000000
+      internalID: 21300170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_86
       rect:
@@ -1666,6 +3025,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cc305410000000000800000000000000
+      internalID: 21300172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_87
       rect:
@@ -1680,6 +3046,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ec305410000000000800000000000000
+      internalID: 21300174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_88
       rect:
@@ -1694,6 +3067,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0d305410000000000800000000000000
+      internalID: 21300176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_89
       rect:
@@ -1708,6 +3088,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2d305410000000000800000000000000
+      internalID: 21300178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_90
       rect:
@@ -1722,6 +3109,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4d305410000000000800000000000000
+      internalID: 21300180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_91
       rect:
@@ -1736,6 +3130,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6d305410000000000800000000000000
+      internalID: 21300182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_92
       rect:
@@ -1750,6 +3151,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8d305410000000000800000000000000
+      internalID: 21300184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_93
       rect:
@@ -1764,6 +3172,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ad305410000000000800000000000000
+      internalID: 21300186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_94
       rect:
@@ -1778,6 +3193,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cd305410000000000800000000000000
+      internalID: 21300188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_95
       rect:
@@ -1792,6 +3214,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ed305410000000000800000000000000
+      internalID: 21300190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_96
       rect:
@@ -1806,6 +3235,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0e305410000000000800000000000000
+      internalID: 21300192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_97
       rect:
@@ -1820,6 +3256,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2e305410000000000800000000000000
+      internalID: 21300194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_98
       rect:
@@ -1834,6 +3277,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4e305410000000000800000000000000
+      internalID: 21300196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_99
       rect:
@@ -1848,6 +3298,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6e305410000000000800000000000000
+      internalID: 21300198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_100
       rect:
@@ -1862,6 +3319,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8e305410000000000800000000000000
+      internalID: 21300200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_101
       rect:
@@ -1876,6 +3340,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ae305410000000000800000000000000
+      internalID: 21300202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_102
       rect:
@@ -1890,6 +3361,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ce305410000000000800000000000000
+      internalID: 21300204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_103
       rect:
@@ -1904,6 +3382,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ee305410000000000800000000000000
+      internalID: 21300206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_104
       rect:
@@ -1918,6 +3403,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0f305410000000000800000000000000
+      internalID: 21300208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_105
       rect:
@@ -1932,6 +3424,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2f305410000000000800000000000000
+      internalID: 21300210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_106
       rect:
@@ -1946,6 +3445,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4f305410000000000800000000000000
+      internalID: 21300212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_107
       rect:
@@ -1960,6 +3466,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6f305410000000000800000000000000
+      internalID: 21300214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_108
       rect:
@@ -1974,6 +3487,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8f305410000000000800000000000000
+      internalID: 21300216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_109
       rect:
@@ -1988,6 +3508,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: af305410000000000800000000000000
+      internalID: 21300218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_110
       rect:
@@ -2002,6 +3529,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cf305410000000000800000000000000
+      internalID: 21300220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_111
       rect:
@@ -2016,6 +3550,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ef305410000000000800000000000000
+      internalID: 21300222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_112
       rect:
@@ -2030,6 +3571,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 00405410000000000800000000000000
+      internalID: 21300224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_113
       rect:
@@ -2044,6 +3592,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 20405410000000000800000000000000
+      internalID: 21300226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_114
       rect:
@@ -2058,6 +3613,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 40405410000000000800000000000000
+      internalID: 21300228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_115
       rect:
@@ -2072,6 +3634,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 60405410000000000800000000000000
+      internalID: 21300230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_116
       rect:
@@ -2086,6 +3655,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 80405410000000000800000000000000
+      internalID: 21300232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_117
       rect:
@@ -2100,6 +3676,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a0405410000000000800000000000000
+      internalID: 21300234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_118
       rect:
@@ -2114,6 +3697,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c0405410000000000800000000000000
+      internalID: 21300236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_119
       rect:
@@ -2128,6 +3718,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e0405410000000000800000000000000
+      internalID: 21300238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_120
       rect:
@@ -2142,6 +3739,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 01405410000000000800000000000000
+      internalID: 21300240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_121
       rect:
@@ -2156,6 +3760,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 21405410000000000800000000000000
+      internalID: 21300242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_122
       rect:
@@ -2170,6 +3781,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 41405410000000000800000000000000
+      internalID: 21300244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_123
       rect:
@@ -2184,6 +3802,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 61405410000000000800000000000000
+      internalID: 21300246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_124
       rect:
@@ -2198,6 +3823,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 81405410000000000800000000000000
+      internalID: 21300248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_125
       rect:
@@ -2212,6 +3844,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a1405410000000000800000000000000
+      internalID: 21300250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_126
       rect:
@@ -2226,6 +3865,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c1405410000000000800000000000000
+      internalID: 21300252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_127
       rect:
@@ -2240,6 +3886,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e1405410000000000800000000000000
+      internalID: 21300254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_128
       rect:
@@ -2254,6 +3907,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 02405410000000000800000000000000
+      internalID: 21300256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_129
       rect:
@@ -2268,6 +3928,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 22405410000000000800000000000000
+      internalID: 21300258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_130
       rect:
@@ -2282,6 +3949,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 42405410000000000800000000000000
+      internalID: 21300260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_131
       rect:
@@ -2296,6 +3970,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 62405410000000000800000000000000
+      internalID: 21300262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_132
       rect:
@@ -2310,6 +3991,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 82405410000000000800000000000000
+      internalID: 21300264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_133
       rect:
@@ -2324,6 +4012,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a2405410000000000800000000000000
+      internalID: 21300266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_134
       rect:
@@ -2338,6 +4033,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c2405410000000000800000000000000
+      internalID: 21300268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_135
       rect:
@@ -2352,6 +4054,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e2405410000000000800000000000000
+      internalID: 21300270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_136
       rect:
@@ -2366,6 +4075,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 03405410000000000800000000000000
+      internalID: 21300272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_137
       rect:
@@ -2380,6 +4096,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 23405410000000000800000000000000
+      internalID: 21300274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_138
       rect:
@@ -2394,6 +4117,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 43405410000000000800000000000000
+      internalID: 21300276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_139
       rect:
@@ -2408,6 +4138,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 63405410000000000800000000000000
+      internalID: 21300278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_140
       rect:
@@ -2422,6 +4159,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 83405410000000000800000000000000
+      internalID: 21300280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_141
       rect:
@@ -2436,6 +4180,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a3405410000000000800000000000000
+      internalID: 21300282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_142
       rect:
@@ -2450,6 +4201,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c3405410000000000800000000000000
+      internalID: 21300284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_143
       rect:
@@ -2464,6 +4222,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e3405410000000000800000000000000
+      internalID: 21300286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_144
       rect:
@@ -2478,6 +4243,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 04405410000000000800000000000000
+      internalID: 21300288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_145
       rect:
@@ -2492,6 +4264,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 24405410000000000800000000000000
+      internalID: 21300290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_146
       rect:
@@ -2506,6 +4285,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 44405410000000000800000000000000
+      internalID: 21300292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_147
       rect:
@@ -2520,6 +4306,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 64405410000000000800000000000000
+      internalID: 21300294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_148
       rect:
@@ -2534,6 +4327,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 84405410000000000800000000000000
+      internalID: 21300296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_149
       rect:
@@ -2548,6 +4348,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a4405410000000000800000000000000
+      internalID: 21300298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_150
       rect:
@@ -2562,6 +4369,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c4405410000000000800000000000000
+      internalID: 21300300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_151
       rect:
@@ -2576,6 +4390,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e4405410000000000800000000000000
+      internalID: 21300302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_152
       rect:
@@ -2590,6 +4411,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 05405410000000000800000000000000
+      internalID: 21300304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_153
       rect:
@@ -2604,6 +4432,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 25405410000000000800000000000000
+      internalID: 21300306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_154
       rect:
@@ -2618,6 +4453,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 45405410000000000800000000000000
+      internalID: 21300308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_155
       rect:
@@ -2632,6 +4474,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 65405410000000000800000000000000
+      internalID: 21300310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_156
       rect:
@@ -2646,6 +4495,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 85405410000000000800000000000000
+      internalID: 21300312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_157
       rect:
@@ -2660,6 +4516,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a5405410000000000800000000000000
+      internalID: 21300314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_158
       rect:
@@ -2674,6 +4537,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c5405410000000000800000000000000
+      internalID: 21300316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_159
       rect:
@@ -2688,6 +4558,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e5405410000000000800000000000000
+      internalID: 21300318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_160
       rect:
@@ -2702,6 +4579,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 06405410000000000800000000000000
+      internalID: 21300320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_161
       rect:
@@ -2716,6 +4600,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 26405410000000000800000000000000
+      internalID: 21300322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_162
       rect:
@@ -2730,6 +4621,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 46405410000000000800000000000000
+      internalID: 21300324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_163
       rect:
@@ -2744,6 +4642,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 66405410000000000800000000000000
+      internalID: 21300326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_164
       rect:
@@ -2758,6 +4663,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 86405410000000000800000000000000
+      internalID: 21300328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_165
       rect:
@@ -2772,6 +4684,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a6405410000000000800000000000000
+      internalID: 21300330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_166
       rect:
@@ -2786,6 +4705,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c6405410000000000800000000000000
+      internalID: 21300332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_167
       rect:
@@ -2800,6 +4726,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e6405410000000000800000000000000
+      internalID: 21300334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_168
       rect:
@@ -2814,6 +4747,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 07405410000000000800000000000000
+      internalID: 21300336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_169
       rect:
@@ -2828,6 +4768,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 27405410000000000800000000000000
+      internalID: 21300338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_170
       rect:
@@ -2842,6 +4789,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 47405410000000000800000000000000
+      internalID: 21300340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_171
       rect:
@@ -2856,6 +4810,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 67405410000000000800000000000000
+      internalID: 21300342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_172
       rect:
@@ -2870,6 +4831,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 87405410000000000800000000000000
+      internalID: 21300344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_173
       rect:
@@ -2884,6 +4852,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a7405410000000000800000000000000
+      internalID: 21300346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_174
       rect:
@@ -2898,6 +4873,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c7405410000000000800000000000000
+      internalID: 21300348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_175
       rect:
@@ -2912,6 +4894,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e7405410000000000800000000000000
+      internalID: 21300350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_176
       rect:
@@ -2926,6 +4915,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 08405410000000000800000000000000
+      internalID: 21300352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_177
       rect:
@@ -2940,6 +4936,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 28405410000000000800000000000000
+      internalID: 21300354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_178
       rect:
@@ -2954,6 +4957,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 48405410000000000800000000000000
+      internalID: 21300356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_179
       rect:
@@ -2968,6 +4978,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 68405410000000000800000000000000
+      internalID: 21300358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_180
       rect:
@@ -2982,6 +4999,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 88405410000000000800000000000000
+      internalID: 21300360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_181
       rect:
@@ -2996,6 +5020,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a8405410000000000800000000000000
+      internalID: 21300362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_182
       rect:
@@ -3010,6 +5041,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c8405410000000000800000000000000
+      internalID: 21300364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_183
       rect:
@@ -3024,6 +5062,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e8405410000000000800000000000000
+      internalID: 21300366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_184
       rect:
@@ -3038,6 +5083,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 09405410000000000800000000000000
+      internalID: 21300368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_185
       rect:
@@ -3052,6 +5104,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 29405410000000000800000000000000
+      internalID: 21300370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_186
       rect:
@@ -3066,6 +5125,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 49405410000000000800000000000000
+      internalID: 21300372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_187
       rect:
@@ -3080,6 +5146,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 69405410000000000800000000000000
+      internalID: 21300374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_188
       rect:
@@ -3094,6 +5167,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 89405410000000000800000000000000
+      internalID: 21300376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_189
       rect:
@@ -3108,6 +5188,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a9405410000000000800000000000000
+      internalID: 21300378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_190
       rect:
@@ -3122,6 +5209,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c9405410000000000800000000000000
+      internalID: 21300380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_191
       rect:
@@ -3136,6 +5230,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e9405410000000000800000000000000
+      internalID: 21300382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_192
       rect:
@@ -3150,6 +5251,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0a405410000000000800000000000000
+      internalID: 21300384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_193
       rect:
@@ -3164,6 +5272,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2a405410000000000800000000000000
+      internalID: 21300386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_194
       rect:
@@ -3178,6 +5293,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4a405410000000000800000000000000
+      internalID: 21300388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_195
       rect:
@@ -3192,6 +5314,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6a405410000000000800000000000000
+      internalID: 21300390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_196
       rect:
@@ -3206,6 +5335,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8a405410000000000800000000000000
+      internalID: 21300392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_197
       rect:
@@ -3220,6 +5356,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: aa405410000000000800000000000000
+      internalID: 21300394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_198
       rect:
@@ -3234,6 +5377,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ca405410000000000800000000000000
+      internalID: 21300396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_199
       rect:
@@ -3248,6 +5398,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ea405410000000000800000000000000
+      internalID: 21300398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_200
       rect:
@@ -3262,6 +5419,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0b405410000000000800000000000000
+      internalID: 21300400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_201
       rect:
@@ -3276,6 +5440,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2b405410000000000800000000000000
+      internalID: 21300402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_202
       rect:
@@ -3290,6 +5461,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4b405410000000000800000000000000
+      internalID: 21300404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_203
       rect:
@@ -3304,6 +5482,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6b405410000000000800000000000000
+      internalID: 21300406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_204
       rect:
@@ -3318,6 +5503,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8b405410000000000800000000000000
+      internalID: 21300408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_205
       rect:
@@ -3332,6 +5524,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ab405410000000000800000000000000
+      internalID: 21300410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_206
       rect:
@@ -3346,6 +5545,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cb405410000000000800000000000000
+      internalID: 21300412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_207
       rect:
@@ -3360,6 +5566,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: eb405410000000000800000000000000
+      internalID: 21300414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_208
       rect:
@@ -3374,6 +5587,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0c405410000000000800000000000000
+      internalID: 21300416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_209
       rect:
@@ -3388,6 +5608,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2c405410000000000800000000000000
+      internalID: 21300418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_210
       rect:
@@ -3402,6 +5629,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4c405410000000000800000000000000
+      internalID: 21300420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_211
       rect:
@@ -3416,6 +5650,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6c405410000000000800000000000000
+      internalID: 21300422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_212
       rect:
@@ -3430,6 +5671,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8c405410000000000800000000000000
+      internalID: 21300424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_213
       rect:
@@ -3444,6 +5692,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ac405410000000000800000000000000
+      internalID: 21300426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_214
       rect:
@@ -3458,6 +5713,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cc405410000000000800000000000000
+      internalID: 21300428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_215
       rect:
@@ -3472,6 +5734,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ec405410000000000800000000000000
+      internalID: 21300430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_216
       rect:
@@ -3486,6 +5755,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0d405410000000000800000000000000
+      internalID: 21300432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_217
       rect:
@@ -3500,6 +5776,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2d405410000000000800000000000000
+      internalID: 21300434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_218
       rect:
@@ -3514,6 +5797,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4d405410000000000800000000000000
+      internalID: 21300436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_219
       rect:
@@ -3528,6 +5818,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6d405410000000000800000000000000
+      internalID: 21300438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_220
       rect:
@@ -3542,6 +5839,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8d405410000000000800000000000000
+      internalID: 21300440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_221
       rect:
@@ -3556,6 +5860,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ad405410000000000800000000000000
+      internalID: 21300442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_222
       rect:
@@ -3570,6 +5881,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cd405410000000000800000000000000
+      internalID: 21300444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_223
       rect:
@@ -3584,6 +5902,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ed405410000000000800000000000000
+      internalID: 21300446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_224
       rect:
@@ -3598,6 +5923,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0e405410000000000800000000000000
+      internalID: 21300448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_225
       rect:
@@ -3612,6 +5944,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2e405410000000000800000000000000
+      internalID: 21300450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_226
       rect:
@@ -3626,6 +5965,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4e405410000000000800000000000000
+      internalID: 21300452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_227
       rect:
@@ -3640,6 +5986,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6e405410000000000800000000000000
+      internalID: 21300454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_228
       rect:
@@ -3654,6 +6007,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8e405410000000000800000000000000
+      internalID: 21300456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_229
       rect:
@@ -3668,6 +6028,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ae405410000000000800000000000000
+      internalID: 21300458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_230
       rect:
@@ -3682,6 +6049,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ce405410000000000800000000000000
+      internalID: 21300460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_231
       rect:
@@ -3696,6 +6070,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ee405410000000000800000000000000
+      internalID: 21300462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_232
       rect:
@@ -3710,6 +6091,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0f405410000000000800000000000000
+      internalID: 21300464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_233
       rect:
@@ -3724,6 +6112,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2f405410000000000800000000000000
+      internalID: 21300466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_234
       rect:
@@ -3738,6 +6133,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4f405410000000000800000000000000
+      internalID: 21300468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_235
       rect:
@@ -3752,6 +6154,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6f405410000000000800000000000000
+      internalID: 21300470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_236
       rect:
@@ -3766,6 +6175,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8f405410000000000800000000000000
+      internalID: 21300472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_237
       rect:
@@ -3780,6 +6196,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: af405410000000000800000000000000
+      internalID: 21300474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_238
       rect:
@@ -3794,6 +6217,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cf405410000000000800000000000000
+      internalID: 21300476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_239
       rect:
@@ -3808,6 +6238,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ef405410000000000800000000000000
+      internalID: 21300478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_240
       rect:
@@ -3822,6 +6259,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 00505410000000000800000000000000
+      internalID: 21300480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_241
       rect:
@@ -3836,6 +6280,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 20505410000000000800000000000000
+      internalID: 21300482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_242
       rect:
@@ -3850,6 +6301,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 40505410000000000800000000000000
+      internalID: 21300484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_243
       rect:
@@ -3864,6 +6322,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 60505410000000000800000000000000
+      internalID: 21300486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_244
       rect:
@@ -3878,6 +6343,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 80505410000000000800000000000000
+      internalID: 21300488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_245
       rect:
@@ -3892,6 +6364,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a0505410000000000800000000000000
+      internalID: 21300490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_246
       rect:
@@ -3906,6 +6385,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c0505410000000000800000000000000
+      internalID: 21300492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_247
       rect:
@@ -3920,6 +6406,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e0505410000000000800000000000000
+      internalID: 21300494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_248
       rect:
@@ -3934,6 +6427,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 01505410000000000800000000000000
+      internalID: 21300496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_249
       rect:
@@ -3948,6 +6448,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 21505410000000000800000000000000
+      internalID: 21300498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_250
       rect:
@@ -3962,6 +6469,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 41505410000000000800000000000000
+      internalID: 21300500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_251
       rect:
@@ -3976,6 +6490,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 61505410000000000800000000000000
+      internalID: 21300502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_252
       rect:
@@ -3990,6 +6511,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 81505410000000000800000000000000
+      internalID: 21300504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_253
       rect:
@@ -4004,6 +6532,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a1505410000000000800000000000000
+      internalID: 21300506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_254
       rect:
@@ -4018,6 +6553,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c1505410000000000800000000000000
+      internalID: 21300508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_255
       rect:
@@ -4032,6 +6574,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e1505410000000000800000000000000
+      internalID: 21300510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_256
       rect:
@@ -4046,6 +6595,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 02505410000000000800000000000000
+      internalID: 21300512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_257
       rect:
@@ -4060,6 +6616,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 22505410000000000800000000000000
+      internalID: 21300514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_258
       rect:
@@ -4074,6 +6637,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 42505410000000000800000000000000
+      internalID: 21300516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_259
       rect:
@@ -4088,6 +6658,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 62505410000000000800000000000000
+      internalID: 21300518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_260
       rect:
@@ -4102,6 +6679,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 82505410000000000800000000000000
+      internalID: 21300520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_261
       rect:
@@ -4116,6 +6700,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a2505410000000000800000000000000
+      internalID: 21300522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_262
       rect:
@@ -4130,6 +6721,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c2505410000000000800000000000000
+      internalID: 21300524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_263
       rect:
@@ -4144,6 +6742,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e2505410000000000800000000000000
+      internalID: 21300526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_264
       rect:
@@ -4158,6 +6763,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 03505410000000000800000000000000
+      internalID: 21300528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_265
       rect:
@@ -4172,6 +6784,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 23505410000000000800000000000000
+      internalID: 21300530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_266
       rect:
@@ -4186,6 +6805,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 43505410000000000800000000000000
+      internalID: 21300532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_267
       rect:
@@ -4200,6 +6826,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 63505410000000000800000000000000
+      internalID: 21300534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_268
       rect:
@@ -4214,6 +6847,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 83505410000000000800000000000000
+      internalID: 21300536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_269
       rect:
@@ -4228,6 +6868,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a3505410000000000800000000000000
+      internalID: 21300538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_270
       rect:
@@ -4242,6 +6889,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c3505410000000000800000000000000
+      internalID: 21300540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_271
       rect:
@@ -4256,6 +6910,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e3505410000000000800000000000000
+      internalID: 21300542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_272
       rect:
@@ -4270,6 +6931,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 04505410000000000800000000000000
+      internalID: 21300544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_273
       rect:
@@ -4284,6 +6952,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 24505410000000000800000000000000
+      internalID: 21300546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_274
       rect:
@@ -4298,6 +6973,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 44505410000000000800000000000000
+      internalID: 21300548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_275
       rect:
@@ -4312,6 +6994,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 64505410000000000800000000000000
+      internalID: 21300550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_276
       rect:
@@ -4326,6 +7015,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 84505410000000000800000000000000
+      internalID: 21300552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_277
       rect:
@@ -4340,6 +7036,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a4505410000000000800000000000000
+      internalID: 21300554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_278
       rect:
@@ -4354,6 +7057,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c4505410000000000800000000000000
+      internalID: 21300556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_279
       rect:
@@ -4368,6 +7078,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e4505410000000000800000000000000
+      internalID: 21300558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_280
       rect:
@@ -4382,6 +7099,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 05505410000000000800000000000000
+      internalID: 21300560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_281
       rect:
@@ -4396,6 +7120,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 25505410000000000800000000000000
+      internalID: 21300562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_282
       rect:
@@ -4410,6 +7141,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 45505410000000000800000000000000
+      internalID: 21300564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_283
       rect:
@@ -4424,6 +7162,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 65505410000000000800000000000000
+      internalID: 21300566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_284
       rect:
@@ -4438,6 +7183,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 85505410000000000800000000000000
+      internalID: 21300568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_285
       rect:
@@ -4452,6 +7204,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a5505410000000000800000000000000
+      internalID: 21300570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_286
       rect:
@@ -4466,6 +7225,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c5505410000000000800000000000000
+      internalID: 21300572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_287
       rect:
@@ -4480,6 +7246,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e5505410000000000800000000000000
+      internalID: 21300574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_288
       rect:
@@ -4494,6 +7267,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 06505410000000000800000000000000
+      internalID: 21300576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_289
       rect:
@@ -4508,6 +7288,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 26505410000000000800000000000000
+      internalID: 21300578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_290
       rect:
@@ -4522,6 +7309,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 46505410000000000800000000000000
+      internalID: 21300580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_291
       rect:
@@ -4536,6 +7330,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 66505410000000000800000000000000
+      internalID: 21300582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_292
       rect:
@@ -4550,6 +7351,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 86505410000000000800000000000000
+      internalID: 21300584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_293
       rect:
@@ -4564,6 +7372,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a6505410000000000800000000000000
+      internalID: 21300586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_294
       rect:
@@ -4578,6 +7393,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c6505410000000000800000000000000
+      internalID: 21300588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_295
       rect:
@@ -4592,6 +7414,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e6505410000000000800000000000000
+      internalID: 21300590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_296
       rect:
@@ -4606,6 +7435,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 07505410000000000800000000000000
+      internalID: 21300592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_297
       rect:
@@ -4620,6 +7456,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 27505410000000000800000000000000
+      internalID: 21300594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_298
       rect:
@@ -4634,6 +7477,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 47505410000000000800000000000000
+      internalID: 21300596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_299
       rect:
@@ -4648,6 +7498,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 67505410000000000800000000000000
+      internalID: 21300598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_300
       rect:
@@ -4662,6 +7519,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 87505410000000000800000000000000
+      internalID: 21300600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_301
       rect:
@@ -4676,6 +7540,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a7505410000000000800000000000000
+      internalID: 21300602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_302
       rect:
@@ -4690,6 +7561,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c7505410000000000800000000000000
+      internalID: 21300604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_303
       rect:
@@ -4704,6 +7582,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e7505410000000000800000000000000
+      internalID: 21300606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_304
       rect:
@@ -4718,6 +7603,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 08505410000000000800000000000000
+      internalID: 21300608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_305
       rect:
@@ -4732,6 +7624,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 28505410000000000800000000000000
+      internalID: 21300610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_306
       rect:
@@ -4746,6 +7645,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 48505410000000000800000000000000
+      internalID: 21300612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_307
       rect:
@@ -4760,6 +7666,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 68505410000000000800000000000000
+      internalID: 21300614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_308
       rect:
@@ -4774,6 +7687,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 88505410000000000800000000000000
+      internalID: 21300616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_309
       rect:
@@ -4788,6 +7708,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a8505410000000000800000000000000
+      internalID: 21300618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_310
       rect:
@@ -4802,6 +7729,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c8505410000000000800000000000000
+      internalID: 21300620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_311
       rect:
@@ -4816,6 +7750,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e8505410000000000800000000000000
+      internalID: 21300622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_312
       rect:
@@ -4830,6 +7771,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 09505410000000000800000000000000
+      internalID: 21300624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_313
       rect:
@@ -4844,6 +7792,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 29505410000000000800000000000000
+      internalID: 21300626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_314
       rect:
@@ -4858,6 +7813,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 49505410000000000800000000000000
+      internalID: 21300628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_315
       rect:
@@ -4872,6 +7834,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 69505410000000000800000000000000
+      internalID: 21300630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_316
       rect:
@@ -4886,6 +7855,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 89505410000000000800000000000000
+      internalID: 21300632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_317
       rect:
@@ -4900,6 +7876,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a9505410000000000800000000000000
+      internalID: 21300634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_318
       rect:
@@ -4914,6 +7897,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c9505410000000000800000000000000
+      internalID: 21300636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_319
       rect:
@@ -4928,6 +7918,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e9505410000000000800000000000000
+      internalID: 21300638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_320
       rect:
@@ -4942,6 +7939,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0a505410000000000800000000000000
+      internalID: 21300640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_321
       rect:
@@ -4956,6 +7960,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2a505410000000000800000000000000
+      internalID: 21300642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_322
       rect:
@@ -4970,6 +7981,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4a505410000000000800000000000000
+      internalID: 21300644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_323
       rect:
@@ -4984,6 +8002,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6a505410000000000800000000000000
+      internalID: 21300646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_324
       rect:
@@ -4998,6 +8023,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8a505410000000000800000000000000
+      internalID: 21300648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_325
       rect:
@@ -5012,6 +8044,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: aa505410000000000800000000000000
+      internalID: 21300650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_326
       rect:
@@ -5026,6 +8065,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ca505410000000000800000000000000
+      internalID: 21300652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_327
       rect:
@@ -5040,6 +8086,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ea505410000000000800000000000000
+      internalID: 21300654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_328
       rect:
@@ -5054,6 +8107,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0b505410000000000800000000000000
+      internalID: 21300656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_329
       rect:
@@ -5068,6 +8128,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2b505410000000000800000000000000
+      internalID: 21300658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_330
       rect:
@@ -5082,6 +8149,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4b505410000000000800000000000000
+      internalID: 21300660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_331
       rect:
@@ -5096,6 +8170,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6b505410000000000800000000000000
+      internalID: 21300662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_332
       rect:
@@ -5110,6 +8191,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8b505410000000000800000000000000
+      internalID: 21300664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_333
       rect:
@@ -5124,6 +8212,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ab505410000000000800000000000000
+      internalID: 21300666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_334
       rect:
@@ -5138,6 +8233,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cb505410000000000800000000000000
+      internalID: 21300668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_335
       rect:
@@ -5152,6 +8254,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: eb505410000000000800000000000000
+      internalID: 21300670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_336
       rect:
@@ -5166,6 +8275,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0c505410000000000800000000000000
+      internalID: 21300672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_337
       rect:
@@ -5180,6 +8296,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2c505410000000000800000000000000
+      internalID: 21300674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_338
       rect:
@@ -5194,6 +8317,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4c505410000000000800000000000000
+      internalID: 21300676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_339
       rect:
@@ -5208,6 +8338,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6c505410000000000800000000000000
+      internalID: 21300678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_340
       rect:
@@ -5222,6 +8359,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8c505410000000000800000000000000
+      internalID: 21300680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_341
       rect:
@@ -5236,6 +8380,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ac505410000000000800000000000000
+      internalID: 21300682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_342
       rect:
@@ -5250,6 +8401,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cc505410000000000800000000000000
+      internalID: 21300684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_343
       rect:
@@ -5264,6 +8422,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ec505410000000000800000000000000
+      internalID: 21300686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_344
       rect:
@@ -5278,6 +8443,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0d505410000000000800000000000000
+      internalID: 21300688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_345
       rect:
@@ -5292,6 +8464,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2d505410000000000800000000000000
+      internalID: 21300690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_346
       rect:
@@ -5306,6 +8485,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4d505410000000000800000000000000
+      internalID: 21300692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_347
       rect:
@@ -5320,6 +8506,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6d505410000000000800000000000000
+      internalID: 21300694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_348
       rect:
@@ -5334,6 +8527,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8d505410000000000800000000000000
+      internalID: 21300696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_349
       rect:
@@ -5348,6 +8548,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ad505410000000000800000000000000
+      internalID: 21300698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_350
       rect:
@@ -5362,6 +8569,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cd505410000000000800000000000000
+      internalID: 21300700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_351
       rect:
@@ -5376,6 +8590,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ed505410000000000800000000000000
+      internalID: 21300702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_352
       rect:
@@ -5390,6 +8611,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0e505410000000000800000000000000
+      internalID: 21300704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_353
       rect:
@@ -5404,6 +8632,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2e505410000000000800000000000000
+      internalID: 21300706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_354
       rect:
@@ -5418,6 +8653,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4e505410000000000800000000000000
+      internalID: 21300708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_355
       rect:
@@ -5432,6 +8674,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6e505410000000000800000000000000
+      internalID: 21300710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_356
       rect:
@@ -5446,6 +8695,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8e505410000000000800000000000000
+      internalID: 21300712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_357
       rect:
@@ -5460,6 +8716,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ae505410000000000800000000000000
+      internalID: 21300714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wc-summer_358
       rect:
@@ -5474,9 +8737,386 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ce505410000000000800000000000000
+      internalID: 21300716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      wc-summer_42: 21300084
+      wc-summer_67: 21300134
+      wc-summer_191: 21300382
+      wc-summer_23: 21300046
+      wc-summer_198: 21300396
+      wc-summer_142: 21300284
+      wc-summer_69: 21300138
+      wc-summer_117: 21300234
+      wc-summer_179: 21300358
+      wc-summer_80: 21300160
+      wc-summer_1: 21300002
+      wc-summer_351: 21300702
+      wc-summer_258: 21300516
+      wc-summer_299: 21300598
+      wc-summer_151: 21300302
+      wc-summer_195: 21300390
+      wc-summer_112: 21300224
+      wc-summer_342: 21300684
+      wc-summer_212: 21300424
+      wc-summer_65: 21300130
+      wc-summer_14: 21300028
+      wc-summer_70: 21300140
+      wc-summer_297: 21300594
+      wc-summer_243: 21300486
+      wc-summer_159: 21300318
+      wc-summer_278: 21300556
+      wc-summer_183: 21300366
+      wc-summer_106: 21300212
+      wc-summer_189: 21300378
+      wc-summer_314: 21300628
+      wc-summer_296: 21300592
+      wc-summer_339: 21300678
+      wc-summer_38: 21300076
+      wc-summer_51: 21300102
+      wc-summer_4: 21300008
+      wc-summer_348: 21300696
+      wc-summer_310: 21300620
+      wc-summer_336: 21300672
+      wc-summer_134: 21300268
+      wc-summer_121: 21300242
+      wc-summer_284: 21300568
+      wc-summer_132: 21300264
+      wc-summer_144: 21300288
+      wc-summer_276: 21300552
+      wc-summer_46: 21300092
+      wc-summer_22: 21300044
+      wc-summer_280: 21300560
+      wc-summer_232: 21300464
+      wc-summer_248: 21300496
+      wc-summer_320: 21300640
+      wc-summer_47: 21300094
+      wc-summer_68: 21300136
+      wc-summer_25: 21300050
+      wc-summer_288: 21300576
+      wc-summer_346: 21300692
+      wc-summer_57: 21300114
+      wc-summer_43: 21300086
+      wc-summer_28: 21300056
+      wc-summer_164: 21300328
+      wc-summer_167: 21300334
+      wc-summer_279: 21300558
+      wc-summer_302: 21300604
+      wc-summer_266: 21300532
+      wc-summer_138: 21300276
+      wc-summer_146: 21300292
+      wc-summer_309: 21300618
+      wc-summer_53: 21300106
+      wc-summer_219: 21300438
+      wc-summer_225: 21300450
+      wc-summer_74: 21300148
+      wc-summer_256: 21300512
+      wc-summer_174: 21300348
+      wc-summer_109: 21300218
+      wc-summer_221: 21300442
+      wc-summer_119: 21300238
+      wc-summer_217: 21300434
+      wc-summer_332: 21300664
+      wc-summer_199: 21300398
+      wc-summer_95: 21300190
+      wc-summer_234: 21300468
+      wc-summer_226: 21300452
+      wc-summer_2: 21300004
+      wc-summer_350: 21300700
+      wc-summer_216: 21300432
+      wc-summer_83: 21300166
+      wc-summer_84: 21300168
+      wc-summer_294: 21300588
+      wc-summer_254: 21300508
+      wc-summer_345: 21300690
+      wc-summer_72: 21300144
+      wc-summer_94: 21300188
+      wc-summer_168: 21300336
+      wc-summer_127: 21300254
+      wc-summer_330: 21300660
+      wc-summer_158: 21300316
+      wc-summer_349: 21300698
+      wc-summer_357: 21300714
+      wc-summer_275: 21300550
+      wc-summer_173: 21300346
+      wc-summer_165: 21300330
+      wc-summer_223: 21300446
+      wc-summer_298: 21300596
+      wc-summer_6: 21300012
+      wc-summer_77: 21300154
+      wc-summer_73: 21300146
+      wc-summer_260: 21300520
+      wc-summer_30: 21300060
+      wc-summer_52: 21300104
+      wc-summer_311: 21300622
+      wc-summer_283: 21300566
+      wc-summer_16: 21300032
+      wc-summer_175: 21300350
+      wc-summer_31: 21300062
+      wc-summer_11: 21300022
+      wc-summer_15: 21300030
+      wc-summer_24: 21300048
+      wc-summer_122: 21300244
+      wc-summer_251: 21300502
+      wc-summer_55: 21300110
+      wc-summer_5: 21300010
+      wc-summer_268: 21300536
+      wc-summer_252: 21300504
+      wc-summer_356: 21300712
+      wc-summer_0: 21300000
+      wc-summer_33: 21300066
+      wc-summer_263: 21300526
+      wc-summer_61: 21300122
+      wc-summer_13: 21300026
+      wc-summer_59: 21300118
+      wc-summer_281: 21300562
+      wc-summer_326: 21300652
+      wc-summer_124: 21300248
+      wc-summer_215: 21300430
+      wc-summer_282: 21300564
+      wc-summer_295: 21300590
+      wc-summer_222: 21300444
+      wc-summer_214: 21300428
+      wc-summer_35: 21300070
+      wc-summer_334: 21300668
+      wc-summer_244: 21300488
+      wc-summer_71: 21300142
+      wc-summer_172: 21300344
+      wc-summer_105: 21300210
+      wc-summer_141: 21300282
+      wc-summer_245: 21300490
+      wc-summer_220: 21300440
+      wc-summer_143: 21300286
+      wc-summer_265: 21300530
+      wc-summer_259: 21300518
+      wc-summer_236: 21300472
+      wc-summer_231: 21300462
+      wc-summer_303: 21300606
+      wc-summer_213: 21300426
+      wc-summer_291: 21300582
+      wc-summer_355: 21300710
+      wc-summer_211: 21300422
+      wc-summer_340: 21300680
+      wc-summer_96: 21300192
+      wc-summer_140: 21300280
+      wc-summer_255: 21300510
+      wc-summer_190: 21300380
+      wc-summer_104: 21300208
+      wc-summer_76: 21300152
+      wc-summer_125: 21300250
+      wc-summer_229: 21300458
+      wc-summer_325: 21300650
+      wc-summer_270: 21300540
+      wc-summer_88: 21300176
+      wc-summer_20: 21300040
+      wc-summer_327: 21300654
+      wc-summer_358: 21300716
+      wc-summer_56: 21300112
+      wc-summer_9: 21300018
+      wc-summer_157: 21300314
+      wc-summer_133: 21300266
+      wc-summer_289: 21300578
+      wc-summer_135: 21300270
+      wc-summer_91: 21300182
+      wc-summer_317: 21300634
+      wc-summer_305: 21300610
+      wc-summer_286: 21300572
+      wc-summer_37: 21300074
+      wc-summer_81: 21300162
+      wc-summer_200: 21300400
+      wc-summer_126: 21300252
+      wc-summer_201: 21300402
+      wc-summer_166: 21300332
+      wc-summer_26: 21300052
+      wc-summer_50: 21300100
+      wc-summer_54: 21300108
+      wc-summer_307: 21300614
+      wc-summer_170: 21300340
+      wc-summer_40: 21300080
+      wc-summer_185: 21300370
+      wc-summer_210: 21300420
+      wc-summer_316: 21300632
+      wc-summer_75: 21300150
+      wc-summer_235: 21300470
+      wc-summer_86: 21300172
+      wc-summer_8: 21300016
+      wc-summer_85: 21300170
+      wc-summer_205: 21300410
+      wc-summer_29: 21300058
+      wc-summer_27: 21300054
+      wc-summer_287: 21300574
+      wc-summer_92: 21300184
+      wc-summer_184: 21300368
+      wc-summer_90: 21300180
+      wc-summer_323: 21300646
+      wc-summer_64: 21300128
+      wc-summer_233: 21300466
+      wc-summer_261: 21300522
+      wc-summer_262: 21300524
+      wc-summer_110: 21300220
+      wc-summer_343: 21300686
+      wc-summer_264: 21300528
+      wc-summer_44: 21300088
+      wc-summer_147: 21300294
+      wc-summer_98: 21300196
+      wc-summer_269: 21300538
+      wc-summer_300: 21300600
+      wc-summer_246: 21300492
+      wc-summer_34: 21300068
+      wc-summer_301: 21300602
+      wc-summer_335: 21300670
+      wc-summer_115: 21300230
+      wc-summer_139: 21300278
+      wc-summer_66: 21300132
+      wc-summer_87: 21300174
+      wc-summer_41: 21300082
+      wc-summer_78: 21300156
+      wc-summer_48: 21300096
+      wc-summer_354: 21300708
+      wc-summer_292: 21300584
+      wc-summer_337: 21300674
+      wc-summer_352: 21300704
+      wc-summer_10: 21300020
+      wc-summer_318: 21300636
+      wc-summer_114: 21300228
+      wc-summer_271: 21300542
+      wc-summer_207: 21300414
+      wc-summer_93: 21300186
+      wc-summer_180: 21300360
+      wc-summer_306: 21300612
+      wc-summer_247: 21300494
+      wc-summer_242: 21300484
+      wc-summer_224: 21300448
+      wc-summer_116: 21300232
+      wc-summer_187: 21300374
+      wc-summer_163: 21300326
+      wc-summer_206: 21300412
+      wc-summer_209: 21300418
+      wc-summer_237: 21300474
+      wc-summer_238: 21300476
+      wc-summer_113: 21300226
+      wc-summer_102: 21300204
+      wc-summer_131: 21300262
+      wc-summer_60: 21300120
+      wc-summer_32: 21300064
+      wc-summer_169: 21300338
+      wc-summer_123: 21300246
+      wc-summer_128: 21300256
+      wc-summer_308: 21300616
+      wc-summer_204: 21300408
+      wc-summer_103: 21300206
+      wc-summer_18: 21300036
+      wc-summer_202: 21300404
+      wc-summer_304: 21300608
+      wc-summer_45: 21300090
+      wc-summer_230: 21300460
+      wc-summer_253: 21300506
+      wc-summer_186: 21300372
+      wc-summer_273: 21300546
+      wc-summer_208: 21300416
+      wc-summer_118: 21300236
+      wc-summer_315: 21300630
+      wc-summer_152: 21300304
+      wc-summer_182: 21300364
+      wc-summer_145: 21300290
+      wc-summer_196: 21300392
+      wc-summer_97: 21300194
+      wc-summer_341: 21300682
+      wc-summer_129: 21300258
+      wc-summer_319: 21300638
+      wc-summer_344: 21300688
+      wc-summer_274: 21300548
+      wc-summer_353: 21300706
+      wc-summer_89: 21300178
+      wc-summer_203: 21300406
+      wc-summer_171: 21300342
+      wc-summer_331: 21300662
+      wc-summer_154: 21300308
+      wc-summer_62: 21300124
+      wc-summer_108: 21300216
+      wc-summer_155: 21300310
+      wc-summer_63: 21300126
+      wc-summer_120: 21300240
+      wc-summer_197: 21300394
+      wc-summer_324: 21300648
+      wc-summer_149: 21300298
+      wc-summer_188: 21300376
+      wc-summer_181: 21300362
+      wc-summer_329: 21300658
+      wc-summer_178: 21300356
+      wc-summer_241: 21300482
+      wc-summer_21: 21300042
+      wc-summer_148: 21300296
+      wc-summer_257: 21300514
+      wc-summer_153: 21300306
+      wc-summer_150: 21300300
+      wc-summer_160: 21300320
+      wc-summer_130: 21300260
+      wc-summer_82: 21300164
+      wc-summer_100: 21300200
+      wc-summer_277: 21300554
+      wc-summer_58: 21300116
+      wc-summer_19: 21300038
+      wc-summer_176: 21300352
+      wc-summer_192: 21300384
+      wc-summer_193: 21300386
+      wc-summer_218: 21300436
+      wc-summer_321: 21300642
+      wc-summer_177: 21300354
+      wc-summer_194: 21300388
+      wc-summer_250: 21300500
+      wc-summer_239: 21300478
+      wc-summer_290: 21300580
+      wc-summer_3: 21300006
+      wc-summer_228: 21300456
+      wc-summer_107: 21300214
+      wc-summer_328: 21300656
+      wc-summer_36: 21300072
+      wc-summer_136: 21300272
+      wc-summer_137: 21300274
+      wc-summer_162: 21300324
+      wc-summer_161: 21300322
+      wc-summer_313: 21300626
+      wc-summer_347: 21300694
+      wc-summer_240: 21300480
+      wc-summer_338: 21300676
+      wc-summer_267: 21300534
+      wc-summer_322: 21300644
+      wc-summer_79: 21300158
+      wc-summer_39: 21300078
+      wc-summer_17: 21300034
+      wc-summer_111: 21300222
+      wc-summer_99: 21300198
+      wc-summer_49: 21300098
+      wc-summer_272: 21300544
+      wc-summer_333: 21300666
+      wc-summer_312: 21300624
+      wc-summer_7: 21300014
+      wc-summer_156: 21300312
+      wc-summer_227: 21300454
+      wc-summer_101: 21300202
+      wc-summer_285: 21300570
+      wc-summer_12: 21300024
+      wc-summer_249: 21300498
+      wc-summer_293: 21300586
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

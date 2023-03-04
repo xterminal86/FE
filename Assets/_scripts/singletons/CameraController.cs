@@ -25,6 +25,8 @@ public class CameraController : MonoSingleton<CameraController>
     _keyHoldStatuses[KeyCode.RightArrow] = false;
     _keyHoldStatuses[KeyCode.UpArrow] = false;
     _keyHoldStatuses[KeyCode.DownArrow] = false;
+    
+    _delayValue = GlobalConstants.CursorDelayBeforeRepeat;
   }
 
   public void SetCameraPosition(int x, int y)
@@ -271,23 +273,19 @@ public class CameraController : MonoSingleton<CameraController>
   {    
     if (Input.GetKeyDown(KeyCode.LeftArrow))
     {
-      MoveCursor(-1, 0);
-      _delayValue = GlobalConstants.CursorDelayBeforeRepeat;
+      MoveCursor(-1, 0);      
     }
     else if (Input.GetKeyDown(KeyCode.RightArrow))
     {
-      MoveCursor(1, 0);
-      _delayValue = GlobalConstants.CursorDelayBeforeRepeat;
+      MoveCursor(1, 0);      
     }
     else if (Input.GetKeyDown(KeyCode.UpArrow))
     {
-      MoveCursor(0, 1);
-      _delayValue = GlobalConstants.CursorDelayBeforeRepeat;
+      MoveCursor(0, 1);      
     }
     else if (Input.GetKeyDown(KeyCode.DownArrow))
     {
-      MoveCursor(0, -1);
-      _delayValue = GlobalConstants.CursorDelayBeforeRepeat;
+      MoveCursor(0, -1);      
     }
   }
 
@@ -387,15 +385,51 @@ public class CameraController : MonoSingleton<CameraController>
         MoveCursor(0, -1);
       }
     }
+    else if (_keyHoldStatuses[KeyCode.LeftArrow])
+    {
+      _repeatTimer += Time.deltaTime;
+
+      if (_repeatTimer > _delayValue)
+      {
+        MoveCursor(-1, 0);
+      }
+    }
+    else if (_keyHoldStatuses[KeyCode.RightArrow])
+    {
+      _repeatTimer += Time.deltaTime;
+
+      if (_repeatTimer > _delayValue)
+      {
+        MoveCursor(1, 0);
+      }
+    }
+    else if (_keyHoldStatuses[KeyCode.UpArrow])
+    {
+      _repeatTimer += Time.deltaTime;
+
+      if (_repeatTimer > _delayValue)
+      {
+        MoveCursor(0, 1);
+      }
+    }
+    else if (_keyHoldStatuses[KeyCode.DownArrow])
+    {
+      _repeatTimer += Time.deltaTime;
+
+      if (_repeatTimer > _delayValue)
+      {
+        MoveCursor(0, -1);
+      }
+    }
   }
 
   bool _cursorTurboMode = false;
   void QueryInput()
   {
-    _keyHoldStatuses[KeyCode.LeftArrow] = Input.GetKey(KeyCode.LeftArrow);
+    _keyHoldStatuses[KeyCode.LeftArrow]  = Input.GetKey(KeyCode.LeftArrow);
     _keyHoldStatuses[KeyCode.RightArrow] = Input.GetKey(KeyCode.RightArrow);
-    _keyHoldStatuses[KeyCode.UpArrow] = Input.GetKey(KeyCode.UpArrow);
-    _keyHoldStatuses[KeyCode.DownArrow] = Input.GetKey(KeyCode.DownArrow);
+    _keyHoldStatuses[KeyCode.UpArrow]    = Input.GetKey(KeyCode.UpArrow);
+    _keyHoldStatuses[KeyCode.DownArrow]  = Input.GetKey(KeyCode.DownArrow);
 
     _cursorTurboMode = Input.GetKey(KeyCode.Z);
 
@@ -412,11 +446,17 @@ public class CameraController : MonoSingleton<CameraController>
     if (!_cursorTurboMode)
     {
       HandleKeyDown();
-      HandleKeyUp();
+      //HandleKeyUp();
     }
 
     HandleKeyRepeat();
 
+    if (!_keyHoldStatuses[KeyCode.UpArrow] && !_keyHoldStatuses[KeyCode.DownArrow]
+    && !_keyHoldStatuses[KeyCode.LeftArrow] && !_keyHoldStatuses[KeyCode.RightArrow])
+    {
+      _repeatTimer = 0.0f;
+    }
+    
     // TODO: remove on release
     GUIManager.Instance.SetCursorPosition((int)_cursorPosition.x, (int)_cursorPosition.y);
   }

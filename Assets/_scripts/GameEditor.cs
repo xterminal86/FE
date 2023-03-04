@@ -14,7 +14,7 @@ public class GameEditor : MonoBehaviour
   public TMP_Text TileDetails;
   public TMP_Text TileName;
   public TMP_Text CurrentLayer;
-
+  
   public Camera MainCamera;
 
   public Transform MapHolder;
@@ -23,6 +23,10 @@ public class GameEditor : MonoBehaviour
   public int MapSizeX = 16;
   public int MapSizeY = 16;
 
+  public RectTransform HelpWindow;
+  
+  public TMP_Text FillRoutineProgressText;
+  
   TileBase[,] _map;
 
   SerializedMap _levelToSave;
@@ -124,15 +128,80 @@ public class GameEditor : MonoBehaviour
     }
   }
 
+  List<string> _progressText = new List<string>()
+  {
+    "-", "\\", "|", "/"
+  };
+  
+  bool _blockInteraction = false;
+  
+  string _targetPrefabName = string.Empty;
   Queue<Vector2Int> _fillQueue = new Queue<Vector2Int>();
+  IEnumerator FillMapRoutine()
+  {
+    _blockInteraction = true;
+    
+    FillRoutineProgressText.gameObject.SetActive(true);
+    
+    int progressIndex = 0;
+        
+    while (_fillQueue.Count != 0)
+    {
+      FillRoutineProgressText.text = _progressText[progressIndex];
+      
+      Vector2Int node = _fillQueue.Dequeue();
+
+      int lx = node.x - 1;
+      int hx = node.x + 1;
+      int ly = node.y - 1;
+      int hy = node.y + 1;
+
+      if (lx >= 0 && _map[lx, node.y].TileObjectLayer1.PrefabName == _targetPrefabName)
+      {
+        PlaceSelectedObject(new Vector3(lx, node.y, node.y));
+        _fillQueue.Enqueue(new Vector2Int(lx, node.y));
+      }
+
+      if (ly >= 0 && _map[node.x, ly].TileObjectLayer1.PrefabName == _targetPrefabName)
+      {
+        PlaceSelectedObject(new Vector3(node.x, ly, ly));
+        _fillQueue.Enqueue(new Vector2Int(node.x, ly));
+      }
+
+      if (hx < MapSizeX && _map[hx, node.y].TileObjectLayer1.PrefabName == _targetPrefabName)
+      {
+        PlaceSelectedObject(new Vector3(hx, node.y, node.y));
+        _fillQueue.Enqueue(new Vector2Int(hx, node.y));
+      }
+
+      if (hy < MapSizeX && _map[node.x, hy].TileObjectLayer1.PrefabName == _targetPrefabName)
+      {
+        PlaceSelectedObject(new Vector3(node.x, hy, hy));
+        _fillQueue.Enqueue(new Vector2Int(node.x, hy));
+      }
+
+      progressIndex++;
+      
+      progressIndex %= _progressText.Count;
+      
+      yield return null;
+    }
+    
+    FillRoutineProgressText.gameObject.SetActive(false);
+    
+    _blockInteraction = false;
+    
+    yield return null;
+  }
+  
   void FillMap()
   {
     int cx = (int)Cursor.transform.position.x;
     int cy = (int)Cursor.transform.position.y;
 
-    string target = _map[cx, cy].TileObjectLayer1.PrefabName;
+    _targetPrefabName = _map[cx, cy].TileObjectLayer1.PrefabName;
 
-    if (target == _previewObject.GetComponent<TileObject>().PrefabName)
+    if (_targetPrefabName == _previewObject.GetComponent<TileObject>().PrefabName)
     {
       return;
     }
@@ -143,49 +212,7 @@ public class GameEditor : MonoBehaviour
 
     _fillQueue.Enqueue(new Vector2Int(cx, cy));
 
-    int safeguard = 0;
-
-    while (_fillQueue.Count != 0)
-    {
-      if (safeguard > 1000000)
-      {
-        Debug.LogWarning("Terminated by safeguard!");
-        break;
-      }
-
-      Vector2Int node = _fillQueue.Dequeue();
-
-      int lx = node.x - 1;
-      int hx = node.x + 1;
-      int ly = node.y - 1;
-      int hy = node.y + 1;
-
-      if (lx >= 0 && _map[lx, node.y].TileObjectLayer1.PrefabName == target)
-      {
-        PlaceSelectedObject(new Vector3(lx, node.y, node.y));
-        _fillQueue.Enqueue(new Vector2Int(lx, node.y));
-      }
-
-      if (ly >= 0 && _map[node.x, ly].TileObjectLayer1.PrefabName == target)
-      {
-        PlaceSelectedObject(new Vector3(node.x, ly, ly));
-        _fillQueue.Enqueue(new Vector2Int(node.x, ly));
-      }
-
-      if (hx < MapSizeX && _map[hx, node.y].TileObjectLayer1.PrefabName == target)
-      {
-        PlaceSelectedObject(new Vector3(hx, node.y, node.y));
-        _fillQueue.Enqueue(new Vector2Int(hx, node.y));
-      }
-
-      if (hy < MapSizeX && _map[node.x, hy].TileObjectLayer1.PrefabName == target)
-      {
-        PlaceSelectedObject(new Vector3(node.x, hy, hy));
-        _fillQueue.Enqueue(new Vector2Int(node.x, hy));
-      }
-
-      safeguard++;
-    }
+    StartCoroutine(FillMapRoutine());    
   }
 
   void UpdateTileInfo()
@@ -200,6 +227,8 @@ public class GameEditor : MonoBehaviour
     TileName.text = tileObject.InGameDescription;
   }
 
+  bool _helpShown = false;
+  
   GameObject _previewObject;
 
   RaycastHit _hitInfoEditor;
@@ -207,8 +236,14 @@ public class GameEditor : MonoBehaviour
   void Update()
   {
     ControlCamera();
+    
+    if (_blockInteraction)    
+    {
+      return;
+    }
+    
     SelectTile();
-
+    
     CurrentLayer.text = (_objectsLayer == 0) ? "Ground" : "Objects";
 
     Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -269,6 +304,12 @@ public class GameEditor : MonoBehaviour
         PickTileFromMap();
       }
     }
+    
+    if (Input.GetKeyDown(KeyCode.H))
+    {
+      _helpShown = !_helpShown;
+      HelpWindow.gameObject.SetActive(_helpShown);
+    }    
   }
 
   void PickTileFromMap()

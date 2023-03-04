@@ -6,4 +6,5 @@ public class TileBase : MonoBehaviour
 {
   public TileObject TileObjectLayer1;
   public TileObject TileObjectLayer2;
+  public Unit UnitHere;
 }
