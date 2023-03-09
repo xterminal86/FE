@@ -8,13 +8,13 @@ using UnityEngine.EventSystems;
 using TMPro;
 using SFB;
 
-public class GameEditor : MonoBehaviour 
+public class GameEditor : MonoBehaviour
 {
   public Image TileInfoSprite;
   public TMP_Text TileDetails;
   public TMP_Text TileName;
   public TMP_Text CurrentLayer;
-  
+
   public Camera MainCamera;
 
   public Transform MapHolder;
@@ -24,9 +24,9 @@ public class GameEditor : MonoBehaviour
   public int MapSizeY = 16;
 
   public RectTransform HelpWindow;
-  
+
   public TMP_Text FillRoutineProgressText;
-  
+
   TileBase[,] _map;
 
   SerializedMap _levelToSave;
@@ -132,23 +132,23 @@ public class GameEditor : MonoBehaviour
   {
     "-", "\\", "|", "/"
   };
-  
+
   bool _blockInteraction = false;
-  
+
   string _targetPrefabName = string.Empty;
   Queue<Vector2Int> _fillQueue = new Queue<Vector2Int>();
   IEnumerator FillMapRoutine()
   {
     _blockInteraction = true;
-    
+
     FillRoutineProgressText.gameObject.SetActive(true);
-    
+
     int progressIndex = 0;
-        
+
     while (_fillQueue.Count != 0)
     {
       FillRoutineProgressText.text = _progressText[progressIndex];
-      
+
       Vector2Int node = _fillQueue.Dequeue();
 
       int lx = node.x - 1;
@@ -181,19 +181,19 @@ public class GameEditor : MonoBehaviour
       }
 
       progressIndex++;
-      
+
       progressIndex %= _progressText.Count;
-      
+
       yield return null;
     }
-    
+
     FillRoutineProgressText.gameObject.SetActive(false);
-    
+
     _blockInteraction = false;
-    
+
     yield return null;
   }
-  
+
   void FillMap()
   {
     int cx = (int)Cursor.transform.position.x;
@@ -212,7 +212,7 @@ public class GameEditor : MonoBehaviour
 
     _fillQueue.Enqueue(new Vector2Int(cx, cy));
 
-    StartCoroutine(FillMapRoutine());    
+    StartCoroutine(FillMapRoutine());
   }
 
   void UpdateTileInfo()
@@ -228,7 +228,7 @@ public class GameEditor : MonoBehaviour
   }
 
   bool _helpShown = false;
-  
+
   GameObject _previewObject;
 
   RaycastHit _hitInfoEditor;
@@ -236,21 +236,21 @@ public class GameEditor : MonoBehaviour
   void Update()
   {
     ControlCamera();
-    
-    if (_blockInteraction)    
+
+    if (_blockInteraction)
     {
       return;
     }
-    
+
     SelectTile();
-    
+
     CurrentLayer.text = (_objectsLayer == 0) ? "Ground" : "Objects";
 
     Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
     int mask = LayerMask.GetMask("Default");
 
     if (Physics.Raycast(r.origin, r.direction, out _hitInfoEditor, Mathf.Infinity, mask))
-    {      
+    {
       Cursor.transform.position = _hitInfoEditor.collider.transform.position;
 
       UpdateTileInfo();
@@ -270,7 +270,7 @@ public class GameEditor : MonoBehaviour
         _previewObject.transform.position = previewPos;
 
         if (Input.GetKeyDown(KeyCode.F))
-        {          
+        {
           var to = _previewObject.GetComponent<TileObject>();
           to.FlipX();
           to.FlipFlagX = !to.FlipFlagX;
@@ -304,12 +304,12 @@ public class GameEditor : MonoBehaviour
         PickTileFromMap();
       }
     }
-    
+
     if (Input.GetKeyDown(KeyCode.H))
     {
       _helpShown = !_helpShown;
       HelpWindow.gameObject.SetActive(_helpShown);
-    }    
+    }
   }
 
   void PickTileFromMap()
@@ -331,19 +331,19 @@ public class GameEditor : MonoBehaviour
   }
 
   void PlaceSelectedObject(Vector3 placementPos)
-  { 
+  {
     float zDepth = (_objectsLayer == 0) ? placementPos.y : placementPos.y - 1;
 
     // Objects are Z sorted using Y coordinate
 
-    Vector3 pos = new Vector3(placementPos.x, 
-                              placementPos.y, 
+    Vector3 pos = new Vector3(placementPos.x,
+                              placementPos.y,
                               zDepth);
 
     int posX = (int)placementPos.x;
     int posY = (int)placementPos.y;
 
-    var go = Instantiate(_previewObject, pos, Quaternion.identity, _map[posX, posY].transform);         
+    var go = Instantiate(_previewObject, pos, Quaternion.identity, _map[posX, posY].transform);
     Util.SetGameObjectLayer(go, LayerMask.NameToLayer("Default"), true);
 
     if (_objectsLayer == 0)
@@ -371,8 +371,8 @@ public class GameEditor : MonoBehaviour
 
     // Objects are Z sorted using Y coordinate
 
-    Vector3 pos = new Vector3(placementPos.x, 
-                              placementPos.y, 
+    Vector3 pos = new Vector3(placementPos.x,
+                              placementPos.y,
                               zDepth);
 
     int posX = (int)placementPos.x;
@@ -383,7 +383,7 @@ public class GameEditor : MonoBehaviour
     if (_objectsLayer == 0)
     {
       Destroy(_map[posX, posY].TileObjectLayer1.gameObject);
-      var go = Instantiate(PrefabsManager.Instance.PrefabsLayer1[0], pos, Quaternion.identity, _map[posX, posY].transform);         
+      var go = Instantiate(PrefabsManager.Instance.PrefabsLayer1[0], pos, Quaternion.identity, _map[posX, posY].transform);
       Util.SetGameObjectLayer(go, LayerMask.NameToLayer("Default"), true);
       _map[posX, posY].TileObjectLayer1 = go.GetComponent<TileObject>();
       _map[posX, posY].TileObjectLayer1.PrefabName = PrefabsManager.Instance.PrefabsLayer1[0].name;
@@ -457,9 +457,9 @@ public class GameEditor : MonoBehaviour
 
   void LoadLevel(string path)
   {
-    var formatter = new BinaryFormatter();  
-    Stream stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);  
-    _levelToSave = (SerializedMap)formatter.Deserialize(stream);  
+    var formatter = new BinaryFormatter();
+    Stream stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
+    _levelToSave = (SerializedMap)formatter.Deserialize(stream);
     stream.Close();
 
     DestroyChildren(MapHolder);

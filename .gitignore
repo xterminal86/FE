@@ -1,4 +1,6 @@
+core*
 *.suo
+/.vs
 /Temp
 /Library
 /*.csproj
@@ -7,6 +9,8 @@
 /*.userprefs
 /*.sln
 /log*
+/UserSettings
+/Logs
 /Assets/UnityVS/*
 /Assets/UnityVS.meta
 /UnityVS.*
